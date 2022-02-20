@@ -14,16 +14,14 @@ class App extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route path='/resume' exact>
+          <Route exact path='/resume'>
             <ResumePage />
           </Route>
           <Route path='/' exact>
-            <Router>
-              <ScrollToTop />
-              <NavBar />
-              <ContentRouter />
-              <Footer />
-            </Router>
+            <ScrollToTop />
+            <NavBar />
+            <ContentRouter />
+            <Footer />
           </Route>
         </Switch>
       </Router>

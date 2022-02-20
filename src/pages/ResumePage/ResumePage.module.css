@@ -38,6 +38,27 @@
     outline: 2cm #FFEAEA solid;
 }
 
+.homeButton {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    padding: 10px 20px;
+    background-color: #434343;
+    border-radius: 12px;
+    box-shadow: 0px 0px 6px 2px #4b4b4b;
+}
+
+.homeButton:hover {
+    box-shadow: 0px 0px 6px 2px #272727;
+}
+
+.homeButton a {
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    display: flex;
+}
+
 @page {
     size: A4;
     margin: 0;

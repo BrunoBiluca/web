@@ -29,7 +29,6 @@ class ContentRouter extends React.Component {
           <Route path='/articles/:articleSlug' exact>
             <ArticlePage />
           </Route>
-          <Redirect  />
         </Switch >
       </div>
     );

@@ -10,10 +10,15 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 
 import { main, workExperiences, certificates, languages, educations, skills } from "./ResumeData.en";
+import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
 
 const ResumePage = () => {
     return (
         <div className={styles.resume}>
+            <div className={styles.homeButton}>
+                <Link to="/">{<FaHome />}</Link>
+            </div>
             <div data-testid="ResumePage" className={styles.page}>
                 <HeaderInfo main={main} />
                 <div className={styles.contentBody}>
