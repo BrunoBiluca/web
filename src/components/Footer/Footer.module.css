@@ -1,0 +1,18 @@
+.footer {
+  background: #272727;
+  padding: 1em;
+  margin-top: 5em;
+  color: #fff;
+}
+
+.footerBody {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsLetter {
+  display: block;
+  width: 70%;
+  margin: 20px auto;
+}

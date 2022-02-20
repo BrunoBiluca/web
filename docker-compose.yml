@@ -1,0 +1,13 @@
+version: '3'
+services:
+  website:
+    container_name: website
+    build:
+      context: ./
+      dockerfile: .
+    env_file:
+      - local.env
+    volumes:
+      - './:/app'
+    ports:
+      - '3000:3000'

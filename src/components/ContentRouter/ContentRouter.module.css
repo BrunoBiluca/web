@@ -1,0 +1,11 @@
+.contentRouter {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+@media (max-width: 600px) {
+  .contentRouter {
+    padding: 1em;
+  }
+}

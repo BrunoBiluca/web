@@ -1,0 +1,18 @@
+.markdownImage {
+    margin: 2em 0;
+    text-align: center;
+    display: block;
+}
+
+.markdownImage img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.markdownImage em {
+    display: block;
+    font-style: italic;
+    font-size: medium;
+    color:#676767;
+}

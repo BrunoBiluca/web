@@ -1,0 +1,61 @@
+.newsLetterForm {
+  display: flex;
+}
+
+.newsLetterForm input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 5px 0 0 5px;
+  border: 0;
+  font-size: 20px;
+}
+
+.newsLetterForm button {
+  padding: .5em 1em;
+  background: gray;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.newsLetterForm button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.newsLetterMessage {
+  color: #1cbf1c;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.newsLetterMessage svg {
+  font-size: 2em;
+  margin: 0 30px 0 0;
+}
+
+.newsLetterMessage span {
+  font-size: 1.5em;
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .newsLetterForm {
+    flex-direction: column;
+  }
+
+  .newsLetterMessage svg {
+    font-size: 1.5em;
+  }
+  
+  .newsLetterMessage span {
+    font-size: 1em;
+  }
+
+  .newsLetterForm button {
+    margin: 1em 0;
+  }
+}

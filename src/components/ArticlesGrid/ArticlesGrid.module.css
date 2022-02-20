@@ -1,0 +1,36 @@
+.contentGrid {
+  display: flex;
+  height: 440px;
+}
+
+.contentHolder {
+  margin: .5em;
+  flex: 1;
+  width: 0;
+}
+
+.contentHolder:first-child {
+  margin-left: 0;
+}
+
+.contentHolder:last-child {
+  margin-right: 0;
+}
+
+.contentHolderVertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentHolderVertical .flex1 {
+  flex: 1;
+}
+
+.contentSeeMore {
+  font-size: 2em;
+  padding: .5em 0;
+  text-decoration: none;
+  color: #888;
+  width: 100%;
+  text-align: center;
+}

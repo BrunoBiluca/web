@@ -1,0 +1,18 @@
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  color: #666;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+div[hidden] {
+  display: none!important;
+}

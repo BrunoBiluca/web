@@ -1,0 +1,62 @@
+.contentGrid {
+  display: flex;
+  height: 420px;
+}
+
+.contentHolder {
+  margin: .5em;
+  flex: 1;
+  width: 0;
+}
+
+.contentHolder:first-child {
+  margin-left: 0;
+}
+
+.contentHolder:last-child {
+  margin-right: 0;
+}
+
+.contentHolderVertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentHolderVertical .flex1 {
+  flex: 1;
+}
+
+.contentSeeMore {
+  font-size: 2em;
+  padding: .5em 0;
+  text-decoration: none;
+  color: #888;
+  width: 100%;
+  text-align: center;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  color: #666;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.intro div {
+  margin: 0 1em;
+  padding: 1em;
+  flex: 1;
+}
+
+.intro img {
+  display: block;
+  width: 100%;
+}
+
+
+@media (max-width: 1000px) {
+  .intro {
+    flex-direction: column;
+  }
+}
