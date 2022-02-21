@@ -8,29 +8,42 @@ import WorkExperiences from "./components/WorkExperiences";
 import Certificates from "./components/Certificates";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
-
-import { main, workExperiences, certificates, languages, educations, skills } from "./ResumeData.en";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
+import LocalizationHandler, { LocalizationDirection } from "../../components/LocalizationHandler/LocalizationHandler";
+import ResumePageService from "./ResumePageService";
+import bgImg from "../../images/resume/resume_packman_bg.png";
+import GamesInfo from "./components/GamesInfo";
 
 const ResumePage = () => {
+
+    let { main, workExperiences, certificates, languages, skills, educations, games }
+        = ResumePageService.getContent();
+
     return (
         <div className={styles.resume}>
-            <div className={styles.homeButton}>
-                <Link to="/">{<FaHome />}</Link>
+            <div className={styles.resumeHelper}>
+                <div className={styles.homeButton}>
+                    <Link to="/">{<FaHome />}</Link>
+                </div>
+                <LocalizationHandler direction={LocalizationDirection.vertical} />
             </div>
-            <div data-testid="ResumePage" className={styles.page}>
-                <HeaderInfo main={main} />
-                <div className={styles.contentBody}>
-                    <div className={styles.sideContent}>
-                        <AdditionalInfo main={main} />
-                        <Languages languages={languages} />
-                        <Skills skills={skills} />
-                    </div>
-                    <div className={styles.content}>
-                        <WorkExperiences workExperiences={workExperiences} />
-                        <Certificates certificates={certificates} />
-                        <Education educations={educations} />
+            <div className={styles.page}>
+                <img src={bgImg} className={styles.bgImg} />
+                <div data-testid="ResumePage" style={{ position: "relative", zIndex: 1 }}>
+                    <HeaderInfo main={main} />
+                    <div className={styles.contentBody}>
+                        <div className={styles.sideContent}>
+                            <AdditionalInfo main={main} />
+                            <Languages languages={languages} />
+                            <Skills skills={skills} />
+                            <GamesInfo games={games} />
+                        </div>
+                        <div className={styles.content}>
+                            <WorkExperiences workExperiences={workExperiences} />
+                            <Certificates certificates={certificates} />
+                            <Education educations={educations} />
+                        </div>
                     </div>
                 </div>
             </div>

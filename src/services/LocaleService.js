@@ -28,6 +28,10 @@ class LocaleService {
 
         return this.getLocale();
     }
+
+    static isLocale = (locale) => {
+        return this.getLocale() == locale.name;
+    }
 }
 
 export default LocaleService;
