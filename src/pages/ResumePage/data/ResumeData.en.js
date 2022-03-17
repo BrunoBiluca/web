@@ -118,7 +118,7 @@ const games = [
     }
 ]
 
-export const Resume = {
+export const ResumeUnity = {
     main: main,
     workExperiences: workExperiences,
     certificates: certificates,
@@ -127,3 +127,47 @@ export const Resume = {
     languages: languages,
     games: games
 }
+
+export const mainBackend = {
+    ...main,
+    job: "Senior Backend Developer",
+}
+
+export const skillsBackend = [
+    { label: "Python" },
+    { label: "C#" },
+    { label: "Git" },
+    { label: "TDD" },
+    { label: "Clean Code" },
+    { label: "Design Patterns" },
+    { label: "Java" },
+    { label: "Javascript" },
+    { label: "Docker" },
+    { label: "RESTful APIs" },
+]
+
+export const certificatesBackend = [
+    {
+        icon: "",
+        title: "Taming Big Data with Apache Spark and Python - Hands On!",
+        description: "Implementing recurrent problems in data analysis with Apache Spark and Python",
+        url: "https://www.udemy.com/certificate/UC-398dd595-513c-492c-83dd-ea5502e5551e/"
+    },
+    {
+        icon: "",
+        title: "Google Cloud Platform Fundamentals: Core Infrastructure",
+        description: "GCP basic services",
+        url: "https://www.coursera.org/account/accomplishments/certificate/P5AB8LP8Y7B6"
+    }
+]
+
+export const ResumeBackend = {
+    main: mainBackend,
+    workExperiences: workExperiences,
+    certificates: certificatesBackend,
+    skills: skillsBackend,
+    educations: educations,
+    languages: languages
+}
+
+export const Resume = ResumeUnity;

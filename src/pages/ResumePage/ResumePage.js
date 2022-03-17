@@ -37,7 +37,7 @@ const ResumePage = () => {
                             <AdditionalInfo main={main} />
                             <Languages languages={languages} />
                             <Skills skills={skills} />
-                            <GamesInfo games={games} />
+                            {games && <GamesInfo games={games} />}
                         </div>
                         <div className={styles.content}>
                             <WorkExperiences workExperiences={workExperiences} />

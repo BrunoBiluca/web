@@ -1,6 +1,6 @@
 import bilucaDefenseImg from '../../../images/resume/biluca_defense_gameplay.png';
 
-export const main = {
+export const mainUnity = {
     name: "Bruno Bernardes da Costa",
     job: "Unity Developer",
     summary: "Com mais de 6 anos de experiência em desenvolvimento de software. Tenho trabalhado nos mais diversificados tipos de sistemas, como, sistemas bancários, plataforma de análise de Big Data, websites, mobile apps e games. Sou uma pessoa determinada, gosto de trabalhar em equipe e compartilhar conhecimento. Acredito que podemos criar um produto incrível enquanto nos divertimos e aprendemos no processo.",
@@ -120,8 +120,8 @@ const games = [
     }
 ]
 
-export const Resume = {
-    main: main,
+export const ResumeUnity = {
+    main: mainUnity,
     workExperiences: workExperiences,
     certificates: certificates,
     skills: skills,
@@ -129,3 +129,47 @@ export const Resume = {
     languages: languages,
     games: games
 }
+
+export const mainBackend = {
+    ...mainUnity,
+    job: "Backend Developer Sênior",
+}
+
+export const skillsBackend = [
+    { label: "Python" },
+    { label: "C#" },
+    { label: "Git" },
+    { label: "TDD" },
+    { label: "Clean Code" },
+    { label: "Design Patterns" },
+    { label: "Java" },
+    { label: "Javascript" },
+    { label: "Docker" },
+    { label: "RESTful APIs" },
+]
+
+export const certificatesBackend = [
+    {
+        icon: "",
+        title: "Taming Big Data with Apache Spark and Python - Hands On!",
+        description: "Implementação de vários problemas de análise de dados utilizando Apache Spark e Python",
+        url: "https://www.udemy.com/certificate/UC-398dd595-513c-492c-83dd-ea5502e5551e/"
+    },
+    {
+        icon: "",
+        title: "Google Cloud Platform Fundamentals: Core Infrastructure",
+        description: "Principais serviços e aplicações do GCP",
+        url: "https://www.coursera.org/account/accomplishments/certificate/P5AB8LP8Y7B6"
+    }
+]
+
+export const ResumeBackend = {
+    main: mainBackend,
+    workExperiences: workExperiences,
+    certificates: certificatesBackend,
+    skills: skillsBackend,
+    educations: educations,
+    languages: languages
+}
+
+export const Resume = ResumeUnity;
