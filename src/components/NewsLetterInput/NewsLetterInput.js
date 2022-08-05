@@ -29,7 +29,7 @@ const NewsLetterInput = () => {
       email: newsLetterEmail,
       active: true
     })
-      .then(res => {
+      .then(_ => {
         setSubmitSuccessfully(true);
       })
       .catch()

@@ -55,7 +55,7 @@ const GamesPage = () => {
             children={game.description}
             remarkPlugins={[remarkGfm]}
             components={{
-              img({ node, className, children, ...props }) {
+              img({ node, className }) {
                 return (
                   <img className={className}
                     src={storagePath(node.properties.src)}

@@ -7,7 +7,7 @@ import Category from '../Category/Category';
 const ContentCard = (props) => {
   let history = useHistory();
 
-  var content = props.content;
+  let content = props.content;
 
   if (!content)
     return (
@@ -21,7 +21,7 @@ const ContentCard = (props) => {
       </div>
     );
 
-  var featuredImage = content.featuredImage.thumbnail
+  let featuredImage = content.featuredImage.thumbnail
     ? content.featuredImage.thumbnail
     : placeholderImg;
 
