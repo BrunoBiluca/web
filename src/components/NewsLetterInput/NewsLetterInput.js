@@ -36,7 +36,9 @@ const NewsLetterInput = () => {
   }
 
   return (
-    <div className={styles.newsLetterInput}>
+    <div
+      className={styles.newsLetterInput} data-testid="news-letter-subscribe"
+    >
       <div hidden={submitSuccessfully} className={styles.newsLetterForm}>
         <input
           onChange={onEmailChanged}

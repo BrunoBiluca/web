@@ -8,6 +8,6 @@ services:
     env_file:
       - local.env
     volumes:
-      - './:/app'
+      - './src:/app/src'
     ports:
       - '3000:3000'

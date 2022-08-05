@@ -13,7 +13,7 @@ import styles from './GamesPage.module.css';
 import { storagePath } from '../../helpers/RemotePath';
 
 const GamesPage = () => {
-  var { gameSlug } = useParams();
+  let { gameSlug } = useParams();
   let [game, setGame] = useState(GamesRequest.emptyGame);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const GamesPage = () => {
   }, [gameSlug]);
 
   return (
-    <div className={styles.gamesPage} data-testid="GamesPage">
+    <div className={styles.gamesPage} data-testid="games-page">
       <div className={styles.header}>
         <h1 className={styles.title}>{game.title}</h1>
         <div className={styles.subtitle}>

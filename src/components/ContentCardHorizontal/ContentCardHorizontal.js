@@ -7,21 +7,21 @@ import { useHistory } from 'react-router';
 const ContentCardHorizontal = (props) => {
   let history = useHistory();
 
-  var content = props.content;
-  var limitContentSummary = props.limitContentSummary ?? true;
+  let content = props.content;
+  let limitContentSummary = props.limitContentSummary ?? true;
 
   if (!content)
     return (
       <div
         style={{ ...props.style }}
         className={`${styles.contentCardHorizontal} ${styles.empty}`}
-        data-testid="ContentCard"
+        data-testid="content-card-horizontal-empty"
       >
         {props.children}
       </div>
     );
 
-  var featuredImage = content.featuredImage.thumbnail
+  let featuredImage = content.featuredImage.thumbnail
     ? content.featuredImage.path
     : placeholderImg;
 
@@ -33,10 +33,10 @@ const ContentCardHorizontal = (props) => {
     <div
       style={{ ...props.style }}
       className={styles.contentCardHorizontal}
-      data-testid="ContentCard"
+      data-testid="content-card-horizontal"
       onClick={redirect}
     >
-      <div style={{width: props.imageWidth}} className={styles.cardHeader}>
+      <div style={{ width: props.imageWidth }} className={styles.cardHeader}>
         <img src={featuredImage} alt="placeholder" />
       </div>
       <div className={styles.cardContent}>

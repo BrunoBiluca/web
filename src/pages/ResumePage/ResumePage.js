@@ -30,7 +30,7 @@ const ResumePage = () => {
             </div>
             <div className={styles.page}>
                 <img src={bgImg} className={styles.bgImg} />
-                <div data-testid="ResumePage" style={{ position: "relative", zIndex: 1 }}>
+                <div data-testid="resume-page" style={{ position: "relative", zIndex: 1 }}>
                     <HeaderInfo main={main} />
                     <div className={styles.contentBody}>
                         <div className={styles.sideContent}>

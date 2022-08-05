@@ -8,6 +8,7 @@ const SocialMediaLinks = (props) => {
     <div 
       style={{...props.style}} 
       className={styles.socialMediaLinks}
+      data-testid="social-media-links"
     >
       <a
         href="https://github.com/BrunoBiluca"

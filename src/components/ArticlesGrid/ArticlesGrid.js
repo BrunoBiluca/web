@@ -15,7 +15,7 @@ const ArticlesGrid = () => {
   }, []);
 
   return (
-    <div>
+    <div data-testid="acticles-grid">
       <h2>Recent articles</h2>
 
       <div className={styles.contentGrid}>

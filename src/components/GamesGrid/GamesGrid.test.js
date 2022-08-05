@@ -7,7 +7,7 @@ describe('<GamesGrid />', () => {
   test('it should mount', () => {
     render(<GamesGrid />);
     
-    const gamesGrid = screen.getByTestId('GamesGrid');
+    const gamesGrid = screen.getByTestId('games-grid');
 
     expect(gamesGrid).toBeInTheDocument();
   });

@@ -10,10 +10,10 @@ const ContentsPage = () => {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1400);
   let location = useLocation();
 
-  var pageLimit = 10;
+  let pageLimit = 10;
 
-  var [contents, setContents] = useState([]);
-  var [showMoreContent, setShowMoreContent] = useState(true);
+  let [contents, setContents] = useState([]);
+  let [showMoreContent, setShowMoreContent] = useState(true);
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 1400);
@@ -45,7 +45,7 @@ const ContentsPage = () => {
   }
 
   return (
-    <div>
+    <div data-testid="contents-page">
       {
         isDesktop &&
         contents

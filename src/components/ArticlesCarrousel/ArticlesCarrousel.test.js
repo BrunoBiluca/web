@@ -7,7 +7,7 @@ describe('<ArticlesCarrousel />', () => {
   test('it should mount', () => {
     render(<ArticlesCarrousel />);
     
-    const articlesCarrousel = screen.getByTestId('ArticlesCarrousel');
+    const articlesCarrousel = screen.getByTestId('articles-carrousel');
 
     expect(articlesCarrousel).toBeInTheDocument();
   });

@@ -7,8 +7,8 @@ import LocalizationHandler from '../LocalizationHandler/LocalizationHandler';
 
 const NavBar = () => {
   return (
-    <div style={{ height: "68px" }}>
-      <div className={styles.navBar} data-testid="NavBar">
+    <div style={{ height: "68px" }} data-testid="navbar">
+      <div className={styles.navBar}>
         <div className={styles.navBarBody}>
           <div className={styles.navBarButton}>
             <Link to="/">{<FaHome />}</Link>

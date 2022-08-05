@@ -13,7 +13,7 @@ const ArticlesCarrousel = () => {
   }, []);
 
   return (
-    <div>
+    <div data-testid="articles-carrousel">
       <h2>Recent articles</h2>
       <div className={styles.articlesCarrousel}>
         {

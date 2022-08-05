@@ -13,7 +13,7 @@ const GamesCarrousel = () => {
   }, []);
 
   return (
-    <div>
+    <div data-testid="games-carrousel">
       <h2>Games</h2>
       <div className={styles.gamesCarrousel}>
         {

@@ -14,7 +14,7 @@ const GamesGrid = () => {
   }, []);
 
   return (
-    <div>
+    <div data-testid="games-grid">
       <h2>Games</h2>
       <div className={styles.contentGrid}>
         <div style={{ flex: 4 }} className={`${styles.contentHolder} ${styles.contentHolderVertical}`}>

@@ -7,7 +7,7 @@ describe('<SocialMediaLinks />', () => {
   test('it should mount', () => {
     render(<SocialMediaLinks />);
     
-    const socialMediaLinks = screen.getByTestId('SocialMediaLinks');
+    const socialMediaLinks = screen.getByTestId('social-media-links');
 
     expect(socialMediaLinks).toBeInTheDocument();
   });

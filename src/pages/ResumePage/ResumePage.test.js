@@ -1,21 +1,30 @@
 import React from 'react';
 import { render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Resume from './Resume';
+import ResumePage from './ResumePage';
+import { BrowserRouter } from 'react-router-dom';
 
 describe('<Resume />', () => {
   test('it should mount', () => {
-    render(<Resume />);
-    
-    const resumePage = screen.getByTestId('Resume');
+    render(
+      <BrowserRouter>
+        <ResumePage />
+      </BrowserRouter>
+    );
+
+    const resumePage = screen.getByTestId('resume-page');
 
     expect(resumePage).toBeInTheDocument();
   });
 
   test('it should mount header info', () => {
-    render(<Resume />);
-    
-    const resumeHeader = screen.getByTestId('ResumeHeader');
+    render(
+      <BrowserRouter>
+        <ResumePage />
+      </BrowserRouter>
+    );
+
+    const resumeHeader = screen.getByTestId('header-info');
 
     expect(resumeHeader).toBeInTheDocument();
 
@@ -25,15 +34,10 @@ describe('<Resume />', () => {
     const goal = within(resumeHeader).getByTestId("goal");
     expect(goal).toBeInTheDocument();
 
-    const picture = within(resumeHeader).getByTestId("picture");
+    const picture = within(resumeHeader).getByTestId("bruno-picture");
     expect(picture).toBeInTheDocument();
 
     const description = within(resumeHeader).getByTestId("description");
     expect(description).toBeInTheDocument();
   });
-
-  // TODO: testar todos os links do pdf, 
-  // testar usando os valores configurados nos respectivos componentes dos links
-
-  // TODO: testar se imprime uma única página
 });

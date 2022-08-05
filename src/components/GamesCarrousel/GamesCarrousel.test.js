@@ -7,7 +7,7 @@ describe('<GamesCarrousel />', () => {
   test('it should mount', () => {
     render(<GamesCarrousel />);
     
-    const gamesCarrousel = screen.getByTestId('GamesCarrousel');
+    const gamesCarrousel = screen.getByTestId('games-carrousel');
 
     expect(gamesCarrousel).toBeInTheDocument();
   });

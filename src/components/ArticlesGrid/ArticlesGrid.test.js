@@ -7,7 +7,7 @@ describe('<ArticlesGrid />', () => {
   test('it should mount', () => {
     render(<ArticlesGrid />);
     
-    const articlesGrid = screen.getByTestId('ArticlesGrid');
+    const articlesGrid = screen.getByTestId('acticles-grid');
 
     expect(articlesGrid).toBeInTheDocument();
   });

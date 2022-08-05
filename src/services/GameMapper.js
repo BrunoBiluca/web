@@ -9,7 +9,7 @@ class GameMapper {
       day: '2-digit'
     };
 
-    var featuredImage = res.featured_image.formats.large
+    let featuredImage = res.featured_image.formats.large
       ? res.featured_image.formats.large 
       : (
         res.featured_image.formats.medium

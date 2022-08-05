@@ -7,7 +7,7 @@ describe('<NewsLetterInput />', () => {
   test('it should mount', () => {
     render(<NewsLetterInput />);
     
-    const newsLetterInput = screen.getByTestId('NewsLetterInput');
+    const newsLetterInput = screen.getByTestId('news-letter-subscribe');
 
     expect(newsLetterInput).toBeInTheDocument();
   });
