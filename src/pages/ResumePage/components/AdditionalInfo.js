@@ -8,7 +8,7 @@ import { ImLocation2 } from 'react-icons/im';
 import Section from "./Section";
 
 const AdditionalInfo = (props) => {
-    var { main } = props;
+    let { main } = props;
     return (
         <Section>
             <div className={styles.additionalInfo}>
@@ -24,17 +24,17 @@ const AdditionalInfo = (props) => {
             </div>
             <div className={styles.additionalInfo}>
                 <ImLocation2 />
-                <a href={main.locationMaps} target="_blank">
+                <a href={main.locationMaps} target="_blank" rel="noreferrer">
                     {main.location}
                 </a>
             </div>
             <div className={styles.additionalInfo}>
                 <FaLinkedin />
-                <a href={main.linkedin} target="_blank">{main.linkedin}</a>
+                <a href={main.linkedin} target="_blank" rel="noreferrer">{main.linkedin}</a>
             </div>
             <div className={styles.additionalInfo}>
                 <FaGithub />
-                <a href={main.github} target="_blank">{main.github}</a>
+                <a href={main.github} target="_blank" rel="noreferrer">{main.github}</a>
             </div>
         </Section>
     );

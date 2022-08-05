@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   website:
     container_name: website
@@ -9,5 +10,6 @@ services:
       - local.env
     volumes:
       - './src:/app/src'
+      - './package.json:/app/package.json'
     ports:
       - '3000:3000'

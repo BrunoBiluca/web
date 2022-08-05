@@ -30,7 +30,7 @@ class LocaleService {
   }
 
   static isLocale = (locale) => {
-    return this.getLocale() == locale.name;
+    return this.getLocale() === locale.name;
   }
 }
 

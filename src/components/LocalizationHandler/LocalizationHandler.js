@@ -14,7 +14,7 @@ const LocalizationHandler = (props) => {
     let { direction } = props;
 
     let directionClass = styles.row;
-    if(direction == LocalizationDirection.vertical)
+    if(direction === LocalizationDirection.vertical)
         directionClass = styles.column;
 
     let containerClass = `${styles.localeContainer} ${directionClass}`;
