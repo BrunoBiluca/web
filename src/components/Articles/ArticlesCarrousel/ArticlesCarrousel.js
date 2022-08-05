@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ArticlesRequest from '../../services/ArticlesRequest';
-import ContentCard from '../ContentCard/ContentCard';
+import ArticlesRequest from 'components/Articles/services/ArticlesRequest';
+import ContentCard from 'components/ContentCard/ContentCard';
 import styles from './ArticlesCarrousel.module.css';
 
 const ArticlesCarrousel = () => {

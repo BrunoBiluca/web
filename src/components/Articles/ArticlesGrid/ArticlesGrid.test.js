@@ -6,8 +6,8 @@ import ArticlesGrid from './ArticlesGrid';
 describe('<ArticlesGrid />', () => {
   test('it should mount', () => {
     render(<ArticlesGrid />);
-    
-    const articlesGrid = screen.getByTestId('acticles-grid');
+
+    const articlesGrid = screen.getByTestId('articles-grid');
 
     expect(articlesGrid).toBeInTheDocument();
   });

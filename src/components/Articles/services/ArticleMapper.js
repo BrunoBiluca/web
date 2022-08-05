@@ -1,4 +1,4 @@
-import { storagePath } from '../config/server';
+import { storagePath } from 'config/server';
 
 class ArticleMapper {
   map = (res) => {

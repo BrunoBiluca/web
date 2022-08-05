@@ -3,7 +3,7 @@ import ContentCardHorizontal from '../../components/ContentCardHorizontal/Conten
 import { useLocation } from 'react-router';
 import ContentCard from '../../components/ContentCard/ContentCard';
 import GamesRequest from '../../services/GamesRequest';
-import ArticlesRequest from '../../services/ArticlesRequest';
+import ArticlesRequest from 'components/Articles/services/ArticlesRequest';
 
 const ContentsPage = () => {
 
@@ -26,6 +26,7 @@ const ContentsPage = () => {
   }, []);
 
   function getContents() {
+    // TODO: esse roteamento deve ser feito pelo Router
     if (location.pathname === "/games") {
       new GamesRequest().get(contents.length, pageLimit).then((res) => updateContent(res));
     }

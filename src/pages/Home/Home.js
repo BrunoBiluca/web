@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-import brunoPicture from '../../images/bruno_picture.jpg'
+import brunoPicture from 'images/bruno_picture.jpg'
 
 import styles from './Home.module.css';
 
-import GamesGrid from '../../components/GamesGrid/GamesGrid';
-import ArticlesGrid from '../../components/ArticlesGrid/ArticlesGrid';
-import GamesCarrousel from '../../components/GamesCarrousel/GamesCarrousel';
-import ArticlesCarrousel from '../../components/ArticlesCarrousel/ArticlesCarrousel';
+import GamesGrid from 'components/GamesGrid/GamesGrid';
+import ArticlesGrid from 'components/Articles/ArticlesGrid/ArticlesGrid';
+import GamesCarrousel from 'components/GamesCarrousel/GamesCarrousel';
+import ArticlesCarrousel from 'components/Articles/ArticlesCarrousel/ArticlesCarrousel';
 import HomeStrings from './HomeStrings';
 
 const Home = () => {

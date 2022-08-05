@@ -1,8 +1,8 @@
 import axios from 'axios';
 import ArticleMapper from './ArticleMapper';
-import { backendPath } from '../config/server';
-import LocaleService from './LocaleService';
-import UrlHelper from '../helpers/UrlHelper';
+import { backendPath } from 'config/server';
+import LocaleService from 'services/LocaleService';
+import UrlHelper from 'helpers/UrlHelper';
 
 class ArticlesRequest {
   debug = false;
@@ -21,7 +21,7 @@ class ArticlesRequest {
     const response = await axios.get(url);
     if (this.debug) console.log(response);
 
-    var responseArticles = [];
+    let responseArticles = [];
     response.data.forEach(element => {
       responseArticles.push(new ArticleMapper().map(element));
     });

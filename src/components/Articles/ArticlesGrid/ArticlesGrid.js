@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ArticlesGrid.module.css';
-import ArticlesRequest from '../../services/ArticlesRequest';
-import ContentCard from '../ContentCard/ContentCard';
-import ContentCardHorizontal from '../ContentCardHorizontal/ContentCardHorizontal';
+import ArticlesRequest from 'components/Articles/services/ArticlesRequest';
+import ContentCard from 'components/ContentCard/ContentCard';
+import ContentCardHorizontal from 'components/ContentCardHorizontal/ContentCardHorizontal';
 
 const ArticlesGrid = () => {
-  
+
   let [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const ArticlesGrid = () => {
   }, []);
 
   return (
-    <div data-testid="acticles-grid">
+    <div data-testid="articles-grid">
       <h2>Recent articles</h2>
 
       <div className={styles.contentGrid}>

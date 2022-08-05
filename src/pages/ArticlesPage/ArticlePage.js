@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from 'react-markdown'
-import Category from "../../components/Category/Category";
+import Category from "components/Category/Category";
 import remarkGfm from 'remark-gfm'
 
 import './ArticlePage.css';
-import CodeMarkdown from "../../components/CodeMarkdown/CodeMarkdown";
-import ImageMarkdown from "../../components/ImageMarkdown/ImageMarkdown";
-import ArticlesRequest from "../../services/ArticlesRequest";
+import CodeMarkdown from "components/CodeMarkdown/CodeMarkdown";
+import ImageMarkdown from "components/ImageMarkdown/ImageMarkdown";
+import ArticlesRequest from "components/Articles/services/ArticlesRequest";
 import { useParams } from "react-router";
 
-import placeHolder from '../../images/placeholder.png';
-import { storagePath } from "../../helpers/RemotePath";
+import placeHolder from 'images/placeholder.png';
+import { storagePath } from "helpers/RemotePath";
 
 function ArticlePage() {
   let { articleSlug } = useParams();
@@ -69,7 +69,7 @@ function ArticlePage() {
             code(codeProps) {
               return <CodeMarkdown codeProps={codeProps} />
             },
-            img({ node, className, children, ...props }) {
+            img({ node, className }) {
               return (
                 <img className={className}
                   src={storagePath(node.properties.src)}
