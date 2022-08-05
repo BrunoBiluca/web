@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { backendPath } from '../config/server';
+import { backendPath } from 'config/server';
 
 class NewsLetterRequest {
   debug = false;

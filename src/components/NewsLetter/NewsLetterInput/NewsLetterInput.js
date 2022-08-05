@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './NewsLetterInput.module.css';
-import NewsLetterRequest from '../../services/NewsLetterRequest';
-import { validateEmail } from '../../helpers/ValidationValues';
+import NewsLetterRequest from '../NewsLetterRequest';
+import { validateEmail } from '../../../helpers/ValidationValues';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const NewsLetterInput = () => {
