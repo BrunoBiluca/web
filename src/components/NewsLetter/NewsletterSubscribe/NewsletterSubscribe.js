@@ -11,7 +11,7 @@ const styles = {
 
 export default function NewsletterSubscribe() {
 
-  if(!FeaturesConfig.newsletter)
+  if(!FeaturesConfig.newsletter.enable)
     return;
 
   return <div className={styles.newsLetter} >

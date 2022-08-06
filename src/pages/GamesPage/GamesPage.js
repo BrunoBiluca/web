@@ -8,16 +8,16 @@ import ImageMarkdown from '../../components/ImageMarkdown/ImageMarkdown';
 import { formatBytes } from '../../helpers/FormatBytes';
 
 import unityLogo from '../../images/unity_logo_white.png'
-import GamesRequest from '../../services/GamesRequest';
+import GamesRequests from '../../components/Games/services/GamesRequests';
 import styles from './GamesPage.module.css';
 import { storagePath } from '../../helpers/RemotePath';
 
 const GamesPage = () => {
   let { gameSlug } = useParams();
-  let [game, setGame] = useState(GamesRequest.emptyGame);
+  let [game, setGame] = useState(GamesRequests.emptyGame);
 
   useEffect(() => {
-    new GamesRequest().getBySlug(gameSlug)
+    new GamesRequests().getBySlug(gameSlug)
       .then(res => setGame(res));
   }, [gameSlug]);
 

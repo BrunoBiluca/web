@@ -1,27 +1,12 @@
 import axios from "axios";
 import GameMapper from "./GameMapper";
-import { backendPath } from '../config/server';
-import UrlHelper from "../helpers/UrlHelper";
-import LocaleService from "./LocaleService";
-import placeHolder from '../images/placeholder.png';
+import { backendPath } from 'config/server';
+import UrlHelper from "helpers/UrlHelper";
+import LocaleService from "services/LocaleService";
+import GameBuilder from "./GameBuilder";
 
-class GamesRequest {
+class GamesRequests {
   debug = process.env.NODE_ENV === 'production' ? false : true;
-
-  static emptyGame = {
-    author: "",
-    categories: [],
-    content: "",
-    featuredImage: {
-      path: placeHolder,
-      description: "description placeholder"
-    },
-    publishedAt: "",
-    title: "",
-    gallery: [],
-    gamePackage: {},
-    howToPlay: []
-  }
 
   get = async (start = null, limit = null) => {
     let url = `${backendPath}/games`;
@@ -30,11 +15,11 @@ class GamesRequest {
     url = UrlHelper.addQueryString(url, "_limit", limit);
     url = UrlHelper.addQueryString(url, "_locale", LocaleService.getLocale());
 
-    var response = await axios.get(url);
+    let response = await axios.get(url);
 
     if (this.debug) console.log(response);
 
-    var responseArticles = [];
+    let responseArticles = [];
     response.data.forEach(element => {
       responseArticles.push(new GameMapper().map(element));
     });
@@ -42,7 +27,7 @@ class GamesRequest {
   }
 
   getById = async (id) => {
-    var response = await axios.get(`${backendPath}/games/${id}`)
+    let response = await axios.get(`${backendPath}/games/${id}`)
 
     if (this.debug) console.log(response);
 
@@ -58,10 +43,10 @@ class GamesRequest {
     if (this.debug) console.log(response);
 
     if (response.data.length === 0)
-      return GamesRequest.emptyGame;
+      return new GameBuilder().empty();
 
     return new GameMapper().map(response.data[0]);
   }
 }
 
-export default GamesRequest;
+export default GamesRequests;

@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import GamesRequest from '../../services/GamesRequest';
-import ContentCard from '../ContentCard/ContentCard';
-import ContentCardHorizontal from '../ContentCardHorizontal/ContentCardHorizontal';
+import ContentCard from 'components/ContentCard/ContentCard';
+import ContentCardHorizontal from 'components/ContentCardHorizontal/ContentCardHorizontal';
 import styles from './GamesGrid.module.css';
+import FeaturesConfig from 'config/FeaturesConfig';
 
 const GamesGrid = () => {
+  const gamesProvider = FeaturesConfig.games.provider();
+
   let [games, setGames] = useState([]);
 
   useEffect(() => {
-    new GamesRequest(true)
+    gamesProvider
       .get()
       .then(res => setGames(res));
   }, []);
@@ -17,7 +19,10 @@ const GamesGrid = () => {
     <div data-testid="games-grid">
       <h2>Games</h2>
       <div className={styles.contentGrid}>
-        <div style={{ flex: 4 }} className={`${styles.contentHolder} ${styles.contentHolderVertical}`}>
+        <div
+          style={{ flex: 4 }}
+          className={`${styles.contentHolder} ${styles.contentHolderVertical}`}
+        >
           <div className={styles.flex1} style={{ marginBottom: "1em" }}>
             <ContentCardHorizontal content={games[2]}>
               <p style={{ color: "#888" }}>Coming soon</p>

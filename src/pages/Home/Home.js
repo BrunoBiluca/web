@@ -4,11 +4,11 @@ import brunoPicture from 'images/bruno_picture.jpg'
 
 import styles from './Home.module.css';
 
-import GamesGrid from 'components/GamesGrid/GamesGrid';
+import GamesGrid from 'components/Games/GamesGrid/GamesGrid';
 import ArticlesGrid from 'components/Articles/ArticlesGrid/ArticlesGrid';
-import GamesCarrousel from 'components/GamesCarrousel/GamesCarrousel';
+import GamesCarrousel from 'components/Games/GamesCarrousel/GamesCarrousel';
 import ArticlesCarrousel from 'components/Articles/ArticlesCarrousel/ArticlesCarrousel';
-import HomeStrings from './HomeStrings';
+import HomeStrings from './Home.strings';
 
 const Home = () => {
 
