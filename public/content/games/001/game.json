@@ -1,0 +1,36 @@
+{
+  "key": "001",
+  "slug": "biluca-defense",
+  "title": "Biluca Defense",
+  "link": "",
+  "published_at": "2021-12-03",
+  "author": "Bruno Bernardes da Costa",
+  "description": "",
+  "description_summary": "",
+  "gameplay_duration": "5 - 10 minutes",
+  "game_status": "Released",
+  "online_play_link": "https://play.unity.com/mg/other/biluca-defense",
+  "itchio_link": "https://brunobiluca.itch.io/biluca-defense",
+  "featured_image": {
+    "formats": {},
+    "path": "",
+    "thumbnail": "content/games/001/images/gameplay_1.png",
+    "description": ""
+  },
+  "categories": [
+    {
+      "key": "1",
+      "name": "Games",
+      "color": "#69b419"
+    }
+  ],
+  "gallery": [
+    {
+      "key": "",
+      "name": "",
+      "path": "",
+      "thumbnail": ""
+    }
+  ],
+  "how_to_play": []
+}

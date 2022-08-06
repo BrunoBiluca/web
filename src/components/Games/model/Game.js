@@ -1,0 +1,46 @@
+export default class Game {
+  key
+  slug
+  title
+  link
+  publishedAt
+  author
+  description
+  contentSummary
+  gameplayDuration
+  gameStatus // TODO: definir os tipos
+  gamePlayLink
+  itchioLink
+  featuredImage = {
+    path: "",
+    thumbnail: "",
+    description: ""
+  }
+  categories = []
+  gallery = []
+  howToPlay = []
+
+  constructor(game) {
+    this.key = game.key
+    this.slug = game.slug
+    this.title = game.title
+    this.publishedAt = game.publishedAt
+    this.author = game.author
+    this.description = game.description
+    this.contentSummary = game.contentSummary
+    this.gameplayDuration = game.gameplayDuration
+    this.gameStatus = game.gameStatus
+    this.gamePlayLink = game.gamePlayLink
+    this.itchioLink = game.itchioLink
+
+    this.link = `/games/${game.slug}`
+  }
+
+  addCategory(key, name, color) {
+    this.categories.push({
+      "key": key,
+      "name": name,
+      "color": color
+    })
+  }
+}

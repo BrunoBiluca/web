@@ -1,5 +1,5 @@
-import GamesLocalProvider from "./GamesLocalProvider";
-import GamesRequests from "./GamesRequests"
+import GamesLocalProvider from "./local/GamesLocalProvider";
+import GamesRequests from "./backend/GamesRequests"
 
 export default class GamesProviderFactory {
   static local(){

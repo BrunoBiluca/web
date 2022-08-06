@@ -3,14 +3,14 @@ import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router';
 import remarkGfm from 'remark-gfm';
 
-import Category from '../../components/Category/Category';
-import ImageMarkdown from '../../components/ImageMarkdown/ImageMarkdown';
-import { formatBytes } from '../../helpers/FormatBytes';
+import Category from 'components/Category/Category';
+import ImageMarkdown from 'components/ImageMarkdown/ImageMarkdown';
+import { formatBytes } from 'helpers/FormatBytes';
 
-import unityLogo from '../../images/unity_logo_white.png'
-import GamesRequests from '../../components/Games/services/GamesRequests';
+import unityLogo from 'images/unity_logo_white.png'
+import GamesRequests from 'components/Games/services/backend/GamesRequests';
 import styles from './GamesPage.module.css';
-import { storagePath } from '../../helpers/RemotePath';
+import { storagePath } from 'helpers/RemotePath';
 
 const GamesPage = () => {
   let { gameSlug } = useParams();

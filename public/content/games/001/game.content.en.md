@@ -1,0 +1,1 @@
+Play against waves of enemies and gather resources to build a strong settlement.

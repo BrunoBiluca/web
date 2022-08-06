@@ -1,0 +1,1 @@
+Jogue contra ondas de inimigos, colete recursos para construir um forte estabelecimento.

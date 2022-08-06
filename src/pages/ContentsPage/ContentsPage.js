@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ContentCardHorizontal from '../../components/ContentCardHorizontal/ContentCardHorizontal';
+import ContentCardHorizontal from 'components/ContentCardHorizontal/ContentCardHorizontal';
 import { useLocation } from 'react-router';
-import ContentCard from '../../components/ContentCard/ContentCard';
-import GamesRequests from '../../components/Games/services/GamesRequests';
+import ContentCard from 'components/ContentCard/ContentCard';
+import GamesRequests from 'components/Games/services/backend/GamesRequests';
 import ArticlesRequests from 'components/Articles/services/ArticlesRequests';
 
 const ContentsPage = () => {

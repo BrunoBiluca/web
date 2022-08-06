@@ -1,5 +1,5 @@
 import axios from "axios";
-import GameMapper from "./GameMapper";
+import GameRequestMapper from "./GameRequestMapper";
 import { backendPath } from 'config/server';
 import UrlHelper from "helpers/UrlHelper";
 import LocaleService from "services/LocaleService";
@@ -21,7 +21,7 @@ class GamesRequests {
 
     let responseArticles = [];
     response.data.forEach(element => {
-      responseArticles.push(new GameMapper().map(element));
+      responseArticles.push(new GameRequestMapper().map(element));
     });
     return responseArticles;
   }
@@ -31,7 +31,7 @@ class GamesRequests {
 
     if (this.debug) console.log(response);
 
-    return new GameMapper().map(response.data);
+    return new GameRequestMapper().map(response.data);
   }
 
   getBySlug = async (slug) => {
@@ -45,7 +45,7 @@ class GamesRequests {
     if (response.data.length === 0)
       return new GameBuilder().empty();
 
-    return new GameMapper().map(response.data[0]);
+    return new GameRequestMapper().map(response.data[0]);
   }
 }
 

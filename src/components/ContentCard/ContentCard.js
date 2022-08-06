@@ -21,9 +21,10 @@ const ContentCard = (props) => {
       </div>
     );
 
-  let featuredImage = content.featuredImage.thumbnail
-    ? content.featuredImage.thumbnail
-    : placeholderImg;
+  let featuredImage =
+    !content.featuredImage || !content.featuredImage.thumbnail
+      ? placeholderImg
+      : content.featuredImage.thumbnail;
 
   function redirect() {
     history.push(content.link);
@@ -47,7 +48,11 @@ const ContentCard = (props) => {
                 .categories
                 .slice(0, 2)
                 .map(c => (
-                  <Category key={c.key} style={{ fontSize: "0.6em" }} category={c} />
+                  <Category
+                    key={c.key}
+                    style={{ fontSize: "0.6em" }}
+                    category={c}
+                  />
                 ))
             }
           </div>

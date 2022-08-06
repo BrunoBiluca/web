@@ -1,6 +1,6 @@
 import { storagePath } from "config/server";
 
-class GameMapper {
+class GameRequestMapper {
   map = (res) => {
     const locale = "en-US";
     const dateOptions = {
@@ -61,4 +61,4 @@ class GameMapper {
   }
 }
 
-export default GameMapper;
+export default GameRequestMapper;

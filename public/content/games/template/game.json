@@ -1,0 +1,39 @@
+{
+  "key": "",
+  "slug": "",
+  "title": "",
+  "link": "",
+  "published_at": "",
+  "author": {
+    "firstname": "",
+    "lastname": ""
+  },
+  "description": "",
+  "description_summary": "",
+  "gameplay_duration": "",
+  "game_status": "",
+  "online_play_link": "",
+  "itchio_link": "",
+  "featured_image": {
+    "formats": {},
+    "path": "",
+    "thumbnail": "",
+    "description": ""
+  },
+  "categories": [
+    {
+      "key": "",
+      "name": "",
+      "color": ""
+    }
+  ],
+  "gallery": [
+    {
+      "key": "",
+      "name": "",
+      "path": "",
+      "thumbnail": ""
+    }
+  ],
+  "how_to_play": ""
+}
