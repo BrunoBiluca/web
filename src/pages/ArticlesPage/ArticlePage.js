@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm'
 import './ArticlePage.css';
 import CodeMarkdown from "components/CodeMarkdown/CodeMarkdown";
 import ImageMarkdown from "components/ImageMarkdown/ImageMarkdown";
-import ArticlesRequest from "components/Articles/services/ArticlesRequest";
+import ArticlesRequests from "components/Articles/services/ArticlesRequests";
 import { useParams } from "react-router";
 
 import placeHolder from 'images/placeholder.png';
@@ -27,7 +27,7 @@ function ArticlePage() {
   });
 
   useEffect(() => {
-    new ArticlesRequest(true)
+    new ArticlesRequests(true)
       .getBySlug(articleSlug)
       .then(res => setArticle(res));
   }, [articleSlug]);

@@ -3,7 +3,7 @@ import ContentCardHorizontal from '../../components/ContentCardHorizontal/Conten
 import { useLocation } from 'react-router';
 import ContentCard from '../../components/ContentCard/ContentCard';
 import GamesRequests from '../../components/Games/services/GamesRequests';
-import ArticlesRequest from 'components/Articles/services/ArticlesRequest';
+import ArticlesRequests from 'components/Articles/services/ArticlesRequests';
 
 const ContentsPage = () => {
 
@@ -32,7 +32,7 @@ const ContentsPage = () => {
     }
 
     if (location.pathname === "/articles")
-      new ArticlesRequest().get(contents.length, pageLimit).then((res) => updateContent(res));
+      new ArticlesRequests().get(contents.length, pageLimit).then((res) => updateContent(res));
   }
 
   function updateContent(res) {

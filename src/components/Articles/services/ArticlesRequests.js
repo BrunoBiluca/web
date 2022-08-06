@@ -4,7 +4,7 @@ import { backendPath } from 'config/server';
 import LocaleService from 'services/LocaleService';
 import UrlHelper from 'helpers/UrlHelper';
 
-class ArticlesRequest {
+class ArticlesRequests {
   debug = false;
 
   constructor(debug = false) {
@@ -52,4 +52,4 @@ class ArticlesRequest {
 
 }
 
-export default ArticlesRequest;
+export default ArticlesRequests;

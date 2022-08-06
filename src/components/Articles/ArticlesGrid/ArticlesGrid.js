@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ArticlesGrid.module.css';
-import ArticlesRequest from 'components/Articles/services/ArticlesRequest';
 import ContentCard from 'components/ContentCard/ContentCard';
 import ContentCardHorizontal from 'components/ContentCardHorizontal/ContentCardHorizontal';
+import FeaturesConfig from 'config/FeaturesConfig';
 
 const ArticlesGrid = () => {
-
+  const articlesProvider = FeaturesConfig.articles.provider();
   let [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    new ArticlesRequest(true)
+    articlesProvider
       .get()
       .then(res => setArticles(res));
   }, []);

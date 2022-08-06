@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import ArticlesRequest from 'components/Articles/services/ArticlesRequest';
 import ContentCard from 'components/ContentCard/ContentCard';
 import styles from './ArticlesCarrousel.module.css';
+import FeaturesConfig from 'config/FeaturesConfig';
 
 const ArticlesCarrousel = () => {
+  const articlesProvider = FeaturesConfig.articles.provider();
   let [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    new ArticlesRequest(true)
+    articlesProvider
       .get()
       .then(res => setArticles(res));
   }, []);
@@ -20,7 +21,7 @@ const ArticlesCarrousel = () => {
           articles.map(g => {
             return (
               <ContentCard
-                style={{ 
+                style={{
                   width: "75%",
                   height: "440px",
                   display: "inline-block",

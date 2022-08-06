@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styles from './GamesCarrousel.module.css';
 import ContentCard from 'components/ContentCard/ContentCard';
-import GamesRequests from '../services/GamesRequests';
+import FeaturesConfig from 'config/FeaturesConfig';
 
 const GamesCarrousel = () => {
+  const gamesProvider = FeaturesConfig.games.provider();
+
   let [games, setGames] = useState([]);
 
   useEffect(() => {
-    new GamesRequests(true)
+    gamesProvider
       .get()
       .then(res => setGames(res));
   }, []);
