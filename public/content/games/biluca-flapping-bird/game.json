@@ -1,19 +1,19 @@
 {
-  "key": "biluca-defense",
-  "slug": "biluca-defense",
-  "title": "Biluca Defense",
-  "published_at": "2021-12-03",
+  "key": "biluca-flapping-bird",
+  "slug": "biluca-flapping-bird",
+  "title": "Biluca Flapping Bird",
+  "published_at": "2021-11-19",
   "author": "Bruno Bernardes da Costa",
   "description": "",
   "description_summary": "",
-  "gameplay_duration": "5 - 10 minutes",
+  "gameplay_duration": "5 minutes",
   "game_status": "Released",
-  "online_play_link": "https://play.unity.com/mg/other/biluca-defense",
-  "itchio_link": "https://brunobiluca.itch.io/biluca-defense",
+  "online_play_link": "https://play.unity.com/mg/other/biluca-flapping-bird",
+  "itchio_link": "https://brunobiluca.itch.io/biluca-flapping-bird",
   "featured_image": {
     "formats": {},
     "path": "",
-    "thumbnail": "images/gameplay_1.png",
+    "thumbnail": "images/thumbnail.png",
     "description": ""
   },
   "categories": [

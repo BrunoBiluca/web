@@ -13,8 +13,7 @@ export default class LocalGameMapper {
     mappedGame.featuredImage
       .thumbnail = `${this.repo.folderPath(game.key)}/${thumbnail}`
 
-    game.categories
-      .forEach(c => mappedGame.addCategory(c.key, c.name, c.color));
+    game.categories.forEach(c => mappedGame.addCategory(c));
 
     return mappedGame
   }

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './ContentCardHorizontal.module.css';
-import placeholderImg from '../../images/placeholder.png';
 import Category from '../Category/Category';
 import { useHistory } from 'react-router';
+import Image from 'components/Image/Image';
 
 const ContentCardHorizontal = (props) => {
   let history = useHistory();
@@ -21,9 +21,7 @@ const ContentCardHorizontal = (props) => {
       </div>
     );
 
-  let featuredImage = content.featuredImage.thumbnail
-    ? content.featuredImage.path
-    : placeholderImg;
+  let featuredImage = content.featuredImage && content.featuredImage.thumbnail;
 
   function redirect() {
     history.push(content.link);
@@ -37,7 +35,7 @@ const ContentCardHorizontal = (props) => {
       onClick={redirect}
     >
       <div style={{ width: props.imageWidth }} className={styles.cardHeader}>
-        <img src={featuredImage} alt="placeholder" />
+        <Image src={featuredImage} alt="" />
       </div>
       <div className={styles.cardContent}>
         <div className={styles.cardTop}>
