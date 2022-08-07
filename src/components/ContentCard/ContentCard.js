@@ -65,7 +65,7 @@ const ContentCard = (props) => {
           <p>
             {
               content.contentSummary.length > 100
-                ? content.contentSummary.substring(0, 200) + "..."
+                ? content.contentSummary.substring(0, 100) + "..."
                 : content.contentSummary
             }
           </p>

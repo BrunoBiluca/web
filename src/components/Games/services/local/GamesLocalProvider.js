@@ -1,21 +1,33 @@
 import IGamesProvider from "../IGamesProvider";
-import GamesContent from "./GamesContent";
+import {create} from "./GamesContentRepo";
 import LocalGameMapper from "./LocalGameMapper";
 
 export default class GamesLocalProvider extends IGamesProvider {
+
+  constructor() {
+    super()
+    this.repo = create()
+    this.mapper = new LocalGameMapper(this.repo)
+  }
+
   get = async (start = null, limit = null) => {
-    const gameConfigPath = GamesContent[0];
-    const gameFolder = gameConfigPath.replace("/game.json", "")
+    const games = []
+    for (const game of this.repo.getAll()) {
+      games.push(await this.getGameContent(game));
+    }
+    return games
+  }
 
-    const file = await fetch(gameConfigPath)
-    const game = await file.json();
-    const mappedGame = new LocalGameMapper().map(game)
+  async getGameContent(game) {
+    const configFilePath = this.repo.configPath(game);
+    const file = await fetch(configFilePath);
+    const config = await file.json();
+    const mappedGame = this.mapper.map(config);
 
-    // TODO: alterar as línguas de conteúdo
-    const gameContentFile = await fetch(gameFolder + "/game.content.ptbr.md")
-    mappedGame.contentSummary = await gameContentFile.text()
+    const content = await fetch(this.repo.contentPath(game));
 
-    return [mappedGame]
+    mappedGame.contentSummary = await content.text();
+    return mappedGame;
   }
 
   getById = async (id) => { }

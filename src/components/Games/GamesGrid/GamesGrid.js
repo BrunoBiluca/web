@@ -9,11 +9,16 @@ const GamesGrid = () => {
 
   let [games, setGames] = useState([]);
 
-  useEffect(() => {
+  const getGames = () => {
     gamesProvider
       .get()
       .then(res => setGames(res));
+  }
+
+  useEffect(() => {
+    getGames()
   }, []);
+
 
   return (
     <div data-testid="games-grid">

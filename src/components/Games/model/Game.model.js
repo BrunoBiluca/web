@@ -1,3 +1,5 @@
+import { getCategory } from "config/Categories"
+
 export default class Game {
   key
   slug
@@ -36,11 +38,7 @@ export default class Game {
     this.link = `/games/${game.slug}`
   }
 
-  addCategory(key, name, color) {
-    this.categories.push({
-      "key": key,
-      "name": name,
-      "color": color
-    })
+  addCategory(key) {
+    this.categories.push(getCategory(key))
   }
 }

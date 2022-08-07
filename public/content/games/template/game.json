@@ -1,13 +1,9 @@
 {
-  "key": "",
-  "slug": "",
+  "key": "001",
+  "slug": "biluca-defense",
   "title": "",
-  "link": "",
   "published_at": "",
-  "author": {
-    "firstname": "",
-    "lastname": ""
-  },
+  "author": "Bruno Bernardes da Costa",
   "description": "",
   "description_summary": "",
   "gameplay_duration": "",
@@ -35,5 +31,5 @@
       "thumbnail": ""
     }
   ],
-  "how_to_play": ""
+  "how_to_play": []
 }

@@ -1,8 +1,7 @@
 {
-  "key": "001",
+  "key": "biluca-defense",
   "slug": "biluca-defense",
   "title": "Biluca Defense",
-  "link": "",
   "published_at": "2021-12-03",
   "author": "Bruno Bernardes da Costa",
   "description": "",
@@ -14,14 +13,12 @@
   "featured_image": {
     "formats": {},
     "path": "",
-    "thumbnail": "content/games/001/images/gameplay_1.png",
+    "thumbnail": "images/gameplay_1.png",
     "description": ""
   },
   "categories": [
     {
-      "key": "1",
-      "name": "Games",
-      "color": "#69b419"
+      "key": "games"
     }
   ],
   "gallery": [
