@@ -1,5 +1,5 @@
-import ArticlesLocalProvider from "./ArticlesLocalProvider";
-import ArticlesRequests from "./ArticlesRequests";
+import ArticlesLocalProvider from "./local/ArticlesLocalProvider";
+import ArticlesRequests from "./backend/ArticlesRequests";
 
 export default class ArticlesProviderFactory {
   static local(){

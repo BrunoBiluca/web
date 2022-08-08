@@ -1,3 +1,4 @@
+import LocalFileReader from "services/LocalFileReader";
 import IGamesProvider from "../IGamesProvider";
 import {create} from "./GamesContentRepo";
 import LocalGameMapper from "./LocalGameMapper";
@@ -7,6 +8,7 @@ export default class GamesLocalProvider extends IGamesProvider {
   constructor() {
     super()
     this.repo = create()
+    this.fileReader = new LocalFileReader()
     this.mapper = new LocalGameMapper(this.repo)
   }
 
@@ -19,14 +21,10 @@ export default class GamesLocalProvider extends IGamesProvider {
   }
 
   async getGameContent(game) {
-    const configFilePath = this.repo.configPath(game);
-    const file = await fetch(configFilePath);
-    const config = await file.json();
-    const mappedGame = this.mapper.map(config);
+    const configPath = this.repo.configPath(game);
+    const mappedGame = await this.fileReader.mapObject(configPath, this.mapper);
 
-    const content = await fetch(this.repo.contentPath(game));
-
-    mappedGame.contentSummary = await content.text();
+    mappedGame.contentSummary = await this.fileReader.getText(this.repo.contentPath(game))
     return mappedGame;
   }
 

@@ -7,6 +7,15 @@ export default class LocalGameMapper {
   }
 
   map(game) {
+    try {
+      return this.onMap(game)
+    } catch (error) {
+      console.log("Error mapping: " + game.key)
+      throw error
+    }
+  }
+
+  onMap(game){
     const mappedGame = new Game(game)
 
     const thumbnail = game.featured_image.thumbnail

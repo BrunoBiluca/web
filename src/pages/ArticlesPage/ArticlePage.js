@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm'
 import './ArticlePage.css';
 import CodeMarkdown from "components/CodeMarkdown/CodeMarkdown";
 import ImageMarkdown from "components/ImageMarkdown/ImageMarkdown";
-import ArticlesRequests from "components/Articles/services/ArticlesRequests";
+import ArticlesRequests from "components/Articles/services/backend/ArticlesRequests";
 import { useParams } from "react-router";
 
 import placeHolder from 'images/placeholder.png';

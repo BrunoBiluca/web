@@ -3,7 +3,7 @@ import ContentCardHorizontal from 'components/ContentCardHorizontal/ContentCardH
 import { useLocation } from 'react-router';
 import ContentCard from 'components/ContentCard/ContentCard';
 import GamesRequests from 'components/Games/services/backend/GamesRequests';
-import ArticlesRequests from 'components/Articles/services/ArticlesRequests';
+import ArticlesRequests from 'components/Articles/services/backend/ArticlesRequests';
 
 const ContentsPage = () => {
 
