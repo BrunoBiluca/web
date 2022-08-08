@@ -15,15 +15,39 @@ export default class LocalGameMapper {
     }
   }
 
-  onMap(game){
+  onMap(game) {
     const mappedGame = new Game(game)
 
-    const thumbnail = game.featured_image.thumbnail
-    mappedGame.featuredImage
-      .thumbnail = `${this.repo.folderPath(game.key)}/${thumbnail}`
+    mappedGame.gameStatus = game.game_status
+    mappedGame.gamePlayLink = game.online_play_link
+    mappedGame.gameplayDuration = game.gameplay_duration
+    mappedGame.itchioLink = game.itchio_link
+    mappedGame.publishedAt = game.published_at
 
+    mappedGame.featuredImage = this.mapImage(game, game.featured_image)
+
+    if (!mappedGame.featuredImage.path) {
+      mappedGame.featuredImage.path = mappedGame.featuredImage.thumbnail
+    }
+
+    mappedGame.gallery = game.gallery.map(g => this.mapImage(game, g));
     game.categories.forEach(c => mappedGame.addCategory(c));
 
     return mappedGame
+  }
+
+  mapImage(game, imageObj) {
+    const path = imageObj.path
+      ? this.formatImagePath(game, imageObj.path)
+      : this.formatImagePath(game, imageObj.thumbnail)
+    return {
+      path: path,
+      thumbnail: this.formatImagePath(game, imageObj.thumbnail),
+      name: imageObj.name
+    }
+  }
+
+  formatImagePath(game, image) {
+    return `${this.repo.folderPath(game.key)}/${image}`
   }
 }

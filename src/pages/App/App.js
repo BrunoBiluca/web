@@ -14,10 +14,10 @@ class App extends React.Component {
     return (
       <Router>
         <Switch>
-          <Route exact path='/resume'>
+          <Route path='/resume' exact >
             <ResumePage />
           </Route>
-          <Route path='/' exact>
+          <Route path='/'>
             <ScrollToTop />
             <NavBar />
             <ContentRouter />

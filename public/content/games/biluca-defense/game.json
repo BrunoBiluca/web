@@ -24,7 +24,19 @@
       "key": "",
       "name": "",
       "path": "",
-      "thumbnail": ""
+      "thumbnail": "images/gameplay_2.png"
+    },
+    {
+      "key": "",
+      "name": "",
+      "path": "",
+      "thumbnail": "images/gameplay_1.png"
+    },
+    {
+      "key": "",
+      "name": "",
+      "path": "",
+      "thumbnail": "images/title_screen.png"
     }
   ],
   "how_to_play": []

@@ -6,7 +6,7 @@ export function create() {
 }
 
 export default class GamesContentRepo {
-  folder = "content/games";
+  folder = "/content/games";
   config_file = "game.json";
 
   constructor(registeredGames) {

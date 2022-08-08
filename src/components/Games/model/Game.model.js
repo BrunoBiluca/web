@@ -23,6 +23,10 @@ export default class Game {
   howToPlay = []
 
   constructor(game) {
+    this.init(game)
+  }
+
+  init(game) {
     this.key = game.key
     this.slug = game.slug
     this.title = game.title

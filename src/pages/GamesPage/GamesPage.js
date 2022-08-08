@@ -8,18 +8,23 @@ import ImageMarkdown from 'components/ImageMarkdown/ImageMarkdown';
 import { formatBytes } from 'helpers/FormatBytes';
 
 import unityLogo from 'images/unity_logo_white.png'
-import GamesRequests from 'components/Games/services/backend/GamesRequests';
 import styles from './GamesPage.module.css';
 import { storagePath } from 'helpers/RemotePath';
+import FeaturesConfig from 'config/FeaturesConfig';
+import Game from 'components/Games/model/Game.model';
 
 const GamesPage = () => {
+  let gameProvider = FeaturesConfig.games.provider()
   let { gameSlug } = useParams();
-  let [game, setGame] = useState(GamesRequests.emptyGame);
+  let [game, setGame] = useState(new Game({ slug: gameSlug }));
 
   useEffect(() => {
-    new GamesRequests().getBySlug(gameSlug)
-      .then(res => setGame(res));
-  }, [gameSlug]);
+    gameProvider
+      .getBySlug(gameSlug)
+      .then(res => {
+        setGame(res)
+      });
+  }, []);
 
   return (
     <div className={styles.gamesPage} data-testid="games-page">
@@ -80,20 +85,8 @@ const GamesPage = () => {
               <span>{game.publishedAt}</span>
             </p>
             <p>
-              <strong>Platforms: </strong>
-              <span></span>
-            </p>
-            <p>
               <strong>Game status: </strong>
               <span>{game.gameStatus}</span>
-            </p>
-            <p>
-              <strong>Last version: </strong>
-              <span></span>
-            </p>
-            <p>
-              <strong>Last version release date: </strong>
-              <span></span>
             </p>
             {
               game.gamePackage &&
@@ -104,18 +97,6 @@ const GamesPage = () => {
             }
           </div>
           <div className={styles.gameDownloadSection}>
-            {/* <div hidden={!game.gamePackage.url}>
-              <p>Download game</p>
-              <div className={styles.downloadButtonHolder}>
-                <a
-                  className={styles.downloadButton}
-                  href={game.gamePackage.url}
-                  download
-                >
-                  <span>Download Game</span>
-                </a>
-              </div>
-            </div> */}
             <div hidden={!game.itchioLink}>
               <p>Download game on itch.io</p>
               <div className={styles.downloadButtonHolder}>

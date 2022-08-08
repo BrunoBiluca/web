@@ -12,7 +12,7 @@ class ContentRouter extends React.Component {
 
   render() {
     return (
-      <div style={{flex: 1}} className={styles.contentRouter}>
+      <div style={{ flex: 1 }} className={styles.contentRouter}>
         <Switch>
           <Route path='/' exact>
             <Home />
