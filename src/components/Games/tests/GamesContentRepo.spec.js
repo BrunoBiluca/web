@@ -18,9 +18,9 @@ describe("GamesContentRepo.js", () => {
     expect(games).toHaveLength(2)
 
     expect(repo.folderPath(games[0]))
-      .toBe("content/games/game_01")
+      .toBe("/content/games/game_01")
     expect(repo.configPath(games[0]))
-      .toBe("content/games/game_01/game.json")
+      .toBe("/content/games/game_01/game.json")
   })
 
 })

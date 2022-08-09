@@ -14,15 +14,22 @@ export default class ArticlesLocalProvider extends IArticlesProvider {
   get = async (start = null, limit = null) => {
     const articles = []
     for (const article of this.repo.getAll()) {
-      articles.push(await this.getArticle(article));
+      articles.push(await this.getBySlug(article));
     }
     return articles
   }
 
-  getArticle = async (slug) => {
-    const article = await this.fileReader
-      .mapObject(this.repo.configPath(slug), this.mapper)
+  getBySlug = async (slug) => {
+    try {
+      const article = await this.fileReader
+        .mapObject(this.repo.configPath(slug), this.mapper)
 
-    return article
+      article.content = await this.fileReader.getText(this.repo.contentPath(slug))
+
+      return article
+    } catch (error) {
+      console.error(`Error loading: <${slug}> content on path: ${this.repo.configPath(slug)}`)
+      throw error
+    }
   }
 }

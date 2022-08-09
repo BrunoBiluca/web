@@ -8,6 +8,9 @@ export default class Article {
   featuredImage = {}
   categories = []
 
+  link
+  imageBasePath
+
   constructor(article) {
     this.key = article.key
     this.slug = article.slug
@@ -15,6 +18,7 @@ export default class Article {
     this.publishedAt = article.publishedAt
     this.author = article.author
     this.contentSummary = article.contentSummary ?? ""
+    this.link = `/articles/${article.slug}`
   }
 
   addCategory(category) {

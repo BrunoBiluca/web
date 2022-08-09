@@ -1,4 +1,5 @@
 import Game from "components/Games/model/Game.model"
+import Image from "components/Image/Image.model"
 
 export default class LocalGameMapper {
 
@@ -26,10 +27,6 @@ export default class LocalGameMapper {
 
     mappedGame.featuredImage = this.mapImage(game, game.featured_image)
 
-    if (!mappedGame.featuredImage.path) {
-      mappedGame.featuredImage.path = mappedGame.featuredImage.thumbnail
-    }
-
     mappedGame.gallery = game.gallery.map(g => this.mapImage(game, g));
     game.categories.forEach(c => mappedGame.addCategory(c));
 
@@ -40,11 +37,11 @@ export default class LocalGameMapper {
     const path = imageObj.path
       ? this.formatImagePath(game, imageObj.path)
       : this.formatImagePath(game, imageObj.thumbnail)
-    return {
+    return new Image({
       path: path,
       thumbnail: this.formatImagePath(game, imageObj.thumbnail),
       name: imageObj.name
-    }
+    })
   }
 
   formatImagePath(game, image) {

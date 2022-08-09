@@ -16,9 +16,7 @@ Timers são muito utilizados para programar ações da inteligência artificial 
 adicionar cooldowns para limitar o uso de certas funcionalidades, 
 ou até determinar eventos que ocorrem de tempos em tempos dentro da fase do jogo.
 
-<p align="center">
-  <img src="meme_mana_cooldown.png" width="300"/>
-</p>
+![](images/meme_mana_cooldown.png)
 
 Então a dúvida que fica é: como faço para contar tempo dentro de um jogo usando a engine Unity? 
 
@@ -95,9 +93,7 @@ public class SomeClass : MonoBehaviour
 }
 ```
 
-<p align="center">
-  <img src="many_clocks.jpg" width="300"/>
-</p>
+![](images/many_clocks.png)
 
 A arquitetura que estou propondo nesse artigo visa o desacoplamento da lógica de timer em uma classe separada chamada `Timer`, possibilitando assim uma **maior flexibilidade e reuso de código ao mesmo tempo que evita duplicação de código no mesmo projeto**.
 
@@ -325,9 +321,7 @@ Com todas as ferramentas na mão, podemos agora utilizar de vez o nosso timer e 
 
 Para o teste de nosso timer podemos implementar uma cena com dois contadores um para cada modo do Timer, cada contador será incrementado ao final do tempo do timer.
 
-<p align="center">
-  <img src="scene_timers_sample.png"/>
-</p>
+![](images/scene_timers_sample.png)
 
 Cada um desses contadores é atualizado da seguinte forma, utilizando um gerenciador na cena.
 
@@ -366,9 +360,7 @@ Também conseguimos aumentar a flexibilidade da solução adicionando múltiplos
 
 Por fim, sem muito esforço conseguimos adicionar funcionalidades ao nosso Timer, como a possibilidade de Stop/Resume e até de reiniciar o timer a medida que precisamos.
 
-<p align="center">
-  <img src="organized_clocks.jpg" width=300/>
-</p>
+![](./images/organized_clocks.jpg)
 
 Para você que chegou aqui muito obrigado pela leitura e qualquer dúvidas não deixe de comentar. Também não deixe de dar uma Estrela para o projeto no Github para seguir o projeto que tem muito mais coisas legais lá.
 
@@ -384,8 +376,5 @@ Aqui vou deixar algumas considerações secundárias a respeito do nosso pequeno
 
 - Para facilitar a visualização dos timers criados nas cenas na Unity, foi criado o método `TryGetTimersReference()` esse método busca a referência de um objeto chamado `** Timers` dentro da cena, todos o TimerMonoBehaviour são então criados como filhos desse objeto para facilizar visualização.
 
-<p align="center">
-  <img src="timers_object_example.png" />
-</p>
-
+![](images/timers_object_example.png)
 

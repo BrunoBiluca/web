@@ -15,12 +15,6 @@ const NavBar = () => {
           </div>
           <div style={{ flex: 1 }}></div>
           <div className={styles.navBarButton}>
-            <Link to="/games">Games</Link>
-          </div>
-          <div className={styles.navBarButton}>
-            <Link to="/articles">Learn</Link>
-          </div>
-          <div className={styles.navBarButton}>
             <Link to="/resume">Resume</Link>
           </div>
           <LocalizationHandler />

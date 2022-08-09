@@ -6,7 +6,7 @@ export function create() {
 }
 
 export default class ArticlesContentRepo {
-  folder = "content/articles";
+  folder = "/content/articles";
   config_file = "article.json";
 
   constructor(registeredArticles) {

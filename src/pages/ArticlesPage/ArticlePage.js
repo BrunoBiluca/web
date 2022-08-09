@@ -6,31 +6,26 @@ import remarkGfm from 'remark-gfm'
 import './ArticlePage.css';
 import CodeMarkdown from "components/CodeMarkdown/CodeMarkdown";
 import ImageMarkdown from "components/ImageMarkdown/ImageMarkdown";
-import ArticlesRequests from "components/Articles/services/backend/ArticlesRequests";
 import { useParams } from "react-router";
 
-import placeHolder from 'images/placeholder.png';
-import { storagePath } from "helpers/RemotePath";
+import FeaturesConfig from "config/FeaturesConfig";
+import Image from "components/Image/Image";
+import Article from "components/Articles/model/Article.model";
 
 function ArticlePage() {
+  const articlesProvider = FeaturesConfig.articles.provider()
   let { articleSlug } = useParams();
-  const [article, setArticle] = useState({
-    author: "",
-    categories: [],
-    content: "",
-    featuredImage: {
-      path: placeHolder,
-      description: "description placeholder"
-    },
-    publishedAt: "",
-    title: ""
-  });
+  const [article, setArticle] = useState(new Article({ slug: articleSlug }));
 
   useEffect(() => {
-    new ArticlesRequests(true)
+    articlesProvider
       .getBySlug(articleSlug)
       .then(res => setArticle(res));
   }, [articleSlug]);
+
+  function imagePath(image) {
+    return `${article.imageBasePath}/${image}`
+  }
 
   return (
     <div className="article">
@@ -42,7 +37,7 @@ function ArticlePage() {
             <span>{article.author}</span>
             <span>
               <strong>Posted on:</strong> {article.publishedAt}
-            </span>          
+            </span>
           </div>
 
           <div className="article-categories">
@@ -55,7 +50,7 @@ function ArticlePage() {
         </div>
       </div>
 
-      <img
+      <Image
         className="article-featured-image"
         src={article.featuredImage.path}
         alt={article.featuredImage.description}
@@ -71,8 +66,9 @@ function ArticlePage() {
             },
             img({ node, className }) {
               return (
-                <img className={className}
-                  src={storagePath(node.properties.src)}
+                
+                <Image className={className}
+                  src={imagePath(node.properties.src)}
                   alt={node.properties.alt}
                 />
               );

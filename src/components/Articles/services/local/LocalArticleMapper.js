@@ -1,4 +1,5 @@
 import Article from "components/Articles/model/Article.model";
+import Image from "components/Image/Image.model";
 import { getCategory } from "config/Categories";
 
 export default class LocalArticleMapper {
@@ -10,20 +11,17 @@ export default class LocalArticleMapper {
     try {
       return this.onMap(article)
     } catch (error) {
-      console.log("Error mapping: " + article.key)
+      console.error("Error mapping: " + article.key)
       throw error
     }
-
   }
 
   onMap(article) {
     const mappedArticle = new Article(article)
 
-    const thumbnail = article.featured_image.thumbnail
-    mappedArticle.featuredImage
-      .thumbnail = `${this.repo.folderPath(article.key)}/${thumbnail}`
-
+    mappedArticle.featuredImage = this.mapImage(article, article.featured_image)
     mappedArticle.contentSummary = article.description
+    mappedArticle.imageBasePath = this.repo.folderPath(article.key)
 
     article.categories
       .forEach(c => mappedArticle.addCategory(getCategory(c)));
@@ -31,4 +29,14 @@ export default class LocalArticleMapper {
     return mappedArticle
   }
 
+  mapImage(article, imageObj) {
+    return new Image(
+      {
+        path: imageObj.path ? imageObj.path : imageObj.thumbnail,
+        thumbnail: imageObj.thumbnail,
+        name: imageObj.name
+      },
+      this.repo.folderPath(article.key)
+    )
+  }
 }
