@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-import brunoPicture from 'images/bruno_picture.jpg'
-
 import styles from './Home.module.css';
 
 import GamesGrid from 'components/Games/GamesGrid/GamesGrid';
 import ArticlesGrid from 'components/Articles/ArticlesGrid/ArticlesGrid';
 import GamesCarrousel from 'components/Games/GamesCarrousel/GamesCarrousel';
 import ArticlesCarrousel from 'components/Articles/ArticlesCarrousel/ArticlesCarrousel';
-import HomeStrings from './Home.strings';
+import BilucaIntro from './BilucaIntro'
 
 const Home = () => {
 
@@ -26,20 +24,7 @@ const Home = () => {
   return (
     <div className={styles.Home} data-testid="Home">
       <div>
-        <div className={styles.intro}>
-          <div>
-            <p>{HomeStrings.strings.intro_1.toString()}</p>
-            <p>{HomeStrings.strings.intro_2.toString()}</p>
-            <p>{HomeStrings.strings.intro_3.toString()}</p>
-          </div>
-          <div>
-            <img src={brunoPicture} alt="Bruno Biluca"/>
-          </div>
-          <div>
-            <p>{HomeStrings.strings.intro_4.toString()}</p>
-            <p>{HomeStrings.strings.intro_5.toString()}</p>
-          </div>
-        </div>
+        <BilucaIntro />
       </div>
 
       {
@@ -61,9 +46,5 @@ const Home = () => {
     </div>
   );
 }
-
-Home.propTypes = {};
-
-Home.defaultProps = {};
 
 export default Home;
