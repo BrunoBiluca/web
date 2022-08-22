@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import ContentCard from './ContentCard';
-import Content from '../model/Content';
+import Content from '../model/Content.model';
 
 describe('<ContentCard />', () => {
   test('it should mount', () => {

@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import styles from './ContentCard.module.css';
 import Category from '../../Category/Category';
 import Image from 'components/Image/Image';
-import Content from '../model/Content';
+import Content from '../model/Content.model';
 
 const ContentCard = (props) => {
   let history = useHistory();

@@ -1,20 +1,33 @@
 import React from 'react';
 import ContentCard from "../ContentCard/ContentCard";
-import Content from "../model/Content";
+import Content from "../model/Content.model";
 
-const InfinityContentHolder = (props) => {
-  const { items } = props;
-  if (!items || items.length === 0)
+const style = {
+  display: "inline-block",
+  columnCount: 3
+}
+
+const cardStyle = {
+  marginTop: "0px",
+  marginBottom: "20px",
+  marginLeft: "12px",
+  marginRight: "12px"
+}
+
+const InfinityContentHolder = ({ contents }) => {
+  if (!contents || contents.length === 0)
     return
 
   return (
-    <div data-testid="infinity-content-holder">
-      {items.map(i => <ContentCard content={i} />)}
+    <div style={style} data-testid="infinity-content-holder">
+      {
+        contents.map(i => <ContentCard content={i} style={cardStyle} />)
+      }
     </div>
   );
 }
 
-InfinityContentHolder.propTypes = { items: Array[Content] };
+InfinityContentHolder.propTypes = { contents: Array[Content] };
 
 InfinityContentHolder.defaultProps = {};
 

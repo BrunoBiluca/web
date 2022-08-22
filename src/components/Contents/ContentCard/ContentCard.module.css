@@ -1,7 +1,7 @@
 .contentCard {
   height: 100%;
   border: 1px solid #d8d8d8;
-  border-radius: 5px;
+  border-radius: 8%;
   box-shadow: -1px 1px 5px 1px #ccc;
   cursor: pointer;
 }
@@ -14,7 +14,7 @@
 
 .contentCard:hover {
   border: 1px solid #c5c5c5;
-  border-radius: 5px;
+  border-radius: 8%;
   box-shadow: -1px 1px 5px 1px #a7a7a7;
 }
 

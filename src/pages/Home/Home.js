@@ -2,11 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './Home.module.css';
 
-import GamesGrid from 'components/Games/GamesGrid/GamesGrid';
-import ArticlesGrid from 'components/Articles/ArticlesGrid/ArticlesGrid';
-import GamesCarrousel from 'components/Games/GamesCarrousel/GamesCarrousel';
-import ArticlesCarrousel from 'components/Articles/ArticlesCarrousel/ArticlesCarrousel';
 import BilucaIntro from './BilucaIntro'
+import HomeContentView from './HomeContentView';
 
 const Home = () => {
 
@@ -27,22 +24,7 @@ const Home = () => {
         <BilucaIntro />
       </div>
 
-      {
-        isDesktop ?
-          (
-            <div>
-              <GamesGrid />
-              <ArticlesGrid />
-            </div>
-          )
-          :
-          (
-            <div>
-              <GamesCarrousel />
-              <ArticlesCarrousel />
-            </div>
-          )
-      }
+      <HomeContentView />
     </div>
   );
 }

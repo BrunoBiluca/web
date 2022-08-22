@@ -1,10 +1,9 @@
 class Content {
   title
-  featuredImage
+  contentSummary
   thumbnail
   link
   publishedAt
-  contentSummary
   categories = []
 
   constructor(title, contentSummary) {
