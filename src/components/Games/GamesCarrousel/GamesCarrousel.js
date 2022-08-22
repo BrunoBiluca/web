@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './GamesCarrousel.module.css';
-import ContentCard from 'components/ContentCard/ContentCard';
+import ContentCard from 'components/Contents/ContentCard/ContentCard';
 import FeaturesConfig from 'config/FeaturesConfig';
 
 const GamesCarrousel = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ArticlesGrid.module.css';
-import ContentCard from 'components/ContentCard/ContentCard';
-import ContentCardHorizontal from 'components/ContentCardHorizontal/ContentCardHorizontal';
+import ContentCard from 'components/Contents/ContentCard/ContentCard';
+import ContentCardHorizontal from 'components/Contents/ContentCardHorizontal/ContentCardHorizontal';
 import FeaturesConfig from 'config/FeaturesConfig';
 
 const ArticlesGrid = () => {

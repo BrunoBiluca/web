@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import ContentCardHorizontal from 'components/ContentCardHorizontal/ContentCardHorizontal';
+import ContentCardHorizontal from 'components/Contents/ContentCardHorizontal/ContentCardHorizontal';
 import { useLocation } from 'react-router';
-import ContentCard from 'components/ContentCard/ContentCard';
+import ContentCard from 'components/Contents/ContentCard/ContentCard';
 import GamesRequests from 'components/Games/services/backend/GamesRequests';
 import ArticlesRequests from 'components/Articles/services/backend/ArticlesRequests';
 

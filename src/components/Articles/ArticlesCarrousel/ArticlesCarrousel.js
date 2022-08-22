@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ContentCard from 'components/ContentCard/ContentCard';
+import ContentCard from 'components/Contents/ContentCard/ContentCard';
 import styles from './ArticlesCarrousel.module.css';
 import FeaturesConfig from 'config/FeaturesConfig';
 

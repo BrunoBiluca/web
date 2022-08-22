@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ContentCardHorizontal.module.css';
-import Category from '../Category/Category';
+import Category from '../../Category/Category';
 import { useHistory } from 'react-router';
 import Image from 'components/Image/Image';
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import ContentCard from 'components/ContentCard/ContentCard';
-import ContentCardHorizontal from 'components/ContentCardHorizontal/ContentCardHorizontal';
+import ContentCard from 'components/Contents/ContentCard/ContentCard';
+import ContentCardHorizontal from 'components/Contents/ContentCardHorizontal/ContentCardHorizontal';
 import styles from './GamesGrid.module.css';
 import FeaturesConfig from 'config/FeaturesConfig';
 

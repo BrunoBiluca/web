@@ -1,8 +1,9 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
 import styles from './ContentCard.module.css';
-import Category from '../Category/Category';
+import Category from '../../Category/Category';
 import Image from 'components/Image/Image';
+import Content from '../model/Content';
 
 const ContentCard = (props) => {
   let history = useHistory();
@@ -73,7 +74,7 @@ const ContentCard = (props) => {
 
 }
 
-ContentCard.propTypes = {};
+ContentCard.propTypes = { content: Content };
 
 ContentCard.defaultProps = {};
 
