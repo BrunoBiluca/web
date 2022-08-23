@@ -22,21 +22,19 @@ const ContentCard = (props) => {
       </div>
     );
 
-  let featuredImage = content.featuredImage && content.featuredImage.thumbnail
-
   function redirect() {
     history.push(content.link);
   }
 
   return (
     <div
-      style={{ ...props.style }}
+      style={{ background: content.backgroundColor, ...props.style }}
       className={styles.contentCard}
       data-testid="ContentCard"
       onClick={redirect}
     >
       <div className={styles.cardHeader}>
-        <Image src={featuredImage} alt="" />
+        <Image src={content.thumbnail} alt="" />
       </div>
       <div className={styles.cardContent}>
         <div className={styles.cardTop}>
@@ -60,13 +58,7 @@ const ContentCard = (props) => {
         </div>
         <div className={styles.cardContentBody}>
           <h3>{content.title}</h3>
-          <p>
-            {
-              content.contentSummary.length > 100
-                ? content.contentSummary.substring(0, 100) + "..."
-                : content.contentSummary
-            }
-          </p>
+          <p>{content.contentSummary}</p>
         </div>
       </div>
     </div>

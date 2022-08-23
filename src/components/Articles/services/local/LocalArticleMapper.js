@@ -19,6 +19,7 @@ export default class LocalArticleMapper {
   onMap(article) {
     const mappedArticle = new Article(article)
 
+    mappedArticle.publishedAt = article.published_at
     mappedArticle.featuredImage = this.mapImage(article, article.featured_image)
     mappedArticle.contentSummary = article.description
     mappedArticle.imageBasePath = this.repo.folderPath(article.key)

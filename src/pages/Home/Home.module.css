@@ -41,6 +41,10 @@
   color: #666;
   line-height: 1.6;
   font-weight: 400;
+  background: #eff8ef;
+  border-radius: 28px;
+  margin: 20px 0;
+  padding: 15px 0;
 }
 
 .intro div {

@@ -8,10 +8,11 @@ const style = {
 }
 
 const cardStyle = {
+  display: "inline-block",
   marginTop: "0px",
   marginBottom: "20px",
-  marginLeft: "12px",
-  marginRight: "12px"
+  marginLeft: "8px",
+  marginRight: "8px"
 }
 
 const InfinityContentHolder = ({ contents }) => {

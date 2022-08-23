@@ -5,6 +5,7 @@ class Content {
   link
   publishedAt
   categories = []
+  backgroundColor
 
   constructor(title, contentSummary) {
     this.title = title

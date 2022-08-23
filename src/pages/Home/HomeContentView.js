@@ -3,6 +3,7 @@ import InfinityContentHolder from 'components/Contents/InfinityContentHolder/Inf
 import Content from 'components/Contents/model/Content.model';
 import FeaturesConfig from 'config/FeaturesConfig';
 import { useEffect, useState } from 'react';
+import HomeStrings from './Home.strings';
 
 const HomeContentView = () => {
   const gamesProvider = FeaturesConfig.games.provider()
@@ -10,12 +11,13 @@ const HomeContentView = () => {
 
   const [contents, setContents] = useState([])
 
-  function mapContent(newContent) {
+  function mapContent(newContent, backgroundColor) {
     const content = new Content(newContent.title, newContent.contentSummary)
     content.categories = newContent.categories
     content.link = newContent.link
     content.publishedAt = newContent.publishedAt
-    content.thumbnail = newContent.featuredImage
+    content.thumbnail = newContent.featuredImage.thumbnail
+    content.backgroundColor = backgroundColor
     return content
   }
 
@@ -24,10 +26,12 @@ const HomeContentView = () => {
       const games = await gamesProvider.get()
       const articles = await articlesProvider.get()
 
-      setContents([
-        ...games.map(g => mapContent(g)),
-        ...articles.map(a => mapContent(a))
-      ])
+      const allContents = [
+        ...games.map(g => mapContent(g, "azure")),
+        ...articles.map(a => mapContent(a, "beige"))
+      ];
+
+      setContents(allContents.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)))
     }
 
     getContents()
@@ -36,10 +40,12 @@ const HomeContentView = () => {
 
   return (
     <div>
-      <h1 style={{textAlign: 'center'}}>Um pouco do meu trabalho 🧑‍💻</h1>
+      <h1 style={{ textAlign: 'center' }}>
+        {HomeStrings.strings.content_title.toString()}
+      </h1>
       <InfinityContentHolder contents={contents} />
     </div>
-    
+
   )
 }
 
