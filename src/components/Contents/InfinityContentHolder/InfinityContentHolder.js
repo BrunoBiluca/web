@@ -22,7 +22,7 @@ const InfinityContentHolder = ({ contents }) => {
   return (
     <div style={style} data-testid="infinity-content-holder">
       {
-        contents.map(i => <ContentCard content={i} style={cardStyle} />)
+        contents.map(c => <ContentCard content={c} style={cardStyle} />)
       }
     </div>
   );

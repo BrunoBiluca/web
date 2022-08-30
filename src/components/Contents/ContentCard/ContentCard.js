@@ -5,6 +5,7 @@ import Category from '../../Category/Category';
 import Image from 'components/Image/Image';
 import Content from '../model/Content.model';
 
+
 const ContentCard = (props) => {
   let history = useHistory();
 
@@ -28,7 +29,12 @@ const ContentCard = (props) => {
 
   return (
     <div
-      style={{ background: content.backgroundColor, ...props.style }}
+      style={{
+        "--bg-color": content.backgroundColor,
+        "--shadow-color": content.shadowColor,
+        "--hover-color": content.hoverColor,
+        ...props.style
+      }}
       className={styles.contentCard}
       data-testid="ContentCard"
       onClick={redirect}

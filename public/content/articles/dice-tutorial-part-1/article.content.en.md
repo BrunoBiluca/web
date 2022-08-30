@@ -4,9 +4,9 @@ Hello game devs, today I will bring you a tutorial to create a **Dice System** t
 
 This tutorial will be divided into 3 parts, following the complexity of the system.
 
-- Part 1: Basic Dice System in plain C#
-- Part 2: Generic Dice System in plain C#
-- Part 3: Physically Dice System using Unity Rigidbody physics
+- **Part 1:** Basic Dice System in plain C#
+- **Part 2:** Generic Dice System in plain C#
+- **Part 3:** Physically Dice System using Unity Rigidbody physics
 
 This tutorial will be a demonstration of my thought process to make this implementation of a Dice System. I will skip some iterations over the development process to not overflow with details and I'll try to be as much concise as possible.
 
@@ -29,7 +29,7 @@ Here is the list of features that the Dice System implements.
 
 # Project Setup
 
-Create a unity project of any kind. I recommend creating a 3D (URP) project that is the now supported type of project.
+Create a unity project of any kind. I recommend creating a 3D (URP) project that is the now-supported type of project.
 
 ![](images/unity_project_creation.png)
 
@@ -49,7 +49,7 @@ Now the project is up and running and we can start implementing the features.
 
 Let's start with the first feature: **Create a Numeric Dice with 6 sides**.
 
-For that let's create a test that validates if the Numeric Dice was created successfully.
+For that let's create a test that validates if the Numeric Dice was created successfully. So for that, we need to validate every Dice's side and dice's invalid sides.
 
 ```c#
 using NUnit.Framework;

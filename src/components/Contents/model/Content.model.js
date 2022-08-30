@@ -6,6 +6,8 @@ class Content {
   publishedAt
   categories = []
   backgroundColor
+  shadowColor
+  hoverColor
 
   constructor(title, contentSummary) {
     this.title = title
