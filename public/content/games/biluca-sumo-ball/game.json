@@ -21,10 +21,10 @@
   ],
   "gallery": [
     {
-      "key": "",
-      "name": "",
-      "path": "",
-      "thumbnail": ""
+      "key": "gameplay",
+      "name": "gameplay",
+      "path": "images/gameplay.png",
+      "thumbnail": "images/gameplay.png"
     }
   ],
   "how_to_play": []

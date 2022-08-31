@@ -1,11 +1,13 @@
 import Game from "components/Games/model/Game.model";
 import { formatBytes } from "helpers/FormatBytes";
-import styles from "./GamesPage.modules.css"
+import styles from "./GamesPage.module.css"
 import unityLogo from "images/unity_logo_white.png";
 import itchioLogo from "images/itchio_logo_white.png"
+import Tooltip from "components/Tooltip/Tooltip";
 
-const GameInfo = (props) => {
-  const game = { props }
+const GameInfo = ({ game }) => {
+
+  console.log(game)
 
   return (
     <div className={styles.gameInfo}>
@@ -32,31 +34,32 @@ const GameInfo = (props) => {
       </div>
       <div className={styles.gameDownloadSection}>
         <div hidden={!game.itchioLink}>
-          <p>Download game on itch.io</p>
-          <div className={styles.downloadButtonHolder}>
-            <a
-              className={styles.downloadButton}
-              href={game.itchioLink}
-              target="_blank"
-              rel="noreferrer external"
-            >
-              <img src={itchioLogo} alt="Itch.io logo" />
-              <span>Download Game</span>
-            </a>
-          </div>
+          <Tooltip text="Download game">
+            <div className={styles.downloadButtonHolder}>
+              <a
+                className={styles.downloadButton}
+                href={game.itchioLink}
+                target="_blank"
+                rel="noreferrer external"
+              >
+                <img src={itchioLogo} alt="Itch.io logo" />
+              </a>
+            </div>
+          </Tooltip>
         </div>
         <div hidden={!game.gamePlayLink}>
-          <p>Try it online</p>
-          <div className={styles.downloadButtonHolder}>
-            <a
-              className={styles.downloadButton}
-              href={`${game.gamePlayLink}`}
-              target="_blank"
-              rel="noreferrer external"
-            >
-              <img src={unityLogo} alt="Unity engine logo" />
-            </a>
-          </div>
+          <Tooltip text="Try it online">
+            <div className={styles.downloadButtonHolder}>
+              <a
+                className={styles.downloadButton}
+                href={game.gamePlayLink}
+                target="_blank"
+                rel="noreferrer external"
+              >
+                <img src={unityLogo} alt="Unity engine logo" />
+              </a>
+            </div>
+          </Tooltip>
         </div>
       </div>
     </div>

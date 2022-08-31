@@ -41,25 +41,20 @@
 }
 
 .content {
-  padding: 1em 2em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1em;
+  padding: 1em;
   line-height: 32px;
   letter-spacing: -0.003em;
   font-size: 21px;
-  margin-bottom: -0.46em;
+  margin: .3em 0;
   word-break: break-word;
   font-weight: 400;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  font-size: 1em;
 }
 
 .galleryItem {
-  display: inline-grid;
-  grid-column-gap: 50px;
-  margin: .5em;
-  padding: .5em;
   cursor: pointer;
 }
 
@@ -67,19 +62,20 @@
   max-width: 100%;
 }
 
-.gameInfo {
-  display: flex;
-}
-
 .gameMoreInfo {
-  flex: 1;
+  background: #d9ffff;
+  padding: 0.6em;
+  border: 1px solid #6ad1d1;
 }
 
-.gameDownloadSection {
-  flex: 1;
+.gameMoreInfo p {
+  font-size: .8em;
+  margin: 0.4em;
+  line-height: initial;
 }
 
 .downloadButtonHolder {
+  margin: 1em 0;
   text-align: center;
 }
 

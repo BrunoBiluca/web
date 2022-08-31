@@ -1,6 +1,6 @@
-import styles from "GamesPage.module.css"
+import styles from "./GamesPage.module.css"
 
-const GamesGallery = (props) => {
+const GameGallery = (props) => {
   const { game } = props
 
   return (
@@ -27,4 +27,4 @@ const GamesGallery = (props) => {
   )
 }
 
-export default GamesGallery;
+export default GameGallery;

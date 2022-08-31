@@ -5,6 +5,8 @@ import styles from './GamesPage.module.css';
 import GlobalConfig from 'config/GlobalConfig';
 import Game from 'components/Games/model/Game.model';
 import GamesMarkdown from 'components/MarkdownComponents/GamesMarkdown/GamesMarkdown';
+import GameInfo from './GameInfo';
+import GameGallery from './GameGallery';
 
 const GamesPage = () => {
   const { gameSlug } = useParams();
@@ -21,9 +23,9 @@ const GamesPage = () => {
   }, [gameSlug]);
 
   return (
-    <div 
+    <div
       style={contentColor.getStyle()}
-      className={styles.gamesPage} 
+      className={styles.gamesPage}
       data-testid="games-page"
     >
       <div>
@@ -38,12 +40,13 @@ const GamesPage = () => {
         <div>
           <h2>About this game</h2>
           <GamesMarkdown game={game} />
+          <GameInfo game={game} />
         </div>
-        {/* GameInfo */}
-        {/* How to play */}
-        {/* Games Gallery */}
-        {/* Repository and Commits */}
+        <div>
+          <GameGallery game={game} />
+        </div>
       </div>
+      {/* Repository and Commits */}
     </div>
   );
 
