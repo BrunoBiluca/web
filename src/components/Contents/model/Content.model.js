@@ -1,3 +1,5 @@
+import ContentColor from "components/Contents/model/ContentColor.model"
+
 class Content {
   title
   contentSummary
@@ -5,9 +7,7 @@ class Content {
   link
   publishedAt
   categories = []
-  backgroundColor
-  shadowColor
-  hoverColor
+  contentColor = new ContentColor()
 
   constructor(title, contentSummary) {
     this.title = title

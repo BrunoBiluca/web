@@ -1,4 +1,4 @@
-import FeaturesConfig from "../../../config/FeaturesConfig";
+import GlobalConfig from "config/GlobalConfig";
 import NewsLetterInput from "../NewsLetterInput/NewsLetterInput";
 
 const styles = {
@@ -11,7 +11,7 @@ const styles = {
 
 export default function NewsletterSubscribe() {
 
-  if(!FeaturesConfig.newsletter.enable)
+  if(!GlobalConfig.newsletter.enable)
     return;
 
   return <div className={styles.newsLetter} >

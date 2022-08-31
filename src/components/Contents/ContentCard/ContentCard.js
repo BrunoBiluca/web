@@ -30,9 +30,7 @@ const ContentCard = (props) => {
   return (
     <div
       style={{
-        "--bg-color": content.backgroundColor,
-        "--shadow-color": content.shadowColor,
-        "--hover-color": content.hoverColor,
+        ...content.contentColor.getStyle(),
         ...props.style
       }}
       className={styles.contentCard}

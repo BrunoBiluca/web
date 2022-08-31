@@ -1,11 +1,11 @@
 .gamesPage {
-  width: 80%;
-  margin: 0 auto;
-  padding: 5% 0;
-}
-
-.header {
-  margin-bottom: 5%;
+  width: 90%;
+  margin: 2em auto;
+  border-radius: 28px;
+  background: var(--bg-color);
+  border: 1px solid var(--bg-color);
+  box-shadow: var(--shadow-color) -1px 1px 5px 1px;
+  transition: 0.5s;
 }
 
 .title {
@@ -36,10 +36,12 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
 }
 
 .content {
-  margin-top: 2em;
+  padding: 1em 2em;
   line-height: 32px;
   letter-spacing: -0.003em;
   font-size: 21px;
@@ -107,11 +109,13 @@
   .gamesPage {
     width: 90%;
   }
+
   .content {
     font-size: 18px;
     margin-top: 1.56em;
     line-height: 28px;
   }
+
   .categories .category {
     display: inline-block;
     margin-bottom: .5em;

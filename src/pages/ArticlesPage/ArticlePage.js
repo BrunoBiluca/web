@@ -4,16 +4,16 @@ import Category from "components/Category/Category";
 import remarkGfm from 'remark-gfm'
 
 import './ArticlePage.css';
-import CodeMarkdown from "components/CodeMarkdown/CodeMarkdown";
-import ImageMarkdown from "components/ImageMarkdown/ImageMarkdown";
+import CodeMarkdown from "components/MarkdownComponents/CodeMarkdown/CodeMarkdown";
+import ImageMarkdown from "components/MarkdownComponents/ImageMarkdown/ImageMarkdown";
 import { useParams } from "react-router";
 
-import FeaturesConfig from "config/FeaturesConfig";
+import GlobalConfig from "config/GlobalConfig";
 import Image from "components/Image/Image";
 import Article from "components/Articles/model/Article.model";
 
 function ArticlePage() {
-  const articlesProvider = FeaturesConfig.articles.provider()
+  const articlesProvider = GlobalConfig.articles.provider()
   let { articleSlug } = useParams();
   const [article, setArticle] = useState(new Article({ slug: articleSlug }));
 

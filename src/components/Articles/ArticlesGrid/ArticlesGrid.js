@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import styles from './ArticlesGrid.module.css';
 import ContentCard from 'components/Contents/ContentCard/ContentCard';
 import ContentCardHorizontal from 'components/Contents/ContentCardHorizontal/ContentCardHorizontal';
-import FeaturesConfig from 'config/FeaturesConfig';
+import GlobalConfig from 'config/GlobalConfig';
 
 const ArticlesGrid = () => {
-  const articlesProvider = FeaturesConfig.articles.provider();
+  const articlesProvider = GlobalConfig.articles.provider();
   let [articles, setArticles] = useState([]);
 
   useEffect(() => {

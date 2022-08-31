@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ContentCard from 'components/Contents/ContentCard/ContentCard';
 import styles from './ArticlesCarrousel.module.css';
-import FeaturesConfig from 'config/FeaturesConfig';
+import GlobalConfig from 'config/GlobalConfig';
 
 const ArticlesCarrousel = () => {
-  const articlesProvider = FeaturesConfig.articles.provider();
+  const articlesProvider = GlobalConfig.articles.provider();
   let [articles, setArticles] = useState([]);
 
   useEffect(() => {
