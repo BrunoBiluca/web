@@ -6,9 +6,6 @@ import itchioLogo from "images/itchio_logo_white.png"
 import Tooltip from "components/Tooltip/Tooltip";
 
 const GameInfo = ({ game }) => {
-
-  console.log(game)
-
   return (
     <div className={styles.gameInfo}>
       <div className={styles.gameMoreInfo}>
