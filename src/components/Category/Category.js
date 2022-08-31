@@ -1,33 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Category.module.css';
 
 function Category(props) {
-  let [hover, setHover] = useState(false);
-  let category = props.category;
+  let { category, style } = props;
 
-  let style = props.style;
-  style = {
-    ...style,
-    color: category.color,
-    borderColor: category.color,
-  };
-
-  if (hover) {
-    style = {
-      ...style,
-      color: "#fff",
-      background: category.color,
-      borderColor: category.color
-    }
+  let categoryStyle = {
+    "--bg-color": category.color,
+    ...style
   }
 
   return (
     <span
       key={category.key}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
+      style={categoryStyle}
       className={styles.category}
-      style={style}
     >
       {category.name}
     </span>

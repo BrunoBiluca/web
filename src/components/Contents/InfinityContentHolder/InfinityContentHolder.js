@@ -4,7 +4,9 @@ import Content from "../model/Content.model";
 
 const style = {
   display: "inline-block",
-  columnCount: 3
+  columnCount: 3,
+  marginRight: "-8px",
+  marginLeft: "-8px"
 }
 
 const cardStyle = {

@@ -42,6 +42,8 @@
   line-height: 1.6;
   font-weight: 400;
   background: #eff8ef;
+  border: 1px solid #48c648;
+  box-shadow: #48c648 -1px 1px 5px 1px;
   border-radius: 28px;
   margin: 20px 0;
   padding: 15px 0;
@@ -53,9 +55,14 @@
   flex: 1;
 }
 
+.intro p {
+  font-family: cursive;
+}
+
 .intro img {
   display: block;
   width: 100%;
+  border-radius: 28px;
 }
 
 

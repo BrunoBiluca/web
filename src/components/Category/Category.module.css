@@ -5,8 +5,15 @@
   margin: 0 4px;
   font-size: small;
   border: 3px solid;
+  color: #fff;
+  background-color: var(--bg-color);
+  border-color: var(--bg-color);
+  transition: 0.5s;
 }
 
 .category:hover {
   cursor: pointer;
+  color: var(--bg-color);
+  background-color: transparent;
+  border-color: var(--bg-color);
 }
