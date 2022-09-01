@@ -27,5 +27,10 @@
       "thumbnail": "images/gameplay.png"
     }
   ],
+  "repository": {
+    "name": "",
+    "owner": "",
+    "url": ""
+  },
   "how_to_play": []
 }

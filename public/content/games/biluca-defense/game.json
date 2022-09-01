@@ -39,5 +39,10 @@
       "thumbnail": "images/title_screen.png"
     }
   ],
+  "repository": {
+    "name": "biluca-defense",
+    "owner": "BrunoBiluca",
+    "url": "https://github.com/BrunoBiluca/biluca-defense"
+  },
   "how_to_play": []
 }

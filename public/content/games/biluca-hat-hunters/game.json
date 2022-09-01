@@ -28,5 +28,10 @@
       "thumbnail": ""
     }
   ],
+  "repository": {
+    "name": "BilucaHatChase",
+    "owner": "BrunoBiluca",
+    "url": "https://github.com/BrunoBiluca/BilucaHatChase"
+  },
   "how_to_play": []
 }

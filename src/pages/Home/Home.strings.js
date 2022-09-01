@@ -1,23 +1,4 @@
-import LocaleService from "../../services/LocaleService"
-
-
-class LocaleStr {
-  obj = {}
-
-  constructor(key) {
-    this.obj["key"] = key;
-  }
-
-  addLocale(locale, value) {
-    this.obj[locale] = value;
-    return this;
-  }
-
-  toString() {
-    const locale = LocaleService.getLocale();
-    return this.obj[locale];
-  }
-}
+import LocaleStr from "services/LocaleStr";
 
 class HomeStrings {
   static strings = {

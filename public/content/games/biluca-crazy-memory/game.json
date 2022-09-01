@@ -27,5 +27,10 @@
       "thumbnail": ""
     }
   ],
+  "repository": {
+    "name": "crazy-memory",
+    "owner": "BrunoBiluca",
+    "url": "https://github.com/BrunoBiluca/crazy-memory"
+  },
   "how_to_play": []
 }

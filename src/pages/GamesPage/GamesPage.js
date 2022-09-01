@@ -7,6 +7,7 @@ import Game from 'components/Games/model/Game.model';
 import GamesMarkdown from 'components/MarkdownComponents/GamesMarkdown/GamesMarkdown';
 import GameInfo from './GameInfo';
 import GameGallery from './GameGallery';
+import GitHubRepository from 'components/GitHubRepository/GitHubRepository';
 
 const GamesPage = () => {
   const { gameSlug } = useParams();
@@ -46,7 +47,14 @@ const GamesPage = () => {
           <GameGallery game={game} />
         </div>
       </div>
-      {/* Repository and Commits */}
+      {
+        game.repository &&
+        <GitHubRepository
+          owner={game.repository.owner}
+          repository={game.repository.name}
+          repositoryURL={game.repository.url}
+        />
+      }
     </div>
   );
 

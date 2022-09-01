@@ -27,5 +27,10 @@
       "thumbnail": ""
     }
   ],
+  "repository": {
+    "name": "flap-bird-clone",
+    "owner": "BrunoBiluca",
+    "url": "https://github.com/BrunoBiluca/flap-bird-clone"
+  },
   "how_to_play": []
 }

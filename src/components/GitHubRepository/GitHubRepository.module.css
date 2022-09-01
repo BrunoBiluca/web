@@ -1,0 +1,52 @@
+.githubRepository {
+  padding: 3em;
+}
+
+.githubRepository h2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 48px;
+}
+
+.repositoryCard {
+  cursor: pointer;
+}
+
+.commitHistory {
+  border-radius: 28px;
+  background: #d9ffff;
+  border: 1px solid #6ad1d1;
+}
+
+.commit {
+  border-bottom: 1px solid #6ad1d1;
+  border-collapse: collapse;
+  padding: 0.7em;
+  padding-left: 3em;
+  font-family: sans-serif;
+}
+
+.commit:last-child {
+  border: 0;
+}
+
+.commit * {
+  margin: 0px;
+}
+
+.commitInfo {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatarHolder {
+  height: inherit;
+}
+
+.avatarHolder img {
+  height: inherit;
+  border-radius: 50%;
+}

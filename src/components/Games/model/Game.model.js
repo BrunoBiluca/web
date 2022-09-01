@@ -22,6 +22,8 @@ export default class Game {
   gallery = []
   howToPlay = []
 
+  repository = {}
+
   constructor(game) {
     this.init(game)
   }
@@ -38,6 +40,8 @@ export default class Game {
     this.gameStatus = game.gameStatus
     this.gamePlayLink = game.gamePlayLink
     this.itchioLink = game.itchioLink
+
+    this.repository = game.repository
 
     this.link = `/games/${game.slug}`
   }
