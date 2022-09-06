@@ -1,3 +1,4 @@
+import { env } from 'process'
 import ArticlesProviderFactory from "components/Articles/services/ArticlesProviderFactory";
 import GamesProviderFactory from "components/Games/services/GamesProviderFactory";
 import ContentColor from "../components/Contents/model/ContentColor.model";
@@ -13,6 +14,9 @@ const GlobalConfig = {
   },
   newsletter: {
     enable: false
+  },
+  github: {
+    token() { return env.REACT_APP_GITHUB_PERSONAL_TOKEN }
   }
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import ContentCard from "../ContentCard/ContentCard";
 import Content from "../model/Content.model";
+import PropTypes from 'prop-types';
 
 const style = {
   display: "inline-block",
@@ -24,13 +25,13 @@ const InfinityContentHolder = ({ contents }) => {
   return (
     <div style={style} data-testid="infinity-content-holder">
       {
-        contents.map(c => <ContentCard content={c} style={cardStyle} />)
+        contents.map(c => <ContentCard key={c.title} content={c} style={cardStyle} />)
       }
     </div>
   );
 }
 
-InfinityContentHolder.propTypes = { contents: Array[Content] };
+InfinityContentHolder.propTypes = { contents: PropTypes.arrayOf(PropTypes.instanceOf(Content)) };
 
 InfinityContentHolder.defaultProps = {};
 

@@ -13,11 +13,11 @@ import Image from "components/Image/Image";
 import Article from "components/Articles/model/Article.model";
 
 function ArticlePage() {
-  const articlesProvider = GlobalConfig.articles.provider()
   let { articleSlug } = useParams();
   const [article, setArticle] = useState(new Article({ slug: articleSlug }));
 
   useEffect(() => {
+    const articlesProvider = GlobalConfig.articles.provider()
     articlesProvider
       .getBySlug(articleSlug)
       .then(res => setArticle(res));
@@ -66,7 +66,7 @@ function ArticlePage() {
             },
             img({ node, className }) {
               return (
-                
+
                 <Image className={className}
                   src={imagePath(node.properties.src)}
                   alt={node.properties.alt}

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useHistory } from "react-router-dom";
 import styles from './ContentCard.module.css';
 import Category from '../../Category/Category';
@@ -6,20 +7,18 @@ import Image from 'components/Image/Image';
 import Content from '../model/Content.model';
 
 
-const ContentCard = (props) => {
+const ContentCard = ({style, content, onClick, children}) => {
   let history = useHistory();
-
-  let content = props.content;
 
   if (!content)
     return (
       <div
-        style={{ ...props.style }}
+        style={{ ...style }}
         className={`${styles.contentCard} ${styles.empty}`}
-        onClick={props.onClick}
+        onClick={onClick}
         data-testid="ContentCard"
       >
-        {props.children}
+        {children}
       </div>
     );
 
@@ -31,7 +30,7 @@ const ContentCard = (props) => {
     <div
       style={{
         ...content.contentColor.getStyle(),
-        ...props.style
+        ...style
       }}
       className={styles.contentCard}
       data-testid="ContentCard"
@@ -70,7 +69,7 @@ const ContentCard = (props) => {
 
 }
 
-ContentCard.propTypes = { content: Content };
+ContentCard.propTypes = { content: PropTypes.instanceOf(Content) };
 
 ContentCard.defaultProps = {};
 

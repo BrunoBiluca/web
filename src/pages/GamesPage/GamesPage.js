@@ -40,7 +40,7 @@ const GamesPage = () => {
       <div className={styles.content}>
         <div>
           <h2>About this game</h2>
-          <GamesMarkdown game={game} />
+          <GamesMarkdown text={game.description} />
           <GameInfo game={game} />
         </div>
         <div>

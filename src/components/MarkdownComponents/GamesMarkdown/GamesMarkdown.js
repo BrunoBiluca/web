@@ -3,10 +3,10 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ImageMarkdown from "../ImageMarkdown/ImageMarkdown";
 
-const GamesMarkdown = ({game}) => {
+const GamesMarkdown = ({ text }) => {
   return (
     <ReactMarkdown
-      children={game.description}
+      children={text}
       remarkPlugins={[remarkGfm]}
       components={{
         img({ node, className }) {
