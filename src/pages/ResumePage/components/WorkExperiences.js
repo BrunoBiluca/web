@@ -49,7 +49,9 @@ const CompanyInfo = (props) => {
     <a
       href={companyUrl}
       style={{ color: "#666", fontStyle: "italic" }}
-      target="_blank">
+      target="_blank"
+      rel="noreferrer"
+    >
       {company}
     </a>
   )

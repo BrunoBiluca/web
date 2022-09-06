@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Languages.module.css";
 import Section from "./Section";
 
 const Languages = (props) => {
