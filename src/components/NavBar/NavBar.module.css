@@ -1,6 +1,7 @@
 .navBar {
   background-color: #272727;
   height: 68px;
+  padding: 0 3em;
 }
 
 .navBarBody {

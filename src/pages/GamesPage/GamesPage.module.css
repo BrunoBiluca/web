@@ -32,8 +32,13 @@
   text-align: right;
 }
 
+.featuredImageHolder {
+  text-align: center;
+}
+
 .featuredImage {
-  width: 100%;
+  width: 98%;
+  margin-top: 8px;
   height: auto;
   object-fit: cover;
   border-top-left-radius: 28px;

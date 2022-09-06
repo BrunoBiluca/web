@@ -1,3 +1,4 @@
+import GitHubRepositoryModel from "components/GitHubRepository/GitHubRepository.model"
 import { getCategory } from "config/Categories"
 
 export default class Game {
@@ -22,7 +23,7 @@ export default class Game {
   gallery = []
   howToPlay = []
 
-  repository = {}
+  repository = undefined
 
   constructor(game) {
     this.init(game)
@@ -41,7 +42,14 @@ export default class Game {
     this.gamePlayLink = game.gamePlayLink
     this.itchioLink = game.itchioLink
 
-    this.repository = game.repository
+    try {
+      this.repository = new GitHubRepositoryModel(
+        game.repository.name, game.repository.owner, game.repository.url
+      )
+    } catch (error) {
+      // invalid repository
+      this.repository = undefined
+    }
 
     this.link = `/games/${game.slug}`
   }

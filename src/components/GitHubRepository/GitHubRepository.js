@@ -3,8 +3,10 @@ import DateFormatterAsDaysAgo from "helpers/DateFormatterAsDaysAgo";
 import { useEffect, useState } from "react";
 import styles from "./GitHubRepository.module.css"
 import githubLogo from "./logotipo-do-github.png"
+import PropTypes from 'prop-types';
 
 class Commit {
+  oid
   message
   committedDate
   authorEmail
@@ -75,6 +77,7 @@ async function getLastCommits(repository, owner, authToken) {
   ["nodes"]
     .map(n => {
       const commit = new Commit()
+      commit.oid = n["oid"]
       commit.message = n["message"]
       commit.committedDate = n["committedDate"]
       commit.authorName = n["author"]["name"]
@@ -91,7 +94,6 @@ const GitHubRepository = ({ repositoryURL, repository, owner }) => {
 
   useEffect(() => {
     const githubToken = GlobalConfig.github.token();
-    console.log(githubToken)
     getLastCommits(
       repository,
       owner,
@@ -110,7 +112,6 @@ const GitHubRepository = ({ repositoryURL, repository, owner }) => {
     .replace("<repo>", repository)
 
   return (
-
     <div className={styles.githubRepository}>
       <h2><img style={{ height: "inherit" }} src={githubLogo} alt="Github logo" />Repository</h2>
 
@@ -127,21 +128,27 @@ const GitHubRepository = ({ repositoryURL, repository, owner }) => {
         {
           commits.length > 0 &&
           commits.map(c => (
-            <div className={styles.commit}>
+            <div key={c.oid} className={styles.commit}>
               <p>{c.message}</p>
-              <p className={styles.commitInfo}>
+              <div className={styles.commitInfo}>
                 <div className={styles.avatarHolder}>
                   <img src={c.authorAvatarUrl} alt="commit's author's avatar" />
                 </div>
                 <strong>{c.authorName}</strong>
                 <span>{formatCommitDate(c.committedDate)}</span>
-              </p>
+              </div>
             </div>
           ))
         }
       </div>
     </div>
   )
+}
+
+GitHubRepository.propTypes = {
+  repositoryURL: PropTypes.string,
+  owner: PropTypes.string,
+  repository: PropTypes.string
 }
 
 export default GitHubRepository;

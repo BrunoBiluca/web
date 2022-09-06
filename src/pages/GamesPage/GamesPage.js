@@ -29,7 +29,7 @@ const GamesPage = () => {
       className={styles.gamesPage}
       data-testid="games-page"
     >
-      <div>
+      <div className={styles.featuredImageHolder}>
         <img
           className={styles.featuredImage}
           src={game.featuredImage.path}
@@ -51,7 +51,7 @@ const GamesPage = () => {
         game.repository &&
         <GitHubRepository
           owner={game.repository.owner}
-          repository={game.repository.name}
+          repository={game.repository.repositoryName}
           repositoryURL={game.repository.url}
         />
       }
