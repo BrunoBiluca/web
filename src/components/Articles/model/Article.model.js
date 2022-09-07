@@ -4,6 +4,7 @@ export default class Article {
   title
   publishedAt
   author
+  content
   contentSummary
   featuredImage = {}
   categories = []

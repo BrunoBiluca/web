@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './ImageMarkdown.module.css';
 
-function ImageMarkdown(imageProps) {
-  let { node, className, children, ...props } = imageProps.imageProps;
+function ImageMarkdown(props) {
+  let { node, className, children, ...otherProps } = props.imageProps;
 
   let elements = children;
 
@@ -29,7 +29,7 @@ function ImageMarkdown(imageProps) {
     }
   }
 
-  return <p className={className} {...props}>
+  return <p className={className} {...otherProps}>
     {elements}
   </p>
 }
