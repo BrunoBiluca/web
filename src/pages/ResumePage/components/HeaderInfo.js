@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './HeaderInfo.module.css';
-import brunoPicture from '../../../images/bruno_picture.jpg';
+import brunoPicture from 'images/bruno_picture.webp';
 
 const HeaderInfo = (props) => {
   let { main } = props;

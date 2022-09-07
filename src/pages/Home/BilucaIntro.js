@@ -1,5 +1,5 @@
 import React from 'react';
-import brunoPicture from 'images/bruno_picture.jpg';
+import brunoPicture from 'images/bruno_picture.webp';
 import styles from './Home.module.css';
 import HomeStrings from './Home.strings';
 
