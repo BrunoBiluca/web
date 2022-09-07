@@ -16,7 +16,7 @@ const GamesInfo = (props) => {
 
 const GameInfo = (props) => {
   let { game } = props;
-  let screenshootPath = `/images/resume/${game.screenshoot}`;
+  let screenshootPath = `images/resume/${game.screenshoot}`;
 
   return (
     <a
