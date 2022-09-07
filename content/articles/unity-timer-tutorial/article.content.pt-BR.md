@@ -16,7 +16,7 @@ Timers são muito utilizados para programar ações da inteligência artificial 
 adicionar cooldowns para limitar o uso de certas funcionalidades, 
 ou até determinar eventos que ocorrem de tempos em tempos dentro da fase do jogo.
 
-![](images/meme_mana_cooldown.png)
+![](images/meme_mana_cooldown.png){:markdowmImage}
 
 Então a dúvida que fica é: como faço para contar tempo dentro de um jogo usando a engine Unity? 
 
