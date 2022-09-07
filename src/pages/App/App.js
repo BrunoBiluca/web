@@ -7,12 +7,13 @@ import ContentRouter from '../../components/ContentRouter/ContentRouter';
 import './App.css';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import ResumePage from '../ResumePage/ResumePage';
+import { baseUrl } from 'config/server';
 
 class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={baseUrl}>
         <Switch>
           <Route path='/resume' exact >
             <ResumePage />

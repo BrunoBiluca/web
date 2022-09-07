@@ -3,8 +3,8 @@ import Image from "components/Image/Image.model";
 import { getCategory } from "config/Categories";
 
 export default class LocalArticleMapper {
-  constructor(repo) {
-    this.repo = repo
+  constructor(contentPath) {
+    this.contentPath = contentPath
   }
 
   map(article) {
@@ -22,7 +22,7 @@ export default class LocalArticleMapper {
     mappedArticle.publishedAt = article.published_at
     mappedArticle.featuredImage = this.mapImage(article, article.featured_image)
     mappedArticle.contentSummary = article.description
-    mappedArticle.imageBasePath = this.repo.folderPath(article.key)
+    mappedArticle.imageBasePath = this.contentPath.folderPath(article.key)
 
     article.categories
       .forEach(c => mappedArticle.addCategory(getCategory(c)));
@@ -37,7 +37,7 @@ export default class LocalArticleMapper {
         thumbnail: imageObj.thumbnail,
         name: imageObj.name
       },
-      this.repo.folderPath(article.key)
+      this.contentPath.folderPath(article.key)
     )
   }
 }

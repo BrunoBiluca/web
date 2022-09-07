@@ -1,34 +1,33 @@
+import RegisteredArticles from "config/RegisteredArticles";
+import LocalContentPath from "services/LocalContentPath";
 import LocalFileReader from "services/LocalFileReader";
 import IArticlesProvider from "../IArticlesProvider";
-import { create } from "./ArticlesContentRepo";
 import LocalArticleMapper from "./LocalArticleMapper";
 
 export default class ArticlesLocalProvider extends IArticlesProvider {
   constructor() {
     super()
-    this.repo = create()
     this.fileReader = new LocalFileReader()
-    this.mapper = new LocalArticleMapper(this.repo)
+    this.contentPath = new LocalContentPath("article")
+    this.mapper = new LocalArticleMapper(this.contentPath)
   }
 
   get = async (start = null, limit = null) => {
     const articles = []
-    for (const article of this.repo.getAll()) {
+    for (const article of RegisteredArticles) {
       articles.push(await this.getBySlug(article));
     }
     return articles
   }
 
   getBySlug = async (slug) => {
+    const configPath = this.contentPath.configPath(slug);
     try {
-      const article = await this.fileReader
-        .mapObject(this.repo.configPath(slug), this.mapper)
-
-      article.content = await this.fileReader.getText(this.repo.contentPath(slug))
-
+      const article = await this.fileReader.mapObject(configPath, this.mapper)
+      article.content = await this.fileReader.getText(this.contentPath.contentPath(slug))
       return article
     } catch (error) {
-      console.error(`Error loading: <${slug}> content on path: ${this.repo.configPath(slug)}`)
+      console.error(`Error loading: <${slug}> content on path: ${configPath}`)
       throw error
     }
   }

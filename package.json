@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.2.0",
   "private": true,
-  "homepage": "https://brunobiluca.github.io/bruno-biluca-portal-website",
+  "homepage": "https://brunobiluca.github.io/web",
   "scripts": {
     "start": "react-scripts start",
     "start:watch": "powershell .\\run_local.ps1",

@@ -1,20 +1,21 @@
+import RegisteredGames from "config/RegisteredGames";
+import LocalContentPath from "services/LocalContentPath";
 import LocalFileReader from "services/LocalFileReader";
 import IGamesProvider from "../IGamesProvider";
-import { create } from "./GamesContentRepo";
 import LocalGameMapper from "./LocalGameMapper";
 
 export default class GamesLocalProvider extends IGamesProvider {
 
   constructor() {
     super()
-    this.repo = create()
+    this.contentPath = new LocalContentPath("game")
     this.fileReader = new LocalFileReader()
-    this.mapper = new LocalGameMapper(this.repo)
+    this.mapper = new LocalGameMapper(this.contentPath)
   }
 
   get = async (start = null, limit = null) => {
     const games = []
-    for (const game of this.repo.getAll()) {
+    for (const game of RegisteredGames) {
       games.push(await this.getGameContent(game));
     }
     return games
@@ -27,12 +28,12 @@ export default class GamesLocalProvider extends IGamesProvider {
   }
 
   async getGameContent(game) {
-    const configPath = this.repo.configPath(game);
+    const configPath = this.contentPath.configPath(game);
     const mappedGame = await this.fileReader
       .mapObject(configPath, this.mapper);
 
     mappedGame.contentSummary = await this.fileReader
-      .getText(this.repo.contentPath(game))
+      .getText(this.contentPath.contentPath(game))
     mappedGame.description = mappedGame.contentSummary
     return mappedGame;
   }

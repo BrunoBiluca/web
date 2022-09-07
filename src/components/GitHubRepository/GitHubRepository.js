@@ -98,7 +98,9 @@ const GitHubRepository = ({ repositoryURL, repository, owner }) => {
       repository,
       owner,
       githubToken
-    ).then(res => setCommits(res))
+    )
+      .then(res => setCommits(res))
+      .catch(err => console.log("error getting last commits"))
   }, [repository, owner])
 
   const formatCommitDate = (committedDate) => {
