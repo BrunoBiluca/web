@@ -1,0 +1,37 @@
+{
+  "key": "biluca-hat-hunters",
+  "slug": "biluca-hat-hunters",
+  "title": "Biluca Hat Hunters",
+  "published_at": "2021-11-17",
+  "author": "Bruno Bernardes da Costa",
+  "description": "",
+  "description_summary": "",
+  "gameplay_duration": "2 minutes",
+  "game_status": "Released",
+  "online_play_link": "https://play.unity.com/mg/other/biluca-hat-hunters",
+  "itchio_link": "https://brunobiluca.itch.io/biluca-hat-hunters",
+  "featured_image": {
+    "formats": {},
+    "path": "",
+    "thumbnail": "images/game_2.png",
+    "description": ""
+  },
+  "categories": [
+    "games",
+    "multiplayer"
+  ],
+  "gallery": [
+    {
+      "key": "",
+      "name": "",
+      "path": "",
+      "thumbnail": ""
+    }
+  ],
+  "repository": {
+    "name": "BilucaHatChase",
+    "owner": "BrunoBiluca",
+    "url": "https://github.com/BrunoBiluca/BilucaHatChase"
+  },
+  "how_to_play": []
+}

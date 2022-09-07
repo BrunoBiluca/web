@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2659f98e.chunk.css",
+    "main.js": "/static/js/main.fa836b8c.chunk.js",
+    "main.js.map": "/static/js/main.fa836b8c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e02955c1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e02955c1.js.map",
+    "static/js/2.14a981f9.chunk.js": "/static/js/2.14a981f9.chunk.js",
+    "static/js/2.14a981f9.chunk.js.map": "/static/js/2.14a981f9.chunk.js.map",
+    "static/js/3.b942169e.chunk.js": "/static/js/3.b942169e.chunk.js",
+    "static/js/3.b942169e.chunk.js.map": "/static/js/3.b942169e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.2659f98e.chunk.css.map": "/static/css/main.2659f98e.chunk.css.map",
+    "static/js/2.14a981f9.chunk.js.LICENSE.txt": "/static/js/2.14a981f9.chunk.js.LICENSE.txt",
+    "static/media/bruno_picture.8f59ec40.jpg": "/static/media/bruno_picture.8f59ec40.jpg",
+    "static/media/resume_packman_bg.50e3d9af.png": "/static/media/resume_packman_bg.50e3d9af.png",
+    "static/media/unity_logo_white.15fd696d.png": "/static/media/unity_logo_white.15fd696d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e02955c1.js",
+    "static/js/2.14a981f9.chunk.js",
+    "static/css/main.2659f98e.chunk.css",
+    "static/js/main.fa836b8c.chunk.js"
+  ]
+}

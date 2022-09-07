@@ -1,0 +1,36 @@
+{
+  "key": "001",
+  "slug": "biluca-defense",
+  "title": "",
+  "published_at": "",
+  "author": "Bruno Bernardes da Costa",
+  "description": "",
+  "description_summary": "",
+  "gameplay_duration": "",
+  "game_status": "",
+  "online_play_link": "",
+  "itchio_link": "",
+  "featured_image": {
+    "formats": {},
+    "path": "",
+    "thumbnail": "",
+    "description": ""
+  },
+  "categories": [
+    ""
+  ],
+  "gallery": [
+    {
+      "key": "",
+      "name": "",
+      "path": "",
+      "thumbnail": ""
+    }
+  ],
+  "repository": {
+    "name": "",
+    "owner": "",
+    "url": ""
+  },
+  "how_to_play": []
+}

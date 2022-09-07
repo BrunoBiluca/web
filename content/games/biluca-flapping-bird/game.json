@@ -1,0 +1,36 @@
+{
+  "key": "biluca-flapping-bird",
+  "slug": "biluca-flapping-bird",
+  "title": "Biluca Flapping Bird",
+  "published_at": "2021-11-19",
+  "author": "Bruno Bernardes da Costa",
+  "description": "",
+  "description_summary": "",
+  "gameplay_duration": "5 minutes",
+  "game_status": "Released",
+  "online_play_link": "https://play.unity.com/mg/other/biluca-flapping-bird",
+  "itchio_link": "https://brunobiluca.itch.io/biluca-flapping-bird",
+  "featured_image": {
+    "formats": {},
+    "path": "",
+    "thumbnail": "images/thumbnail.png",
+    "description": ""
+  },
+  "categories": [
+    "games"
+  ],
+  "gallery": [
+    {
+      "key": "",
+      "name": "",
+      "path": "",
+      "thumbnail": ""
+    }
+  ],
+  "repository": {
+    "name": "flap-bird-clone",
+    "owner": "BrunoBiluca",
+    "url": "https://github.com/BrunoBiluca/flap-bird-clone"
+  },
+  "how_to_play": []
+}

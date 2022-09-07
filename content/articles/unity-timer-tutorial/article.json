@@ -1,0 +1,16 @@
+{
+  "key": "unity-timer-tutorial",
+  "slug": "unity-timer-tutorial",
+  "title": "Como fazer um Timer definitivo na Unity?",
+  "published_at": "2021-11-16",
+  "author": "Bruno Bernardes da Costa",
+  "description": "Vamos explorar um pouco mais o conceito de Timers, elemento muito aplicado no desenvolvimento de games",
+  "featured_image": {
+    "path": "images/organized_clocks.jpg",
+    "thumbnail": "images/organized_clocks.jpg"
+  },
+  "categories": [
+    "tools",
+    "unity"
+  ]
+}

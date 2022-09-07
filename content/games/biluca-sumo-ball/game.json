@@ -1,0 +1,36 @@
+{
+  "key": "biluca-sumo-ball",
+  "slug": "biluca-sumo-ball",
+  "title": "Biluca Sumo Ball",
+  "published_at": "2021-11-19",
+  "author": "Bruno Bernardes da Costa",
+  "description": "",
+  "description_summary": "",
+  "gameplay_duration": "2 minutes",
+  "game_status": "Released",
+  "online_play_link": "https://play.unity.com/mg/other/biluca-sumo-ball",
+  "itchio_link": "https://brunobiluca.itch.io/biluca-sumo-game",
+  "featured_image": {
+    "formats": {},
+    "path": "",
+    "thumbnail": "images/gameplay.png",
+    "description": ""
+  },
+  "categories": [
+    "games"
+  ],
+  "gallery": [
+    {
+      "key": "gameplay",
+      "name": "gameplay",
+      "path": "images/gameplay.png",
+      "thumbnail": "images/gameplay.png"
+    }
+  ],
+  "repository": {
+    "name": "",
+    "owner": "",
+    "url": ""
+  },
+  "how_to_play": []
+}

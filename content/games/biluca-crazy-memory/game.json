@@ -1,0 +1,36 @@
+{
+  "key": "biluca-crazy-memory",
+  "slug": "biluca-crazy-memory",
+  "title": "Biluca Crazy Memory",
+  "published_at": "2021-11-29",
+  "author": "Bruno Bernardes da Costa",
+  "description": "",
+  "description_summary": "",
+  "gameplay_duration": "2 - 10 minutes",
+  "game_status": "Released",
+  "online_play_link": "https://play.unity.com/mg/other/biluca-crazy-memory",
+  "itchio_link": "https://brunobiluca.itch.io/biluca-crazy-memory",
+  "featured_image": {
+    "formats": {},
+    "path": "",
+    "thumbnail": "images/main_screen.png",
+    "description": ""
+  },
+  "categories": [
+    "games"
+  ],
+  "gallery": [
+    {
+      "key": "",
+      "name": "",
+      "path": "",
+      "thumbnail": ""
+    }
+  ],
+  "repository": {
+    "name": "crazy-memory",
+    "owner": "BrunoBiluca",
+    "url": "https://github.com/BrunoBiluca/crazy-memory"
+  },
+  "how_to_play": []
+}
