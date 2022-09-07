@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/bruno-biluca-portal-website/static/css/main.a2f0007e.chunk.css",
-    "main.js": "/bruno-biluca-portal-website/static/js/main.2b0b89f4.chunk.js",
-    "main.js.map": "/bruno-biluca-portal-website/static/js/main.2b0b89f4.chunk.js.map",
-    "runtime-main.js": "/bruno-biluca-portal-website/static/js/runtime-main.6f1a29c8.js",
-    "runtime-main.js.map": "/bruno-biluca-portal-website/static/js/runtime-main.6f1a29c8.js.map",
-    "static/js/2.f7b7ae8e.chunk.js": "/bruno-biluca-portal-website/static/js/2.f7b7ae8e.chunk.js",
-    "static/js/2.f7b7ae8e.chunk.js.map": "/bruno-biluca-portal-website/static/js/2.f7b7ae8e.chunk.js.map",
-    "static/js/3.e10538c3.chunk.js": "/bruno-biluca-portal-website/static/js/3.e10538c3.chunk.js",
-    "static/js/3.e10538c3.chunk.js.map": "/bruno-biluca-portal-website/static/js/3.e10538c3.chunk.js.map",
-    "index.html": "/bruno-biluca-portal-website/index.html",
-    "static/css/main.a2f0007e.chunk.css.map": "/bruno-biluca-portal-website/static/css/main.a2f0007e.chunk.css.map",
-    "static/js/2.f7b7ae8e.chunk.js.LICENSE.txt": "/bruno-biluca-portal-website/static/js/2.f7b7ae8e.chunk.js.LICENSE.txt",
-    "static/media/bruno_picture.8f59ec40.jpg": "/bruno-biluca-portal-website/static/media/bruno_picture.8f59ec40.jpg",
-    "static/media/resume_packman_bg.50e3d9af.png": "/bruno-biluca-portal-website/static/media/resume_packman_bg.50e3d9af.png",
-    "static/media/unity_logo_white.15fd696d.png": "/bruno-biluca-portal-website/static/media/unity_logo_white.15fd696d.png"
+    "main.css": "/web/static/css/main.a2f0007e.chunk.css",
+    "main.js": "/web/static/js/main.1291a494.chunk.js",
+    "main.js.map": "/web/static/js/main.1291a494.chunk.js.map",
+    "runtime-main.js": "/web/static/js/runtime-main.b24550ba.js",
+    "runtime-main.js.map": "/web/static/js/runtime-main.b24550ba.js.map",
+    "static/js/2.3d643247.chunk.js": "/web/static/js/2.3d643247.chunk.js",
+    "static/js/2.3d643247.chunk.js.map": "/web/static/js/2.3d643247.chunk.js.map",
+    "static/js/3.e10538c3.chunk.js": "/web/static/js/3.e10538c3.chunk.js",
+    "static/js/3.e10538c3.chunk.js.map": "/web/static/js/3.e10538c3.chunk.js.map",
+    "index.html": "/web/index.html",
+    "static/css/main.a2f0007e.chunk.css.map": "/web/static/css/main.a2f0007e.chunk.css.map",
+    "static/js/2.3d643247.chunk.js.LICENSE.txt": "/web/static/js/2.3d643247.chunk.js.LICENSE.txt",
+    "static/media/bruno_picture.8f59ec40.jpg": "/web/static/media/bruno_picture.8f59ec40.jpg",
+    "static/media/resume_packman_bg.50e3d9af.png": "/web/static/media/resume_packman_bg.50e3d9af.png",
+    "static/media/unity_logo_white.15fd696d.png": "/web/static/media/unity_logo_white.15fd696d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6f1a29c8.js",
-    "static/js/2.f7b7ae8e.chunk.js",
+    "static/js/runtime-main.b24550ba.js",
+    "static/js/2.3d643247.chunk.js",
     "static/css/main.a2f0007e.chunk.css",
-    "static/js/main.2b0b89f4.chunk.js"
+    "static/js/main.1291a494.chunk.js"
   ]
 }
