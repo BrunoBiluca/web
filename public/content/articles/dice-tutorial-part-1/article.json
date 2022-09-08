@@ -1,7 +1,16 @@
 {
-  "key": "folder_name",
-  "slug": "",
-  "title": "",
-  "published_at": "",
-  "author": "Bruno Bernardes da Costa"
+  "key": "dice-tutorial-part-1",
+  "slug": "dice-tutorial-part-1",
+  "title": "Dice System Tutorial - Part 1",
+  "published_at": "2022-09-08",
+  "author": "Bruno Bernardes da Costa",
+  "description": "Vamos criar um sistema de lançamento de dados na Unity. Utilizando lançamento de dados podemos implementar jogos de tabuleiro, Dungeon & Dragons e vários outros tipos de jogos",
+  "featured_image": {
+    "path": "images/sample_scene_dices.png",
+    "thumbnail": "images/sample_scene_dices.png"
+  },
+  "categories": [
+    "tools",
+    "unity"
+  ]
 }

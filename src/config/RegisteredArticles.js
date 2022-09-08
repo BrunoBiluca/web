@@ -1,5 +1,6 @@
 const RegisteredArticles = [
-  "unity-timer-tutorial"
+  "unity-timer-tutorial",
+  "dice-tutorial-part-1"
 ]
 
 export default RegisteredArticles;
