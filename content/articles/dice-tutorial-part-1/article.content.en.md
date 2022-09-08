@@ -60,7 +60,7 @@ namespace DiceSystem.Tests
     public class DiceTests
     {
         [Test]
-        public void ShouldCreateAValidNumericDice()
+        public void Should_create_a_valid_numeric_dice()
         {
             var dice = new NumericDice();
 
@@ -78,9 +78,9 @@ namespace DiceSystem.Tests
 }
 ```
 
-With this test, we expect that the creation of a Dice is successful and it has 6 sides, each one indexed by a number. More than that we test the boundaries of the dice.
+With this test, we expect that the creation of a Dice is successful and it has 6 sides, each one indexed by a number. More than that we test the boundaries of the dice. In case an invalid dice side is requested the code is prepared to handle it.
 
-The implementation to pass this test is the following
+As TDD suggests the implementation to pass a test need to be a minimal one. In this case, a minimal implementation to pass this test is the following:
 
 ```c#
 using System;
@@ -99,9 +99,11 @@ namespace DiceSystem
 
         public int GetSideValue(int sideIndex)
         {
+            // borders validation
             if(sideIndex < 0 || sideIndex >= sides.Count)
                 throw new InvalidOperationException();
 
+            // valid side return
             return sides[sideIndex];
         }
     }
@@ -124,10 +126,10 @@ namespace DiceSystem
 {
     public class NumericDiceTests
     {
-        // previous code
+        // previous code...
 
         [Test]
-        public void ShouldReturnASideWhenDiceIsThrow()
+        public void Should_return_a_side_when_dice_is_throw()
         {
             var dice = new NumericDice();
 
@@ -139,12 +141,12 @@ namespace DiceSystem
 }
 ```
 
-And the implementation to pass this test can be just returning one of the Dice's sides.
+And the implementation to pass this test can be just returning one of the Dice's sides (again think here about a minimum implementation).
 
 ```c#
 public class NumericDice
 {
-    // previous code
+    // previous code...
 
     public int Throw()
     {
@@ -153,12 +155,14 @@ public class NumericDice
 }
 ```
 
-Continuing with the throw dice feature, the dice can be thrown multiple times generating a random result. What will it be of our dice system if it returns only one of the dice's sides every time? So let's implement the random approach using the Unity Random system.
+Continuing with the throw dice feature, the dice can be thrown multiple times generating a **random result**. 
+
+What will it be of our dice system if it returns only one of the dice's sides every time? So let's implement the random approach using the **Unity Random system**.
 
 ```c#
 public class NumericDice
 {
-    // previous code
+    // previous code...
 
     public int Throw()
     {
@@ -167,11 +171,15 @@ public class NumericDice
 }
 ```
 
-That way we will have random values every time that we throw our dice. But sometimes this will break the test that we wrote, as it tests if the returned side has the value 1.
+That way we will have random values every time that we throw our dice. The problem with this approach stands that the test doesn't have control over the randomness of the implementation, and because of that it sometimes will break and when the value 1 is thrown then the test will pass.
+
+This is a common problem testing random in a system, we will see a solution for this problem in the next section.
 
 # Adding some control over the code
 
-Now we have random Dice that will generate different results every time. But this raises a question. How can I test the dice throw if we will have a different answer every time?
+Now we have a Dice that will generate different results every time, but this raises a question. 
+
+> How can I test the dice throw if we will have a different answer every time?
 
 To test something that uses a random system, we need to have a way of replicating the same results every time. That way we can test the behavior of the system and not only the values that output.
 
@@ -180,11 +188,10 @@ Let's create the next test that will help us with this part. This test will be c
 ```c#
 public class NumericDiceTests
 {
-    // previous code
-
+    // previous code...
 
     [Test]
-    public void ShouldReturnDifferentSidesWhenDiceIsThrowMultipleTimes()
+    public void Should_return_different_sides_when_dice_is_throw_multiple_times()
     {
         var random = new MockRandomGenerator(new int[] { 1, 3, 0 }); // side indexes
         var dice = new NumericDice();
@@ -196,12 +203,12 @@ public class NumericDiceTests
 }
 ```
 
-Of course, our test will fail because there isn't a way to select the sides that we want. Or you thought that there isn't. Now we introduce a powerful tool in our repertoire, the **Dependency inversion**. That way we can pass the dependencies to the NumericDice class that it needs. And one of the dependencies will be the `Random` class.
+Of course, our test will fail because there isn't a way to select the sides that we want. Or you thought that there isn't. Now we introduce a powerful tool in our repertoire, the **Dependency inversion**. That way we can pass the dependencies to the NumericDice class that it needs and one of the dependencies will be the `Random` class.
 
 ```c#
 public class NumericDice
 {
-    // previous code
+    // previous code...
 
     public int Throw(IRandomGenerator random)
     {
@@ -260,7 +267,7 @@ namespace DiceSystem.Tests
     public class DiceTests
     {
         [Test]
-        public void ShouldCreateAValidNumericDice()
+        public void Should_create_a_valid_numeric_dice()
         {
             var dice = new NumericDice();
 
@@ -276,7 +283,7 @@ namespace DiceSystem.Tests
         }
 
         [Test]
-        public void ShouldReturnASideWhenDiceIsThrow()
+        public void Should_return_a_side_when_dice_is_throw()
         {
             var random = new MockRandomGenerator(new int[] { 0 });
             var dice = new NumericDice();
@@ -287,7 +294,7 @@ namespace DiceSystem.Tests
         }
 
         [Test]
-        public void ShouldReturnDifferentSidesWhenDiceIsThrowMultipleTimes()
+        public void Should_return_different_sides_when_dice_is_throw_multiple_times()
         {
             var random = new MockRandomGenerator(new int[] { 1, 3, 0 });
             var dice = new NumericDice();
@@ -314,11 +321,3 @@ class NumericDice {
 + int Throw(IRandomGenerator random)
 }
 ```
-
-# Appendix
-
-## Assembly Definition
-
-## Test Runner
-
-Explain about Edit mode and why it will be used for the whole tutorial.
