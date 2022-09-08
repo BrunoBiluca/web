@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 import ContentRouter from '../../components/ContentRouter/ContentRouter';
@@ -7,25 +7,22 @@ import ContentRouter from '../../components/ContentRouter/ContentRouter';
 import './App.css';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import ResumePage from '../ResumePage/ResumePage';
-import { baseUrl } from 'config/server';
 
 class App extends React.Component {
 
   render() {
     return (
-      <Router basename={baseUrl}>
-        <Switch>
-          <Route path='/resume' exact >
-            <ResumePage />
-          </Route>
-          <Route path='/'>
-            <ScrollToTop />
-            <NavBar />
-            <ContentRouter />
-            <Footer />
-          </Route>
-        </Switch>
-      </Router>
+      <Switch>
+        <Route path='/resume' >
+          <ResumePage />
+        </Route>
+        <Route path='/'>
+          <ScrollToTop />
+          <NavBar />
+          <ContentRouter />
+          <Footer />
+        </Route>
+      </Switch>
     );
   }
 }
