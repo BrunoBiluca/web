@@ -1,0 +1,13 @@
+{
+  "key": "linear-interpolation-unity",
+  "slug": "linear-interpolation-unity",
+  "title": "Interpolação linear na Unity",
+  "published_at": "2023-02-15",
+  "author": "Bruno Bernardes da Costa",
+  "description": "Interpolação linear é um método muito utilizado no desenvolvimento de games. Nesse artigo discutimos a matemática por trás desse método e implementamos movimentação de objetos em uma cena utilizando interpolação.",
+  "featured_image": {
+    "path": "images/feature-image.png",
+    "thumbnail": "images/feature-image.png"
+  },
+  "categories": ["games", "tools"]
+}
