@@ -25,22 +25,30 @@ blockquote {
 - [Criando uma função de interpolação cúbica](#criando-uma-função-de-interpolação-cúbica)
 - [Biluca, o que tiramos disso tudo?](#biluca-o-que-tiramos-disso-tudo)
 - [Código fonte](#código-fonte)
+- [Referências](#referências)
 
 > 💡Nesse artigo você encontrará:
 > - Explicação da matemática da interpolação linear
 > - Principais casos de uso e seus códigos
 
-Interpolação linear é um método muito utilizado para calcular pontos intermediários dentro de uma função linear. Isso nos permite definir um comportamento de movimentação que siga uma função estabelecida, eliminando a necessidade de definir pontos individuais. 🙋 *Mas Biluca beleza essa matemática, e o que isso significa em desenvolvimento de games?*
+Interpolação linear é um método muito utilizado para calcular pontos intermediários dentro de uma função linear. Isso nos permite definir um comportamento que siga uma função estabelecida, eliminando a necessidade de definir pontos individuais.
 
-A interpolação linear nos permite criar funções para definir comportamento de animações, definir a movimentação de um objeto dentro do jogo de forma a definir apenas os ponto iniciais e finais pontos enquanto os intermediários são calculados, permitindo uma grande flexibilidade e dinamicidade na implementação de movimentos dentro do game.
+> 🙋 *Mas Biluca beleza essa matemática, e o que isso significa em desenvolvimento de games?*
 
-Pegue como exemplo a implementação da movimentação de um personagem de um ponto A para um ponto B do mapa. *Como você implementaria essa movimentação?* 
+Podemos utilizar esse método para múltiplas funcionalidades como por exemplo: 
 
-Uma forma seria definir todos os pontos que o personagem irá andar do ponto A até o ponto B. Outra seria ir somando um valor a cada passo do personagem e verificar se a posição final foi alcançada. Ambas abordagem não são ideias, a primeira seria necessário definir vários passos para o personagem, caso o caminho mude precisaríamos definir novamente todos os passos. A seguindo abordagem poderia funcionar para um movimento simples, porém movimentos complexos poderiam dificultar muito a validação da posição final.
+- criar comportamentos de animações baseados em funções, isso nos permite alterar de forma programática um movimento e então conseguir uma animação mais fluída. 
+- definir a movimentação de um objeto dentro do jogo de forma a definir apenas os ponto iniciais e finais enquanto os intermediários são calculados pelo interpolação. Por exemplo na criação de um sistema de patrulha.
 
-Para resolver esses tipos de problemas tempos a interpolação polinomial e é isso que vamos discutir hoje.
+> 🐶 **Pense comigo:** pegue como exemplo a implementação da movimentação de um personagem de um ponto A para um ponto B do mapa. *Como você implementaria essa movimentação?*
+
+Uma forma seria definir todos os pontos que o personagem irá andar do ponto A até o ponto B. Outra seria ir somando um valor a cada passo do personagem e verificar se a posição final foi alcançada. Perceba que ambas abordagems precisamos conhecer todos os pontos que regem o movimento. Na primeira seria necessário definir vários passos para o personagem, caso o caminho mude precisaríamos definir novamente todos os passos. A seguindo abordagem poderia funcionar para um movimento simples, porém movimentos complexos poderiam dificultar muito a validação da posição final.
+
+Para resolver esses tipos de problemas tempos a **interpolação polinomial** e é isso que vamos discutir hoje.
 
 Ao final desse artigo teremos passado pela **matemática do método de interpolação linear** e os **principais casos de usos**. Usos como a interpolação de movimento de objetos na cena dada uma função decomposta (quebrada) em outras funções lineares, no caso as funções quadráticas e cúbicas.
+
+As imagens abaixo demonstram as funções utilizadas para criar o movimento que a bola amarela percorre, levando em consideração os outros pontos criados. 
 
 | Implementação da Interpolação quadrática | Implementação da Interpolação cúbica |
 | :--------------------------------------: | :----------------------------------: |
@@ -50,7 +58,9 @@ Ao final desse artigo teremos passado pela **matemática do método de interpola
 
 Na matemática, Interpolação linear é um método no qual instanciamos um novo conjunto de dados utilizando interpolação polinomial em vista de construir novos pontos de dados no alcance de pontos já conhecidos ([definição da Wikipedia](https://pt.wikipedia.org/wiki/Interpola%C3%A7%C3%A3o_linear)).
 
-Esse novos conjuntos de dados podem ser utilizados para **aproximar um comportamento de uma função complexa** que não tem uma definição direta. Assim utilizamos interpolação linear para aproximar pedaços dessa função complexa em partes lineares. Essa característica é particularmente interessante por exemplo, na criação de um **sistema de patrulha**, onde o personagem patrulha uma região inteira de forma não linear e retilínea.
+Esse novos conjuntos de dados podem ser utilizados para **aproximar um comportamento de uma função complexa** que não tem uma definição direta. Assim utilizamos interpolação linear para aproximar partes dessa função complexa em partes lineares. 
+
+Essa característica é particularmente interessante por exemplo, na criação de um **sistema de patrulha**, onde o personagem patrulha uma região inteira de forma não linear e retilínea.
 
 Dados dois valores, pontos no espaço 2D ou 3D, vetores, vetores multidimensionais, podemos calcular qualquer valor entre esses dois valores.
 
@@ -103,7 +113,7 @@ Assim conseguimos saber as posições na função que define a posição de obje
 
 # Função Lerp na Unity
 
-A Unity já possui uma função de interpolação linear entre dois pontos no espaço para utilizarmos descrita na [documentação da Unity](https://docs.unity3d.com/ScriptReference/Vector3.Lerp.html).
+A Unity já possui uma função de interpolação linear entre dois pontos no espaço para utilizarmos. Essa função está descrita na [documentação da Unity](https://docs.unity3d.com/ScriptReference/Vector3.Lerp.html) e tem o como assinatura `Vector3 Vector3.Lerp(float a, float b, float t)`, onde `a` é o ponto inicial, `b` é o ponto final, `t` é a valor de interpolação e o retorno é a posição intermediária.
 
 Iremos implementar as próximas funções utilizando essa função `Vector3.Lerp` como base, já que essa função já implementa a interpolação linear entre dois pontos.
 
@@ -115,7 +125,7 @@ Para exercitar esse raciocínio vamos implementar a interpolação linear para u
 
 ![Função quadrática](images/quadratic-function.png)
 
-Assim podemos "quebrar" a função quadrática em duas partes. A primeira parte levará como ponto inicial o círculo verde mais a esquerda e o ponto final o círculo azul. A segunda parte levará como ponto inicial o círculo azul e o ponto final o círculo verde mais a direita. Combinando essas duas funções temos uma aproximação da função de interpolação linear para uma função quadrática.
+Assim podemos "quebrar" a função quadrática em duas partes. A primeira parte levará como ponto inicial o círculo verde mais a esquerda e o ponto final o círculo azul. A segunda parte levará como ponto inicial o círculo azul e o ponto final o círculo verde mais a direita. Combinando essas duas funções temos uma aproximação da função quadrática linear em termos de duas funções polinomiais.
 
 ```csharp
 public static Vector3 Quadratic(Vector3 a, Vector3 b, Vector3 c, float t)
@@ -127,9 +137,13 @@ public static Vector3 Quadratic(Vector3 a, Vector3 b, Vector3 c, float t)
 }
 ```
 
-A implementação dessa função nos leva ao seguinte resultado
+A implementação dessa função nos leva ao seguinte resultado:
 
 ![Demonstração da interpolação de uma função quadrática](images/quadratic-interpolation.gif)
+
+Nessa imagem podemos observar em verde os pontos iniciais e finais do nosso movimento. O ponto em azul é o ponto intermediário. A bolinha amarela irá seguir o ponto azul e com isso conseguimos criar vários outros tipos de padrões de movimentos interessantes.
+
+A seguir temos o código completo do objeto utilizado para montar a cena da imagem exibida acima.
 
 ```csharp
 public class QuadraticLerpDemo : MonoBehaviour
@@ -159,17 +173,17 @@ public class QuadraticLerpDemo : MonoBehaviour
 }
 ```
 
-Nessa imagem vemos em verde os pontos iniciais e finais do nosso movimento. O ponto em azul é o ponto intermediário. A bolinha amarela irá seguir o ponto azul e com isso conseguimos criar vários outros tipos de padrões de movimentos interessantes.
-
 # Criando uma função de interpolação cúbica
 
 Agora que já criamos uma função quadrática podemos dar um próximo passo e criar uma função cúbica definida por $y = x^3$ e com o seguinte comportamento conforme o seguinte gráfico.
 
 ![Função cúbica](images/cubic-function.png)
 
-Olhando bem para esse gráfico, em que tipo de funções podemos "quebrar" a função cúbica para implementarmos seu respectivo comportamento? Se você falou duas funções quadráticas acertou em cheio. (🙋 Agora me diga, as cores do gráfico ajudaram?)
+> 🐶 Pense comigo: olhando bem para esse gráfico, em que tipo de funções podemos "quebrar" a função cúbica para implementarmos seu respectivo comportamento? 
 
-Da mesma forma que decompomos a função quadrática em duas funções cúbicas agora vamos decompor a função cúbica em duas interpolações lineares de funções quadráticas.
+Se você falou duas funções quadráticas acertou em cheio. (🐶 Agora me diga, as cores do gráfico ajudaram?)
+
+Conforme fizemos no exemplo da função quadrática, onde quebramos a função quadrática em duas funções polinomiais lineares agora vamos decompor a função cúbica em duas funções polinomiais quadráticas.
 
 ```csharp
   public static Vector3 Cubic(Vector3 a, Vector3 b, Vector3 c, Vector3 d, float t)
@@ -183,6 +197,8 @@ Da mesma forma que decompomos a função quadrática em duas funções cúbicas 
 Com isso já podemos utilizar em nossa cena a função cúbica de interpolação e conseguimos o seguinte comportamento.
 
 ![](images/cubic-interpolation.gif)
+
+Da mesma forma, defimios os pontos iniciais e finais na cor verde e os pontos de ancoragem intermediários na cor azul. A bola amarela segue um movimento quadrático para cima no até a metade do movimento onde o primeiro ponto azul está definido e depois inverte sua movimentação para baixo por causa da influência do segundo ponto azul. 🐶 Legal né?
 
 ```csharp
 public class CubicLerpDemo : MonoBehaviour
@@ -227,3 +243,8 @@ No mais é isso, muito obrigado por quem leu esse artigo e um abraço. Até o pr
 - [Código das funções de interpolação linear](https://github.com/BrunoBiluca/UnityFoundation/blob/main/Code/Math/LinearInterpolation/LinearInterpolation.cs)
 - [Código da demonstração de interpolação linear](https://github.com/BrunoBiluca/unity-foundation-samples/tree/main/Assets/UnityFoundationSamples/UnityFoundation.Code/Math)
 
+# Referências
+
+- [Interpolação linar wikipédia](https://pt.wikipedia.org/wiki/Interpola%C3%A7%C3%A3o_linear)
+- [One Lone Coder - Essential Mathematics For Aspiring Game Developers](https://www.youtube.com/watch?v=DPfxjQ6sqrc&list=PLK9v9ebk627fEHJOVLR0xku-iYenE8m8X&index=12)
+- [Documentação Vector3.Lerp](https://docs.unity3d.com/ScriptReference/Vector3.Lerp.html)
