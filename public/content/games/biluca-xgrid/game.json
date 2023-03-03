@@ -1,0 +1,36 @@
+{
+  "key": "biluca-xgrid",
+  "slug": "biluca-xgrid",
+  "title": "Biluca XGrid",
+  "published_at": "2023-03-03",
+  "author": "Bruno Bernardes da Costa",
+  "description": "Enfrente de forma tática um grupo de lobisomens em uma igreja gótica",
+  "description_summary": "",
+  "gameplay_duration": "10 minutes",
+  "game_status": "Released",
+  "online_play_link": "",
+  "itchio_link": "https://brunobiluca.itch.io/biluca-xgrid",
+  "featured_image": {
+    "formats": {},
+    "path": "images/destaque_camera_perto.jpg",
+    "thumbnail": "images/destaque_camera_perto.jpg",
+    "description": ""
+  },
+  "categories": [
+    "games"
+  ],
+  "gallery": [
+    {
+      "key": "",
+      "name": "",
+      "path": "images/gameplay.png",
+      "thumbnail": "images/gameplay.png"
+    }
+  ],
+  "repository": {
+    "name": "course-xcom-game",
+    "owner": "BrunoBiluca",
+    "url": "https://github.com/BrunoBiluca/course-xcom-game"
+  },
+  "how_to_play": []
+}
