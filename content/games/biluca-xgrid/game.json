@@ -5,7 +5,7 @@
   "published_at": "2023-03-03",
   "author": "Bruno Bernardes da Costa",
   "description": "Enfrente de forma tática um grupo de lobisomens em uma igreja gótica",
-  "description_summary": "",
+  "description_summary": "Enfrente de forma tática um grupo de lobisomens em uma igreja gótica",
   "gameplay_duration": "10 minutes",
   "game_status": "Released",
   "online_play_link": "",
@@ -23,8 +23,14 @@
     {
       "key": "",
       "name": "",
-      "path": "images/gameplay.png",
-      "thumbnail": "images/gameplay.png"
+      "path": "images/gameplay.jpg",
+      "thumbnail": "images/gameplay.jpg"
+    },
+    {
+      "key": "",
+      "name": "",
+      "path": "images/gameplay_2.jpg",
+      "thumbnail": "images/gameplay_2.jpg"
     }
   ],
   "repository": {
