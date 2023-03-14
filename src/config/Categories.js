@@ -1,6 +1,7 @@
 import Category from "components/Category/Category.model";
 
 const categories = [
+  new Category("math", "Matemática", "#39b46c"),
   new Category("games", "Games", "#69b419"),
   new Category("multiplayer", "Multi Jogador", "#993399"),
   new Category("unity", "Unity", "#000066"),
