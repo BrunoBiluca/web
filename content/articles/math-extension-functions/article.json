@@ -1,0 +1,16 @@
+{
+  "key": "math-extension-functions",
+  "slug": "math-extension-functions",
+  "title": "4 funções matemáticas muito úteis no desenvolvimento de games",
+  "published_at": "2023-03-14",
+  "author": "Bruno Bernardes da Costa",
+  "description": "Implementação de algumas das principais funções utilizada no desenvolvimento de games de uma forma limpa.",
+  "featured_image": {
+    "path": "images/thumbnail.jpg",
+    "thumbnail": "images/thumbnail.jpg"
+  },
+  "categories": [
+    "math",
+    "unity"
+  ]
+}
