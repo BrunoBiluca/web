@@ -1,0 +1,15 @@
+{
+  "key": "single-responsibility-principal",
+  "slug": "single-responsibility-principal",
+  "title": "O S do SOLID - Responsabilidade Única",
+  "published_at": "2023-03-'5",
+  "author": "Bruno Bernardes da Costa",
+  "description": "Definição e exemplos na implementação de games utilizando um dos principais princípios de programação orientada a objetos limpa",
+  "featured_image": {
+    "path": "images/single-responsibility-analogy.png",
+    "thumbnail": "images/single-responsibility-analogy.png"
+  },
+  "categories": [
+    "code"
+  ]
+}
