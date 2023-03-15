@@ -281,6 +281,50 @@ Encapsulamos em seus contextos de responsabilidade cada uma das operações exec
 
 Ou seja, se quisermos alterar a forma que posição do objeto é calculada alteramos a classe `PositionHandler`. Se quisermos alterar a forma que o jogador interage com o jogo, alteramos a classe `PlayerInputs`. E por fim se quisermos alterar o efeito de expansão e contração alteramos a classe `ExpansionContractionEffect`.
 
+## Diagrama da refatoração
+
+Só para deixar mais claro segue as separação das responsabilidades entre as classes implementadas.
+
+```mermaid
+classDiagram
+class MovementWithoutResponsibility {
+  + ler as entradas do jogador
+  + atualizar a posição
+  + verificar se objetos chegou no alvo
+  + atualizar a direção do objeto
+  + atualizar o efeito de expansão e contração
+  + verificar se objeto está no máximo da expansão ou contração
+}
+```
+
+Depois da refatoração
+
+```mermaid
+classDiagram
+class MovementResponsibility {
+  + definir as funções do movimento
+}
+
+class PositionHandler {
+  + atualizar a posição
+  + atualizar a direção do objeto
+  + verificar se objetos chegou no alvo
+}
+
+class PlayerInputs {
+  + ler as entradas do jogador
+}
+
+class ExpansionContractionEffect {
+  + atualizar o efeito de expansão e contração
+  + verificar se objeto está no máximo da expansão ou contração
+}
+
+PositionHandler ..> MovementResponsibility
+PlayerInputs ..> MovementResponsibility
+ExpansionContractionEffect ..> MovementResponsibility
+```
+
 # Biluca, o que tiramos disso tudo?
 
 O princípio de Responsabilidade Única é uma forma de distribuirmos a responsabilidade pelo código e assim garantir que esses contextos de responsabilidades sejam criados. Utilizar esse princípio exige experiência do desenvolvedor, saber restringir as responsabilidade não é uma tarefa simples, mas com prática pode se virar em uma prática crucial para o desenvolvimento, principalmente para projetos maiores onde o código é reutilizado em vários contextos e de diversas funções.
