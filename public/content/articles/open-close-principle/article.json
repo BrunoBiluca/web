@@ -1,0 +1,15 @@
+{
+  "key": "open-close-principle",
+  "slug": "open-close-principle",
+  "title": "O O do Solid - Princípio do Aberto e Fechado",
+  "published_at": "<year>-<month>-<day>",
+  "author": "Bruno Bernardes da Costa",
+  "description": "<description>",
+  "featured_image": {
+    "path": "images/open-close-principle.png",
+    "thumbnail": "images/open-close-principle.png"
+  },
+  "categories": [
+    "code"
+  ]
+}
