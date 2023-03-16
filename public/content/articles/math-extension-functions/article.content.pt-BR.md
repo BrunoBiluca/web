@@ -1,13 +1,11 @@
-# 4 funções matemáticas úteis no desenvolvimento de games
-
 > 💡Nesse artigo você encontrará:
 > - Implementação das funções (Sign, Clamp, Distance e Remap)
-> - Ideias de aplicações
+> - Ideias de aplicações dessa funções
 > - Ideias de utilização focada em legibilidade
 
-Funções matemáticas são comumente utilizadas no desenvolvimento de games. Seja para calcular o dano casado se um inimigo ataca o herói do jogo, seja a movimentação dos personagem, inteligência artificial, gerenciamento de recursos. O desenvolvedor está rotineiramente implementando operações e fórmulas para definir o comportamento de seu jogo.
+Funções matemáticas são comumente utilizadas no desenvolvimento de games. Seja para calcular o dano causado o personagem herói do jogo ataca um inimigo, seja a movimentação dos personagem, inteligência artificial, gerenciamento de recursos, entre vários outros exemplos. O desenvolvedor está rotineiramente implementando operações e fórmulas para definir o comportamento de seu jogo.
 
-Por mais que fórmulas matemáticas são utilizadas em todos os lugares, deixar essas operações soltas no código pode dificultar bastante a legibilidade futura. Simples funções matemáticas podem tirar atenção do que realmente o código está executando.
+Por mais que fórmulas matemáticas são utilizadas em todos os lugares, deixar essas operações soltas no código pode dificultar bastante sua legibilidade. Simples funções matemáticas podem tirar a atenção do desenvolvedor do que realmente o código está executando. Por esse motivos devemos implementar funções matemáticas levando em consideração sua legibilidade também.
 
 > 🐶 **Pense comigo:** Tome como exemplo o código abaixo e me diga se você consegue explicar o que esse código faz?
 
@@ -23,7 +21,7 @@ if(value >= 0f) {
 }
 ```
 
-É um código simples que caso o valor `value` for maior que zero, então ele imprime o mínimo se o valor for menor que o mínimo, o máximo se o valor form maior que o máximo ou o próprio valor se este estiver entre o mínimo e o máximo. Esse código pode ser reutilizado em vários pontos do código, e toda vez será necessário entender o que está implementado.
+A princípio é um código simples. Se variável `value` for maior que zero, será impresso no console o mínimo, caso o valor for menor que o mínimo, ou o máximo se o valor for maior que o máximo ou o próprio valor se este estiver entre o mínimo e o máximo. Não é difícil imaginar que um código similar será reutilizado em vários outros pontos do projeto, levando a desenvolvedores sempre terem a necessidade de entender em muitos detalhes o que está implementado.
 
 Agora podemos escrever a mesma coisa como
 
@@ -32,7 +30,9 @@ if(IsSignPositive(value))
   Console.Write(Clamp(value, min, max))
 ```
 
-Como podemos ver nesse exemplo, encapsular essas operações em funções podem melhorar muito o estado do código e facilitar sua compreensão, além de já utilizar conceitos definidos pela própria matemática, ou seja, outros desenvolvedores que já estão acostumados com esses conceitos conseguem compartilhar conhecimento de forma mais simples.
+Esse exemplo nos mostra que encapsular essas operações em funções podem melhorar muito a legibilidade do código e facilitar sua compreensão. Também temos o bônus de já utilizar conceitos definidos pela própria matemática, ou seja, outros desenvolvedores que já estão acostumados com a nomenclatura matemática consegue entender o que está sendo feito pelo código.
+
+Assim as próximas seções irão demonstrar a implementação de 4 funções muito utilizadas durante o desenvolvimento de games, focando também na legibilidade dessas funções.
 
 # Função de Sign
 
@@ -81,7 +81,9 @@ Parecem funções simples, mas fazem toda a diferença quando estamos lendo cód
 
 # Função Clamp
 
-O termo <mark>clamp</mark> é utilizado quando queremos restringir um número entre outros dois números. Quando fazermos o clamp de um número estamos falando que esse número será o seu valor atual se estiver entre a faixa determinada ou um dos valores limitantes.
+O termo <mark>clamp</mark> é utilizado quando queremos restringir um número entre outros dois números. 
+
+Quando fazermos o clamp de um número estamos falando que esse número será o seu valor atual se estiver entre a faixa determinada ou um dos valores limitantes.
 
 A implementação do Clamp é bem simples e direta
 
@@ -97,13 +99,15 @@ public float Clamp(float value, float min, float max){
 }
 ```
 
-Essa função pode ser muito útil no desenvolvimento de games, principalmente quando os valores não devam sair de certos limites definidos.
+Essa função pode ser muito útil no desenvolvimento de games, principalmente quando precisamos garantir que valores não possam ultrapassar certos limites definidos.
 
 Em um <mark>sistema de Barra de vida</mark> por exemplo, quando recuperamos a vida do personagem, o valor da vida atual do personagem não deve ultrapassar o valor máximo da vida do personagem, se isso acontecesse levaria a um personagem com vida infinita.
 
 # Função de Distância
 
-A função de <mark>Distância</mark> é utiliza quando queremos saber a distância total entre dois valores. Seria apenas calcular a diferença entre os números se não fosse que podemos também ter valores negativos. A distância entre valores com o mesmo sinal é dada pela diferença do maior valor para o menor valor, e a distância entre valores com sinais opostos é dada pela soma dos dois valores.
+A função de <mark>Distância</mark> é utiliza quando queremos saber a distância total entre dois valores. 
+
+Seria apenas calcular a diferença entre os números se não fosse que podemos também ter valores negativos. A distância entre valores com o mesmo sinal é dada pela diferença do maior valor para o menor valor, e a distância entre valores com sinais opostos é dada pela soma dos dois valores.
 
 A implementação da função de distância precisa levar em consideração todos esses casos e pode ser dada da seguinte maneira
 
@@ -118,9 +122,7 @@ public static float Distance(float a, float b)
 }
 ```
 
-O cálculo de distância pode ser utilizado principalmente quando precisamos de conhecer uma fórmula que determina o comportamento entre dois valores e aplicamos alguma operação nessa faixa de valores.
-
-No meu artigo de <mark>interpolação linear</mark> é a função de distância é bastante utilizada, já que para interpolar a posição de um objeto é necessário saber toda a **faixa de movimentação** necessária entre dois pontos. Ou seja, para interpolar o movimento em uma dimensão do ponto `x = -3` até `x = 3` sabemos que a distância movimentada é `distance = 6`, assim se cada passo for relativo a 1 metro, quando movemos 1 passo corresponde a 16,67% de todo o movimento que será interpolado.
+No meu artigo de <mark>interpolação linear</mark> a função de distância é bastante utilizada. Para interpolar a posição de um objeto é necessário saber toda a sua **faixa de movimentação** entre dois pontos. Ou seja, para interpolar o movimento em uma dimensão do ponto `x = -3` até `x = 3` sabemos que a distância movimentada é `distance = 6`, assim se cada passo for relativo a 1 metro, quando movemos 1 passo corresponde a 16,67% de todo o movimento que será interpolado.
 
 # Remap
 
@@ -149,7 +151,7 @@ public static float Remap(
 }
 ```
 
-Um caso que utilizei o Remap foi em um <mark>sistema de Zoom da câmera</mark> que implementei onde queria que de acordo com a altura da câmera também fosse implementado uma rotação da câmera. Ou seja, nesse exemplo temos duas faixas de valores distintos, uma a faixa de altura da câmera e a outra a faixa de rotação da câmera, e o valor mapeado seria da altura atual da câmera para a rotação da câmera.
+Um caso que utilizei o Remap foi em um <mark>sistema de Zoom da câmera</mark>. Quando o zoom da câmera era efetuado uma rotação também era aplicada. Assim era necessário remapear o valor da altura da câmera entre os limites de rotação. Ou seja, nesse exemplo temos duas faixas de valores distintos, uma a faixa de altura e a outra a faixa de rotação, onde o valor mapeado seria da altura atual da câmera para a sua rotação.
 
 Esse exemplo pode ser implementado utilizando a função Remap da seguinte maneira
 
@@ -163,17 +165,15 @@ var cameraRotation = Remap(
 );
 ```
 
-O `cameraRotation` será o valor proporcional a altura da câmera agora mapeado nos limites de rotação que a câmera segue.
+O `cameraRotation` será o valor proporcional a altura da câmera agora mapeado nos limites de rotação.
 
 # Biluca, o que tiramos disso tudo?
 
 Como pudemos ver nesse artigo a matemática é comumente utiliza no desenvolvimento de games. É bastante normal ver em códigos todos essas funções reimplementadas múltiplas vezes. 
 
-Esse tipo de abordagem exige do desenvolver muito mais esforço na hora de analisar um código, já que quando este além do comportamento do código ele tem que estar preocupado com detalhes de implementação.
+Esse tipo de abordagem exige do desenvolver muito mais esforço na hora de fazer uma análise no código, já que quando este além do seu comportamento também deixa explícito detalhes de implementação. Encapsular essas fórmulas em funções próprias com uma nomenclatura adequada pode auxiliar bastante o desenvolvedor a entender realmente o que é necessário. 
 
-Encapsular essas fórmulas em funções próprias e dar um nome adequado podem auxiliar bastante o desenvolvedor a entender realmente o que ele precisa desse código. 
-
-Assim não podemos negligenciar a legibilidade do código e devemos sempre presar pelo código mais simples e fácil de ler, mesmo que essa seja uma fórmula matemática complexa.
+Assim não podemos negligenciar a legibilidade do código. Mesmo fórmulas matemáticas complexas podem ser implementadas de uma forma simples e fácil de ser lida.
 
 
 # Código fonte
