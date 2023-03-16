@@ -1,5 +1,3 @@
-# O S do SOLID - Responsabilidade Única
-
 > 💡Nesse artigo você encontrará:
 > - Definição do conceito de Responsabilidade Única
 > - Um exemplo prático da aplicação do conceito
