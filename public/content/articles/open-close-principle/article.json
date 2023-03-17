@@ -2,9 +2,9 @@
   "key": "open-close-principle",
   "slug": "open-close-principle",
   "title": "O O do Solid - Princípio do Aberto e Fechado",
-  "published_at": "<year>-<month>-<day>",
+  "published_at": "2023-03-16",
   "author": "Bruno Bernardes da Costa",
-  "description": "<description>",
+  "description": "Princípio do Aberto e Fechado com exemplo na Unity",
   "featured_image": {
     "path": "images/open-close-principle.png",
     "thumbnail": "images/open-close-principle.png"

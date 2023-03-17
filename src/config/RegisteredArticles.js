@@ -3,7 +3,8 @@ const RegisteredArticles = [
   "dice-tutorial-part-1",
   "linear-interpolation-unity",
   "math-extension-functions",
-  "single-responsibility-principle"
+  "single-responsibility-principle",
+  "open-close-principle"
 ]
 
 export default RegisteredArticles;

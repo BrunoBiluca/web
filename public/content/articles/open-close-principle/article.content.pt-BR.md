@@ -1,10 +1,10 @@
 > 💡Nesse artigo você encontrará:
-> - Definição do princípio
-> - Implementação do princípio em um caso
+> - Definição do princípio de Aberto e Fechado
+> - Implementação do princípio em um caso da Unity
 
 O princípio Open-Closed (Aberto-Fechado) é o segundo princípio definido no conjunto SOLID. Esse princípio tem como objetivo definir que comportamentos dentro do código sejam estendidos em vez de modificados visando assim diminuir a quebra de funcionalidades anteriormente finalizadas e adição de bugs no sistema.
 
->  📝 Definição: uma entidade de software (classe, módulo, função, método) deve ser aberto para extensão e fechado para modificação.
+> 📝 Definição: uma entidade de software (classe, módulo, função, método) deve ser aberto para extensão e fechado para modificação.
 
 Ou seja, entidades de software devem possibilitar sua expansão ao adicionar outras funcionalidades ao sistema, sem que nenhuma modificação seja feita nas entidades já finalizadas.
 
@@ -12,12 +12,14 @@ Essa extensão deve ser possibilitada por qualquer entidade de software. Um mét
 
 A principais vantagens da utilização do princípio são:
 
-- Flexibilização das funcionalidades do código (veremos sobre isso na seção de Combinações possíveis)
+- Flexibilidade das entidades de software (veremos sobre isso na seção de Combinações possíveis)
 - Minimizar a inserção de bugs e comportamentos inesperados no código
 
 Para demonstrar esse conceito na prática vamos explorar o seguinte cenário:
 
-Dado um objeto qualquer no espaço do jogo queremos aplicar operações diversas que transformem seu aspecto como posição, rotação e escalonamento. O que queremos implementar ao final é uma cena da seguinte maneira:
+Dado um objeto qualquer no espaço do jogo queremos aplicar operações diversas que transformem seu aspecto como posição, rotação e escalonamento.
+
+O que queremos implementar ao final é uma cena da seguinte maneira:
 
 ![](images/multiple-triangles.gif)
 
@@ -92,7 +94,7 @@ Como o princípio diz precisamos de estar abertos a extensão e fechados para mo
 
 > 🐶 **Pense comigo:** Claro que esse conceito não deve ser levado ao extremo, precisamos sim de revisitar o nosso código trazendo melhorias e novas funcionalidades, porém isso deve ser feito em conjunto com testes automatizados, assim garantimos que o comportamento esperado permaneça inalterado.
 
-Para a nova versão precisamos então numa forma de garantir que novas funcionalidades sejam adicionadas ao sistema sem que tenha a necessidade de alterar o código existente.
+Para a nova versão precisamos de garantir que novas funcionalidades sejam adicionadas ao sistema sem precisar alterar o código existente.
 
 Para isso podemos definir uma classe base que tem a responsabilidade de executar transformações definidas para o objeto em questão. Vamos chamar essa classe de `MovementWithOpenClosed`. Essas transformações irão implementar uma interface padrão, chamada de `ITransformation`, que serão chamadas pela classe `MovementWithOpenClosed`.
 
@@ -119,12 +121,11 @@ public class MovementWithOpenClosed : MonoBehaviour
 }
 ```
 
-Com isso implementado já começamos a entender o conceito do Aberto e Fechado, ou seja, para adicionar funcionalidades de transformações a classe `MovementWithOpenClosed` eu preciso de implementar outras classes que implementem a interface `ITransformation`. A classe `MovementWithOpenClosed` não precisa mais de ser alterada para adicionar nenhum outro tipo de transformação, ou seja, ela está fechada para modificação e aberta para extensão.
+Esse exemplo já ajuda a começarmos a entender o conceito do Aberto e Fechado, ou seja, para adicionar funcionalidades de transformações a classe `MovementWithOpenClosed` é necessário implementar classes que implementem a interface `ITransformation`. A classe `MovementWithOpenClosed` não precisa mais de ser alterada para adicionar nenhum outro tipo de transformação, ou seja, ela está fechada para modificação e aberta para extensão.
 
-As transformações aplicadas ao objeto, como posicionamento e escalonamento, agora serão dadas por classes separadas que implementem a interface `ITransformation`.
+As transformações aplicadas ao objeto, como posicionamento e escalonamento, serão dadas por classes separadas que implementem a interface `ITransformation`.
 
 ```csharp
-
 // classe responsável pelo posicionamento
 public class CircleMovement : MonoBehaviour, ITransformation
 {
@@ -163,7 +164,7 @@ public class ScaledEffect : MonoBehaviour, ITransformation
 }
 ```
 
-No objeto desejado apenas adicionamentos estes scripts no Inspector
+No objeto desejado apenas adicionamentos estes scripts no Inspector como a imagem.
 
 ![](images/triangle-with-open-closed-inspector.png)
 
@@ -173,7 +174,7 @@ O que nos leva ao mesmo resultado que a versão sem a aplicação do princípio 
 
 # Adicionando novas transformações
 
-Chegamos ao mesmo resultado que tínhamos anteriormente, porém isso não é tão interessante. Vamos adicionar mais transformações ao nosso objeto.
+Chegamos ao mesmo resultado que tínhamos anteriormente, mas só isso não é tão interessante. Vamos adicionar mais transformações ao nosso objeto.
 
 Uma terceira transformação que podemos utilizar é de rotação do objeto.
 
@@ -198,6 +199,8 @@ O resultado de adicionar esse script ao objeto é
 # Combinações possíveis
 
 Agora com todas essas transformações implementadas podemos combiná-las sem se preocupar em alterar nenhum tipo de código.
+
+Assim podemos criar vários objetos cada um com sua combinação de `ITransformation`.
 
 ![](images/multiple-triangles.gif)
 
