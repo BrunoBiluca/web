@@ -2,33 +2,38 @@
 > - Definição do conceito de Responsabilidade Única
 > - Um exemplo prático da aplicação do conceito
 
-Quando falamos em boas práticas de programação um dos principais termos que aparecerem em nossas pesquisas são os princípios SOLID. Esses princípios foram criados por Michael Feathers e popularizados por Robert C.Martin, o famoso Uncle Bob, com a finalidade de definir práticas que se seguidas durante o desenvolvimento de software permite criar um código mais legível, reutilizável, coeso e assim garantir que o projeto seja futuramente mais fácil de manter e evoluir.
+Quando falamos em boas práticas de programação um dos principais termos que aparecerem em nossas pesquisas são os princípios SOLID. Esses princípios foram criados por Michael Feathers e popularizados por Robert C.Martin, o famoso Uncle Bob, com a finalidade de definir práticas que se seguidas durante o desenvolvimento de software propiciam criar um código mais legível, reutilizável, coeso e assim garantir que o projeto seja futuramente mais fácil de manter e evoluir.
 
-Nesse artigo vamos explorar o primeiro princípio do SOLID, S de Single Responsibility ou Responsabilidade Única utilizando um exemplo simples.
+Nesse artigo vamos explorar o primeiro princípio do SOLID, o S de Single Responsibility ou Responsabilidade Única utilizando um exemplo simples.
 
 O princípio da Responsabilidade Única define:
 
 > 📝 "Uma classe deve ter apenas um motivo para mudar."
 
-ou também como
+ou em outras palavras
 
 > 📝 "Um módulo, ou classe, ou método, ou função deve fazer apenas uma única coisa"
 
-As duas definições são válidas e acredito que são complementares. Uma pode ajudar a definir o que é essa uma única coisa que está sendo feita.
+As duas definições são válidas e complementares. Pensar em qual motivo uma entidade de software precisa ser alterada pode levar a entender bem qual é sua responsabilidade. Se uma entidade está sendo alterada por vários motivos, provavelmente esta entidade tem muitas responsabilidades.
 
-A ideia é que separando as responsabilidades em pequenos contextos de responsabilidade a fim de diminuirmos o impacto de uma futura modificação. Ao mesmo tempo quando nomeamos qualquer parte do código com o que está sendo feito melhora a legibilidade do código e quando bem nomeado deixa mais claro para outros desenvolvedores que futuramente precisarão de ler esse código.
+A ideia é que separando as responsabilidades em pequenos contextos de responsabilidade diminuímos o impacto de uma futura modificação. Ao mesmo tempo quando nomeamos qualquer parte do código com um nome bem descritivo melhoramos a sua legibilidade e deixamos mais claro nossa intensão para outros desenvolvedores que futuramente precisarão de ler esse código.
 
-Para demonstrar esse conceito foi implementado a movimentação de uma seta com o controle do jogador que esta seta aumente e diminua a medida que o movimento acontece. Apenas com esse exemplo já podemos perceber que várias funcionalidades serão implementadas.
+Para demonstrar esse conceito vamos implementar o seguinte cenário:
+
+- O jogador irá controlar uma seta que se movimentará horizontalmente
+- Quando a seta chega em uma das extremidades ela troca de direção
+- Durante o movimento a seta irá aumentar e diminuir de tamanho.
+- A seta deve sempre está virada para a posição que está se direcionando
+
+A implementação desse sistema leva ao seguinte resultado
 
 ![](images/arrow-movement.gif)
 
-Para o exemplo de movimentação da seta será definida por:
-- O jogador pode interagir com a movimentação
-- A seta deve se mover entre dois pontos e então quando alcança um dos pontos mudar de direção
-- A seta durante o movimento deve expandir e contrair de acordo com uma terminada velocidade
-- A seta deve sempre está virada para a posição que está se direcionando
+Apenas com esse exemplo já conseguimos exemplificar vários conceitos de programação, porém iremos focar no contexto do artigo de Responsabilidade Única.
 
-Para exemplificar o conceito do princípio implementei essas funcionalidades todas em um classe chamada `MovementWithoutResponsibility` sem a necessidade de me preocupar com nenhum tipo de separação de responsabilidades.
+# Primeira versão 
+
+Para exemplificar o conceito do princípio, primeiramente vamos implementar todas essas funcionalidades em uma única classe chamada `MovementWithoutResponsibility` sem a necessidade de me preocupar com nenhum tipo de separação de responsabilidades. Esse tipo de desenvolvimento é o mais comum que vemos em nossos projetos, então iremos partir dele para a explicação do conceito.
 
 ```csharp
 public class MovementWithoutResponsibility : MonoBehaviour
@@ -94,19 +99,21 @@ public class MovementWithoutResponsibility : MonoBehaviour
 }
 ```
 
-Pela definição do princípio de Responsabilidade Única a classe `MovementWithoutResponsibility` tem vários pontes de alteração. Podemos colocar como exemplo:
+Todas as responsabilidades implementadas pela classe `MovementWithoutResponsibility` estão em comentários no código. Temos por exemplo:
 
 - A forma que o jogador interage com o movimento
 - A forma que a posição é calculada
 - A forma que o efeito de Expansão e Contração é calculado
 
-Pelo que analisamos essa classe fere severamente esse princípio. Vamos partir dessa implementação para isolar todas essas responsabilidades em seus devidos contextos e nossa hipótese é que no final teremos um projeto mais simples de manter e evoluir no futuro.
+Pelo que analisamos essa classe fere severamente o princípio. Caso futuramente precisemos alterar esses pontos levantados, será necessário alterar todo o código, podendo resultar em bugs e comportamentos inesperados.
+
+Vamos partir dessa implementação para isolar todas essas responsabilidades em seus devidos contextos e nossa hipótese é que no final teremos um projeto mais simples de manter e evoluir no futuro.
 
 ## Refatoração do cálculo de posição
 
-Para começar a refatoração vamos começar pela função principal do movimento, o cálculo da posição do objeto. Para isso vamos juntar as responsabilidades referentes a posição do objeto em uma única classe.
+Para começar a refatoração vamos começar pela função principal, o cálculo da posição do objeto. Para isso vamos juntar as responsabilidades referentes a posição do objeto em uma única classe.
 
-Essa classe será responsável pela posição do movimento. Cada método público da classe será responsável por um aspecto da posição.
+Essa classe será responsável pela manipulação da posição do objetos. Cada método público da classe será responsável por um aspecto da posição.
 
 Os aspectos da posição implementados são
 
@@ -161,7 +168,7 @@ public class PositionHandler
 }
 ```
 
-E então refatoramos a classe original desses pontos refatorados por chamadas a nova classe criada.
+E então refatoramos a classe original substituindo o código anterior por chamadas a nova classe criada.
 
 ```csharp
 public class MovementWithResponsibility : MonoBehaviour
@@ -191,7 +198,7 @@ public class MovementWithResponsibility : MonoBehaviour
 }
 ```
 
-Dessa forma a responsabilidade de manipular a posição do objeto agora está isolada em sua própria estrutura. Também deixamos claro o tipo de responsabilidade cada estrutura está resolvendo. Por exemplo o método criado `ChangeDirection()`, deixa claro o que está sendo feito em relação a versão anterior que a primeira vista se tratava de uma troca de valores. 
+Dessa forma a responsabilidade de manipular a posição do objeto agora está isolada em sua própria estrutura. Por exemplo o método criado `ChangeDirection()`, deixa claro o que está sendo feito em relação a versão anterior que a primeira vista se tratava de uma troca de valores. 
 
 Outra melhoria que percebemos foi a remoção do cálculo da direção do objeto de cada frame. Quando a refatoração da mudança de direção foi feita e então foi criado o método `ChangeDirection()`, ficou mais fácil de perceber a oportunidade de extrair a função de calcular a direção para ser executada apenas quando a direção foi alterada. Essa é uma melhoria muito grande, esse cálculo estava sendo executado a cada frame e agora é executado apenas quando a direção é alterada.
 
@@ -223,13 +230,13 @@ public class MovementWithResponsibility : MonoBehaviour
 }
 ```
 
-A classe que controla a movimentação do objeto agora não depende de saber que tipo de tecla ou de condição é feita para saber se o a movimentação foi pressionada ou não. Isso nos permite futuramente alterar a tecla pressionada, adicionar uma condição de tempo de pressão que o movimento irá ser executado da mesma forma.
+A classe que controla a movimentação do objeto agora não depende de saber que tipo de tecla ou de condição é satisfeita para a classe principal seguir com o código do movimento. Isso nos permite futuramente alterar a tecla pressionada ou adicionar uma condição de tempo de pressão que o movimento irá ser executado da mesma forma.
 
-Além disso criamos mais um contexto de responsabilidade. A classe `PlayerInputs` tem a responsabilidade (função) de resolver as entradas do jogador e apenas isso. Está classe agora tem um nome simples de entender o que ela representa e pode facilmente ser utilizada no decorrer do projeto.
+Além disso criamos mais um contexto de responsabilidade. A classe `PlayerInputs` tem a responsabilidade (função) de resolver as entradas do jogador e apenas isso. Está classe agora tem um nome simples de entender que pode ser facilmente referenciado dentro de todo o projeto.
 
 # Refatoração do efeito de Expansão e Contração
 
-Para finalizar vamos refatorar a última parte, referente ao efeito de expansão e contração que a seta executada. Esse efeito será refatorado de forma muito análoga ao cálculo de posição. Porém aqui é interessante entender que são duas operação implementadas de forma muito parecida porém com responsabilidade diferentes. Por esse motivo cada uma deve estar contida em seu contexto de responsabilidade já que uma pode ser alterada sem necessariamente precisar de alterar a outra.
+Para finalizar vamos refatorar a última parte, referente ao efeito de expansão e contração que a seta executada. Esse efeito será refatorado de forma muito análoga ao cálculo de posição, porém aqui é interessante entender que mesmo sendo duas operações implementadas de forma muito parecida tem responsabilidades diferentes. 
 
 Como código final de nossa sessão de refatoração temos
 
@@ -279,9 +286,14 @@ Encapsulamos em seus contextos de responsabilidade cada uma das operações exec
 
 Ou seja, se quisermos alterar a forma que posição do objeto é calculada alteramos a classe `PositionHandler`. Se quisermos alterar a forma que o jogador interage com o jogo, alteramos a classe `PlayerInputs`. E por fim se quisermos alterar o efeito de expansão e contração alteramos a classe `ExpansionContractionEffect`.
 
+Afinal temos o mesmo resultado, porém agora com um código muito mais limpo.
+
+![](images/arrow-movement.gif)
+
+
 ## Diagrama da refatoração
 
-Só para deixar mais claro segue as separação das responsabilidades entre as classes implementadas.
+Só para deixar mais claro segue um diagrama com o antes.
 
 ```mermaid
 classDiagram
@@ -327,6 +339,8 @@ ExpansionContractionEffect ..> MovementResponsibility
 
 O princípio de Responsabilidade Única é uma forma de distribuirmos a responsabilidade pelo código e assim garantir que esses contextos de responsabilidades sejam criados. Utilizar esse princípio exige experiência do desenvolvedor, saber restringir as responsabilidade não é uma tarefa simples, mas com prática pode se virar em uma prática crucial para o desenvolvimento, principalmente para projetos maiores onde o código é reutilizado em vários contextos e de diversas funções.
 
-Como podemos ver com todos esses exemplos de refatorações, implementar apenas o conceito de <mark>Responsabilidade Única não altera muito a estrutura do código.</mark> Apenas porque podemos combinar esse conceito com vários outros como Modularização, Coesão, Separação de responsabilidades a fim de criarmos estruturas mais dinâmicas e eficientes assim então revolucionarmos a forma que escrevemos código.
+Como podemos ver com todos esses exemplos de refatorações, implementar apenas o conceito de <mark>Responsabilidade Única não altera muito a estrutura do código.</mark> Podemos combinar esse conceito com vários outros princípios como Modularização, Coesão, Separação de responsabilidades a fim de criarmos estruturas mais dinâmicas e eficientes assim então revolucionarmos a forma que escrevemos código.
 
 Com todos esses conceitos combinados conseguimos criar um código mais limpo e claro para nós desenvolvedores, além de como vimos no caso do cálculo de mudança de direção até mais performático.
+
+# Referências
