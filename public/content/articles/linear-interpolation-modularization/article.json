@@ -1,0 +1,15 @@
+{
+  "key": "linear-interpolation-modularization",
+  "slug": "linear-interpolation-modularization",
+  "title": "Modularizando a Interpolação linear",
+  "published_at": "2023-03-27",
+  "author": "Bruno Bernardes da Costa",
+  "description": "A modularização entidades de software nos ajuda a economizar tempo e garantir um código mais coeso. Nesse artigo iremos modularizar dois dos principais conceitos de interpolação linear que poderão ser utilizados em vários pontos do nosso projeto.",
+  "featured_image": {
+    "path": "images/<img>",
+    "thumbnail": "images/<img>"
+  },
+  "categories": [
+    "unity", "code"
+  ]
+}
