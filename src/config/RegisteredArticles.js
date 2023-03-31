@@ -4,7 +4,8 @@ const RegisteredArticles = [
   "linear-interpolation-unity",
   "math-extension-functions",
   "single-responsibility-principle",
-  "open-close-principle"
+  "open-close-principle",
+  "linear-interpolation-modularization"
 ]
 
 export default RegisteredArticles;

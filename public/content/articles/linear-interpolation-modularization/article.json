@@ -6,8 +6,8 @@
   "author": "Bruno Bernardes da Costa",
   "description": "A modularização entidades de software nos ajuda a economizar tempo e garantir um código mais coeso. Nesse artigo iremos modularizar dois dos principais conceitos de interpolação linear que poderão ser utilizados em vários pontos do nosso projeto.",
   "featured_image": {
-    "path": "images/<img>",
-    "thumbnail": "images/<img>"
+    "path": "images/lerp-time.gif",
+    "thumbnail": "images/lerp-time.gif"
   },
   "categories": [
     "unity", "code"
