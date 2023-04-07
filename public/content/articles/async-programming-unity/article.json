@@ -1,0 +1,16 @@
+{
+  "key": "async-programming-unity",
+  "slug": "async-programming-unity",
+  "title": "Programação assíncrona na Unity",
+  "published_at": "2023-04-07",
+  "author": "Bruno Bernardes da Costa",
+  "description": "Programação assíncrona é um paradigma de programação amplamente utilizado principalmente quando o resultado de uma operação não é necessário de imediato. Podemos aplicar esse conceito em Inteligência artificial dos inimigos, requisições web, rastreamente de missões entre vários outros. Nesse artigo vamos discutir alguns exemplos e como implementa-los na Unity.",
+  "featured_image": {
+    "path": "images/move.gif",
+    "thumbnail": "images/move.gif"
+  },
+  "categories": [
+    "code",
+    "unity"
+  ]
+}
