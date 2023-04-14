@@ -5,7 +5,6 @@
   "homepage": "https://brunobiluca.github.io/web",
   "scripts": {
     "start": "react-scripts start",
-    "start:watch": "powershell .\\run_local.ps1",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "deploy": "gh-pages -d build"

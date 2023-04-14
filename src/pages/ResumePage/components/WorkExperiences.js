@@ -1,13 +1,18 @@
 import React from "react";
 import Section from "./Section";
+import stylesResumePage from "../ResumePage.module.css";
 import styles from "./WorkExperiences.module.css";
 
 const WorkExperiences = (props) => {
   let { workExperiences } = props;
   return (
     <Section title="Work Experience">
-      {workExperiences.map(
-        (we, i) => <WorkExperience key={i} workExperience={we} />
+      {workExperiences.map((we, i) =>
+        <div className={i > 2 ? stylesResumePage.noPrint : ""} key={i}>
+          <WorkExperience
+            workExperience={we}
+          />
+        </div>
       )}
     </Section>
   );

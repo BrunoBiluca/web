@@ -1,17 +1,26 @@
 export const mainUnity = {
   name: "Bruno Bernardes da Costa",
   job: "Unity Developer",
-  summary: "Com mais de 6 anos de experiência em desenvolvimento de software. Tenho trabalhado nos mais diversificados tipos de sistemas, como, sistemas bancários, plataforma de análise de Big Data, websites, mobile apps e games. Sou uma pessoa determinada, gosto de trabalhar em equipe e compartilhar conhecimento. Acredito que podemos criar um produto incrível enquanto nos divertimos e aprendemos no processo.",
+  summary: "Com mais de 10 anos de experiência em desenvolvimento de software. Tenho trabalhado nos mais diversificados tipos de sistemas, como, sistemas bancários, plataforma de análise de Big Data, websites, mobile apps e games. Sou uma pessoa determinada, gosto de trabalhar em equipe e compartilhar conhecimento. Acredito que podemos criar um produto incrível enquanto nos divertimos e aprendemos no processo.",
   email: "b.b.da.costa@gmail.com",
   phone: "+55 (31) 99325-3017",
   location: "Lagoa Dourada, Minas Gerais, Brasil",
   locationMaps: "https://www.google.com/maps/place/Lagoa+Dourada+-+MG/@-20.872942,-44.1893066,11.17z/data=!4m5!3m4!1s0xa19f3675b62e7b:0xaf82e17dd71573da!8m2!3d-20.9147587!4d-44.0754448",
   linkedin: "linkedin.com/in/bbdacosta/",
   github: "github.com/BrunoBiluca",
-  stackoverflow: "stackoverflow.com/users/6341672/bruno-bernardes"
+  stackoverflow: "stackoverflow.com/users/6341672/bruno-bernardes",
+  website: "https://brunobiluca.github.io/web"
 }
 
 export const workExperiences = [
+  {
+    title: "Software Development Engineer at",
+    period: "01/2022 - 12/2022",
+    location: "Santa Rosa - RS",
+    description: "Trabalhei principalmente no desenvolvimento de aplicações web direcionadas para o sistema educacional brasileiro, com foco em experiência do usuário. Também foi responsável por treinamentos de desenvolvimento de software e boas práticas em processos de mentorias.",
+    company: "GH Branding",
+    companyUrl: "https://ghbranding.com.br"
+  },
   {
     title: "Software Development Engineer at",
     period: "01/2021 - 10/2021",
@@ -95,6 +104,13 @@ export const languages = [
 ]
 
 const games = [
+  {
+    name: "Biluca XGrid",
+    description: "3D Grid based strategy game",
+    role: "Gameplay & UI Programmer",
+    repo: "https://github.com/BrunoBiluca/course-xcom-game",
+    screenshoot: 'biluca_xgrid.jpg'
+  },
   {
     name: "Biluca Defense",
     description: "2D Tower Defense",

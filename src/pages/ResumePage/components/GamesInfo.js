@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from './Section';
 
+import stylesResumePage from "../ResumePage.module.css";
 import styles from './GamesInfo.module.css';
 import { FaGithub } from 'react-icons/fa';
 
@@ -8,7 +9,11 @@ const GamesInfo = (props) => {
   return (
     <Section title="My Games">
       {
-        props.games.map(g => <GameInfo game={g} />)
+        props.games.map((g, i) =>
+          <div className={i > 1 ? stylesResumePage.noPrint : ""} key={g.description}>
+            <GameInfo game={g} key={g.description} />
+          </div>
+        )
       }
     </Section>
   );
@@ -16,8 +21,6 @@ const GamesInfo = (props) => {
 
 const GameInfo = (props) => {
   let { game } = props;
-  let screenshootPath = `images/resume/${game.screenshoot}`;
-
   return (
     <a
       className={styles.gameContainer}
@@ -26,7 +29,7 @@ const GameInfo = (props) => {
       rel="noreferrer"
     >
       <div className={styles.imgHolder}>
-        <img src={screenshootPath} alt="game" />
+        <img src={require(`pages/ResumePage/images/${game.screenshoot}`).default} alt="game" />
       </div>
       <div>
         <p className={styles.title}>

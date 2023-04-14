@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./AdditionalInfo.module.css";
 
 import { GrMail } from 'react-icons/gr';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 import { BsTelephoneFill } from 'react-icons/bs';
 import { ImLocation2 } from 'react-icons/im';
 import Section from "./Section";
@@ -35,6 +35,10 @@ const AdditionalInfo = (props) => {
       <div className={styles.additionalInfo}>
         <FaGithub />
         <a href={main.github} target="_blank" rel="noreferrer">{main.github}</a>
+      </div>
+      <div className={styles.additionalInfo}>
+        <FaGlobe />
+        <a href={main.website} target="_blank" rel="noreferrer">{main.website}</a>
       </div>
     </Section>
   );
