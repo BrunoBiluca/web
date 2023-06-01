@@ -7,6 +7,7 @@ import ContentRouter from '../v1/ContentRouter/ContentRouter';
 import './App.css';
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 import ResumePage from 'ResumePage/ResumePage';
+import AppV2 from 'v2/App/AppV2';
 
 class App extends React.Component {
 
@@ -21,6 +22,9 @@ class App extends React.Component {
           <NavBar />
           <ContentRouter />
           <Footer />
+        </Route>
+        <Route path='/v2'>
+          <AppV2 />
         </Route>
         <Route path='/v1'>
           <ScrollToTop />
