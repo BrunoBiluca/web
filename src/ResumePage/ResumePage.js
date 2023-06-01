@@ -10,7 +10,7 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-import LocalizationHandler, { LocalizationDirection } from "../../components/LocalizationHandler/LocalizationHandler";
+import LocalizationHandler, { LocalizationDirection } from "components/LocalizationHandler/LocalizationHandler";
 import ResumePageService from "./ResumePageService";
 import bgImg from "./images/resume_packman_bg.png";
 import GamesInfo from "./components/GamesInfo";

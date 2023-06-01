@@ -3,7 +3,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import './index.css';
-import App from './pages/App/App';
+import App from './App/App';
 import reportWebVitals from './reportWebVitals';
 
 const container = document.getElementById('root');

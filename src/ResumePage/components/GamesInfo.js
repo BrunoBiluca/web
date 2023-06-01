@@ -29,7 +29,7 @@ const GameInfo = (props) => {
       rel="noreferrer"
     >
       <div className={styles.imgHolder}>
-        <img src={require(`pages/ResumePage/images/${game.screenshoot}`).default} alt="game" />
+        <img src={require(`../images/${game.screenshoot}`).default} alt="game" />
       </div>
       <div>
         <p className={styles.title}>
