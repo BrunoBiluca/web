@@ -1,0 +1,16 @@
+.footer {
+  background-color: #323150;
+  border-top: 2px solid black;
+
+  padding: .5em;
+  color: white;
+  text-align: center;
+}
+
+.footer svg {
+  font-size: 2em;
+}
+
+.footer p {
+  font-size: .7em;
+}

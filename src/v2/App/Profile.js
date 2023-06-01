@@ -9,7 +9,7 @@ export default function Profile() {
     let bubbles = []
     for (let index = 0; index < 20; index++) {
       let speed = Math.floor(Math.random() * 10) + 1
-      bubbles.push(<span style={{ "--speed": speed }}></span>)
+      bubbles.push(<span key={index} style={{ "--speed": speed }}></span>)
     }
     return bubbles;
   }
