@@ -1,5 +1,6 @@
 import GitHubRepositoryModel from "components/GitHubRepository/GitHubRepository.model"
 import { getCategory } from "config/Categories"
+import RouteManager from "services/RouteManager"
 
 export default class Game {
   key
@@ -51,7 +52,7 @@ export default class Game {
       this.repository = undefined
     }
 
-    this.link = `/games/${game.slug}`
+    this.link = RouteManager.toGame(game.slug)
   }
 
   addCategory(key) {

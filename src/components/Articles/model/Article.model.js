@@ -1,3 +1,5 @@
+import RouteManager from "services/RouteManager"
+
 export default class Article {
   key
   slug
@@ -19,7 +21,7 @@ export default class Article {
     this.publishedAt = article.publishedAt
     this.author = article.author
     this.contentSummary = article.contentSummary ?? ""
-    this.link = `/articles/${article.slug}`
+    this.link = RouteManager.toArticle(article.slug)
   }
 
   addCategory(category) {

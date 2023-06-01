@@ -1,32 +1,22 @@
 import React from "react";
-import { Route, Switch } from "react-router";
+import { Route, Switch, useRouteMatch } from "react-router";
 
 import styles from "./ContentRouter.module.css";
 
-import Home from "../../pages/Home/Home";
+import Home from "../../v1/Home/Home";
 import GamesPage from "../../pages/GamesPage/GamesPage";
 import ArticlePage from "../../pages/ArticlesPage/ArticlePage";
 
-class ContentRouter extends React.Component {
+export default function ContentRouter() {
+  let { path } = useRouteMatch();
 
-  render() {
-    return (
-      <div style={{ flex: 1 }} className={styles.contentRouter}>
-        <Switch>
-          <Route path='/' exact>
-            <Home />
-          </Route>
-          <Route path='/games/:gameSlug' exact>
-            <GamesPage />
-          </Route>
-          <Route path='/articles/:articleSlug' exact>
-            <ArticlePage />
-          </Route>
-        </Switch >
-      </div>
-    );
-  }
-
+  return (
+    <div style={{ flex: 1 }} className={styles.contentRouter}>
+      <Switch>
+        <Route path={path} exact children={<Home />} />
+        <Route path={`${path}/games/:gameSlug`} exact children={<GamesPage />} />
+        <Route path={`${path}/articles/:articleSlug`} exact children={<ArticlePage />} />
+      </Switch >
+    </div>
+  );
 }
-
-export default ContentRouter;

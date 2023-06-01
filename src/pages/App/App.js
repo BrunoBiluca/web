@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
-import NavBar from '../../components/NavBar/NavBar';
+import NavBar from '../../v1/NavBar/NavBar';
 import ContentRouter from '../../components/ContentRouter/ContentRouter';
 
 import './App.css';
@@ -16,7 +16,13 @@ class App extends React.Component {
         <Route path='/resume' >
           <ResumePage />
         </Route>
-        <Route path='/'>
+        <Route path='/' exact>
+          <ScrollToTop />
+          <NavBar />
+          <ContentRouter />
+          <Footer />
+        </Route>
+        <Route path='/v1'>
           <ScrollToTop />
           <NavBar />
           <ContentRouter />

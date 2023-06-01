@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { FaHome } from 'react-icons/fa';
 import styles from './NavBar.module.css';
-import SocialMediaLinks from '../SocialMediaLinks/SocialMediaLinks';
-import LocalizationHandler from '../LocalizationHandler/LocalizationHandler';
+import SocialMediaLinks from '../../components/SocialMediaLinks/SocialMediaLinks';
+import LocalizationHandler from '../../components/LocalizationHandler/LocalizationHandler';
+import RouteManager from 'services/RouteManager';
 
 const NavBar = () => {
   return (
@@ -11,7 +12,7 @@ const NavBar = () => {
       <div className={styles.navBar}>
         <div className={styles.navBarBody}>
           <div className={styles.navBarButton}>
-            <Link to="/">{<FaHome />}</Link>
+            <Link to={RouteManager.toBase()}>{<FaHome />}</Link>
           </div>
           <div style={{ flex: 1 }}></div>
           <div className={styles.navBarButton}>
