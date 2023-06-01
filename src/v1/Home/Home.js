@@ -2,14 +2,14 @@ import React from 'react';
 
 import styles from './Home.module.css';
 
-import BilucaIntro from './BilucaIntro'
+import BilucaIntroView from './BilucaIntroView'
 import HomeContentView from './HomeContentView';
 
 const Home = () => {
   return (
     <div className={styles.Home} data-testid="Home">
       <div>
-        <BilucaIntro />
+        <BilucaIntroView />
       </div>
 
       <HomeContentView />

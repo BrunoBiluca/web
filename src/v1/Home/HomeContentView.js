@@ -2,7 +2,7 @@ import InfinityContentHolder from 'v1/InfinityContentHolder/InfinityContentHolde
 import Content from 'components/Contents/model/Content.model';
 import GlobalConfig from 'config/GlobalConfig';
 import { useEffect, useState } from 'react';
-import HomeStrings from './Home.strings';
+import BilucaIntro from './BilucaIntro.strings';
 
 
 function mapContent(newContent, contentColor) {
@@ -43,7 +43,7 @@ const HomeContentView = () => {
   return (
     <div>
       <h1 style={{ textAlign: 'center' }}>
-        {HomeStrings.strings.content_title.toString()}
+        {BilucaIntro.strings.content_title.toString()}
       </h1>
       <InfinityContentHolder contents={contents} />
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Profile.module.css'
-import brunoPicture from 'images/bruno_picture.webp';
 import SocialMediaLinks from 'components/SocialMediaLinks/SocialMediaLinks';
+import ProfileImage from './ProfileImage';
 
 export default function Profile() {
 
@@ -24,9 +24,7 @@ export default function Profile() {
         </div>
       </div>
       <div className={styles.profileInfo}>
-        <div className={styles.profileImage}>
-          <img src={brunoPicture} alt="Bruno Biluca" />
-        </div>
+        {ProfileImage()}
         <p><strong>Bruno Biluca</strong></p>
         <p>Programador e Pau pra toda obra!</p>
         <div style={{ margin: "15px 0" }}>

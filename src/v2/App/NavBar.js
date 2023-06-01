@@ -16,7 +16,7 @@ export function NavBar() {
         </div>
         <div style={{ display: "inline-flex" }}>
           <LocalizationHandler />
-          <SocialMediaLinks style={{ borderLeft: "1px solid" }} />
+          <SocialMediaLinks />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import LocaleStr from "services/LocaleStr";
 
-class HomeStrings {
+class BilucaIntro {
   static strings = {
     intro_1: new LocaleStr("intro_1")
       .addLocale("en", "Hi, I'm Bruno (aka. BrunoBiluca).")
@@ -23,4 +23,4 @@ class HomeStrings {
   }
 }
 
-export default HomeStrings;
+export default BilucaIntro;

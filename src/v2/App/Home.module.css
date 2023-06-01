@@ -1,0 +1,60 @@
+.section {
+  padding: 2em 5em;
+}
+
+.sectionTitle {
+  position: relative;
+}
+
+.sectionTitle h1 {
+  font-family: cursive;
+  position: relative;
+}
+
+.patternHolder {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: -10px;
+  left: -10px;
+  overflow: hidden;
+}
+
+.patternHolder img {
+  height: 100px;
+  width: 100px;
+}
+
+.about {
+  display: flex;
+}
+
+.about p {
+  margin: .4em 0;
+}
+
+.description {
+  position: relative;
+  font-family: cursive;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #434343;
+  padding: 2em;
+}
+
+.description::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid white;
+  left: -40px;
+  top: 40px;
+}
+
+.pictureHolder {
+  margin-right: 5em;
+}
