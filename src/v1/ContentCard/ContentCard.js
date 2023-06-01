@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from "react-router-dom";
 import styles from './ContentCard.module.css';
-import Category from '../../Category/Category';
+import Category from '../../components/Category/Category';
 import Image from 'components/Image/Image';
-import Content from '../model/Content.model';
+import Content from '../../components/Contents/model/Content.model';
 
 
 const ContentCard = ({style, content, onClick, children}) => {

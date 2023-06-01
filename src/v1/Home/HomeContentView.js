@@ -1,4 +1,4 @@
-import InfinityContentHolder from 'components/Contents/InfinityContentHolder/InfinityContentHolder';
+import InfinityContentHolder from 'v1/InfinityContentHolder/InfinityContentHolder';
 import Content from 'components/Contents/model/Content.model';
 import GlobalConfig from 'config/GlobalConfig';
 import { useEffect, useState } from 'react';

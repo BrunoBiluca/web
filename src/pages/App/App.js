@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../v1/Footer/Footer';
 import NavBar from '../../v1/NavBar/NavBar';
-import ContentRouter from '../../components/ContentRouter/ContentRouter';
+import ContentRouter from '../../v1/ContentRouter/ContentRouter';
 
 import './App.css';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';

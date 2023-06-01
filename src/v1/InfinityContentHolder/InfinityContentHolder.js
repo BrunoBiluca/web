@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentCard from "../ContentCard/ContentCard";
-import Content from "../model/Content.model";
+import Content from "../../components/Contents/model/Content.model";
 import PropTypes from 'prop-types';
 
 const style = {

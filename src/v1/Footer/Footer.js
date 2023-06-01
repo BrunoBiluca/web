@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import SocialMediaLinks from '../SocialMediaLinks/SocialMediaLinks';
+import SocialMediaLinks from '../../components/SocialMediaLinks/SocialMediaLinks';
 import NewsletterSubscribe from 'components/NewsLetter/NewsletterSubscribe/NewsletterSubscribe.js';
 
 const Footer = () => {

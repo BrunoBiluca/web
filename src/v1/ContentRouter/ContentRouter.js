@@ -3,9 +3,9 @@ import { Route, Switch, useRouteMatch } from "react-router";
 
 import styles from "./ContentRouter.module.css";
 
-import Home from "../../v1/Home/Home";
-import GamesPage from "../../pages/GamesPage/GamesPage";
-import ArticlePage from "../../pages/ArticlesPage/ArticlePage";
+import Home from "../Home/Home";
+import GamesPage from "../GamesPage/GamesPage";
+import ArticlePage from "../ArticlesPage/ArticlePage";
 
 export default function ContentRouter() {
   let { path } = useRouteMatch();
