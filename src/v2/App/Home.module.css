@@ -1,28 +1,15 @@
-.section {
-  padding: 2em 5em;
-}
 
-.sectionTitle {
-  position: relative;
-}
 
-.sectionTitle h1 {
-  font-family: cursive;
-  position: relative;
-}
-
-.patternHolder {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  top: -10px;
-  left: -10px;
-  overflow: hidden;
-}
-
-.patternHolder img {
-  height: 100px;
-  width: 100px;
+.flatButton {
+  padding: 0.5em 1.2em;
+  border-radius: 20px;
+  background: #F54760;
+  border-color: #F54760;
+  box-shadow: none;
+  color: #fff;
+  border-style: solid;
+  margin: 1em 0;
+  cursor: pointer;
 }
 
 .about {
@@ -57,4 +44,5 @@
 
 .pictureHolder {
   margin-right: 5em;
+  text-align: center;
 }
