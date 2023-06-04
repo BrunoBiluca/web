@@ -1,0 +1,34 @@
+.about {
+  display: flex;
+}
+
+.about p {
+  margin: .4em 0;
+}
+
+.description {
+  position: relative;
+  font-family: cursive;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #434343;
+  padding: 2em;
+}
+
+.description::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid white;
+  left: -40px;
+  top: 40px;
+}
+
+.pictureHolder {
+  margin-right: 5em;
+  text-align: center;
+}

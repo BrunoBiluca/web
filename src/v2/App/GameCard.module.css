@@ -1,0 +1,62 @@
+.card {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: cursive;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.backgroundImageHolder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.backgroundImage {
+  background: #9eec9e;
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding: .5em;
+  margin-bottom: 3em;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+  background: -moz-linear-gradient(right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+
+}
+
+.info h1 {
+  margin: .2em 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+}
+
+.info span {
+  color: #000;
+}
+
+.categories {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.categories span {
+  margin: 4px;
+}
