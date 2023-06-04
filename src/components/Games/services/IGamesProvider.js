@@ -1,4 +1,4 @@
-import { hasMethods } from "helpers/DuckTypingTest"
+import { hasMethods } from "helpers/InterfaceValidator"
 
 export default class IGamesProvider {
   constructor() {

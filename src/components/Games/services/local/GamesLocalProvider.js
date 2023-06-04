@@ -29,12 +29,11 @@ export default class GamesLocalProvider extends IGamesProvider {
 
   async getGameContent(game) {
     const configPath = this.contentPath.configPath(game);
-    const mappedGame = await this.fileReader
-      .mapObject(configPath, this.mapper);
+    const mappedGame = await this.fileReader.mapObject(configPath, this.mapper);
 
-    mappedGame.contentSummary = await this.fileReader
-      .getText(this.contentPath.contentPath(game))
+    mappedGame.contentSummary = await this.fileReader.getText(this.contentPath.contentPath(game))
     mappedGame.description = mappedGame.contentSummary
+
     return mappedGame;
   }
 }

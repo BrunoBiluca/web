@@ -1,26 +1,24 @@
 import Category from "components/Category/Category"
 import style from "./GameCard.module.css"
+import shadowStyle from './CardShadow.module.css'
+import classNames from "helpers/ClassNames"
 
-import titlePattern from "./title_pattern.svg"
-import { getCategory } from "config/Categories"
-
-export default function GameCard() {
+export default function GameCard({ game }) {
   return (
-    <div className={style.card}>
+    <div className={classNames(style.card, shadowStyle.shadow)}>
       <div className={style.backgroundImageHolder}>
-        <div className={style.backgroundImage}></div>
-        {/* <img className={style.backgroundImage} src={titlePattern} /> */}
+        <img
+          className={style.backgroundImage}
+          src={game.featuredImage.thumbnail}
+          alt={game.featuredImage.description}
+        />
       </div>
       <div className={style.categories}>
-        <Category category={getCategory("code")} />
-        <Category category={getCategory("code")} />
-        <Category category={getCategory("code")} />
-        <Category category={getCategory("code")} />
-        <Category category={getCategory("code")} />
+        {game.categories.map(c => <Category key={c.key} category={c} />)}
       </div>
       <div className={style.info}>
-        <h1>Título do jogo</h1>
-        <span>13/09/1992</span>
+        <h1>{game.title}</h1>
+        <span>{game.publishedAt}</span>
       </div>
     </div>
   )
