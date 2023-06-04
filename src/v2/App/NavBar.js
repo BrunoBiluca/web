@@ -12,7 +12,13 @@ export function NavBar() {
     <div className={styles.navBar} data-testid="navbar">
       <div className={styles.navBarBody}>
         <div className={styles.navBarButton}>
-          <Link to={RouteManager.toBase()}>{<FaHome />} Biluca Portal</Link>
+          <Link
+            className={styles.home}
+            to={RouteManager.toBase()}
+          >
+            <FaHome style={{ fontSize: "1.2em" }} />
+            <span>Biluca Portal</span>
+          </Link>
         </div>
         <div style={{ display: "inline-flex" }}>
           <LocalizationHandler />
