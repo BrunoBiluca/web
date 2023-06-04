@@ -7,15 +7,21 @@ import ArticleCard from "./ArticleCard";
 import style from './Home.module.css';
 import GlobalConfig from "config/GlobalConfig";
 
+async function loadGames() {
+  return await GlobalConfig.games.provider().get();
+}
+
+async function loadArticles() {
+  return await GlobalConfig.articles.provider().get();
+}
+
 export default function Home() {
   const [games, setGames] = useState([])
+  const [articles, setArticles] = useState([])
 
   useEffect(() => {
-    async function loadGames() {
-      const gamesProvider = GlobalConfig.games.provider()
-      return await gamesProvider.get();
-    };
     loadGames().then(res => setGames(res));
+    loadArticles().then(res => setArticles(res));
   }, [])
 
   return (
@@ -32,11 +38,7 @@ export default function Home() {
 
       <Section title="Artigos">
         <div className={style.grid}>
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
+          {articles.map(a => <ArticleCard key={a.key} article={a} />)}
         </div>
       </Section>
     </div>

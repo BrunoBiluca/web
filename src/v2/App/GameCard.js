@@ -1,11 +1,11 @@
 import Category from "components/Category/Category"
 import style from "./GameCard.module.css"
-import shadowStyle from './CardShadow.module.css'
+import cardStyle from './ContentCard.module.css'
 import classNames from "helpers/ClassNames"
 
 export default function GameCard({ game }) {
   return (
-    <div className={classNames(style.card, shadowStyle.shadow)}>
+    <div className={classNames(style.card, cardStyle.card)}>
       <div className={style.backgroundImageHolder}>
         <img
           className={style.backgroundImage}

@@ -1,14 +1,5 @@
 .card {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-family: cursive;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
+  height: 320px;
 }
 
 .backgroundImageHolder {
