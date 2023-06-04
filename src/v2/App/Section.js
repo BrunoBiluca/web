@@ -11,7 +11,9 @@ export default function Section({ title, children }) {
         </div>
         <h1>{title}</h1>
       </div>
-      {children}
+      <div>
+        {children}
+      </div>
     </div>
   )
 }
