@@ -1,7 +1,7 @@
 import ProfileImage from "./ProfileImage";
 import styles from "./AboutMe.module.css";
 import BilucaIntro from "./BilucaIntro.strings";
-import LinkButton from "../Components/LinkButton/LinkButton";
+import LinkButton from "../Components/Buttons/LinkButton";
 
 export default function AboutMe() {
   return <div className={styles.about}>

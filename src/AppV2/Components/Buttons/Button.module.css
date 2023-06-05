@@ -1,0 +1,11 @@
+.flatButton {
+  padding: 0.5em 1.2em;
+  border-radius: 20px;
+  background: #F54760;
+  border-color: #F54760;
+  box-shadow: none;
+  color: #fff;
+  border-style: solid;
+  margin: 1em 0;
+  cursor: pointer
+}

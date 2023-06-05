@@ -9,11 +9,9 @@ import reportWebVitals from './reportWebVitals';
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-  <React.StrictMode>
-    <HashRouter basename={baseUrl}>
-      <App />
-    </HashRouter>
-  </React.StrictMode>
+  <HashRouter basename={baseUrl}>
+    <App />
+  </HashRouter>
 );
 
 if (process.env.NODE_ENV === "development") {

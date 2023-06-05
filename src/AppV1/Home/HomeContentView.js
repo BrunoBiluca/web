@@ -19,7 +19,7 @@ async function getContents() {
   const gamesProvider = GlobalConfig.games.provider()
   const articlesProvider = GlobalConfig.articles.provider()
 
-  const games = await gamesProvider.get()
+  const games = await gamesProvider.getAll()
   const articles = await articlesProvider.get()
 
   const allContents = [
