@@ -13,10 +13,8 @@ export default function AboutMe() {
       <p>{BilucaIntro.strings.intro_1.toString()}</p>
       <p>{BilucaIntro.strings.intro_2.toString()}</p>
       <p>{BilucaIntro.strings.intro_3.toString()}</p>
-      <p>{BilucaIntro.strings.intro_4.toString()}</p>
-      <p>{BilucaIntro.strings.intro_5.toString()}</p>
       <div>
-        <h3>Veja minhas últimas contribuições 🧑‍💻</h3>
+        <h3>{BilucaIntro.strings.content_title.toString()}</h3>
         <div style={{ textAlign: "center" }}>
           <a
             href="https://github.com/BrunoBiluca"
