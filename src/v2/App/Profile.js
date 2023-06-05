@@ -28,7 +28,7 @@ export default function Profile() {
         <p><strong>Bruno Biluca</strong></p>
         <p>Programador e Pau pra toda obra!</p>
         <div style={{ margin: "15px 0" }}>
-          <SocialMediaLinks />
+          <SocialMediaLinks style={styles.shadowfilter} />
         </div>
       </div>
     </div>
