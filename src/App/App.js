@@ -1,13 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Footer from '../v1/Footer/Footer';
-import NavBar from '../v1/NavBar/NavBar';
-import ContentRouter from '../v1/ContentRouter/ContentRouter';
+import Footer from '../AppV1/Footer/Footer';
+import NavBar from '../AppV1/NavBar/NavBar';
+import ContentRouter from '../AppV1/ContentRouter/ContentRouter';
 
 import './App.css';
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 import ResumePage from 'ResumePage/ResumePage';
-import AppV2 from 'v2/App/AppV2';
+import AppV2 from '../AppV2/AppV2';
 
 class App extends React.Component {
 

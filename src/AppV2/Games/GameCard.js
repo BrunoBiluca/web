@@ -1,6 +1,6 @@
 import Category from "components/Category/Category"
 import style from "./GameCard.module.css"
-import cardStyle from './ContentCard.module.css'
+import cardStyle from '../Components/ContentCard/ContentCard.module.css'
 import classNames from "helpers/ClassNames"
 
 export default function GameCard({ game }) {

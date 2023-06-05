@@ -24,11 +24,11 @@ export default function Profile() {
         </div>
       </div>
       <div className={styles.profileInfo}>
-        {ProfileImage()}
+        <ProfileImage />
         <p><strong>Bruno Biluca</strong></p>
         <p>Programador e Pau pra toda obra!</p>
         <div style={{ margin: "15px 0" }}>
-          <SocialMediaLinks style={styles.shadowfilter} />
+          <SocialMediaLinks />
         </div>
       </div>
     </div>
