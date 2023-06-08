@@ -12,7 +12,20 @@ export default class ArticlesLocalProvider extends IArticlesProvider {
     this.mapper = new LocalArticleMapper(this.contentPath)
   }
 
-  get = async (start = null, limit = null) => {
+  get = async (start = 0, limit = 3, orderByDate = false) => {
+    const articles = []
+    const filtered = RegisteredArticles.slice(start, limit)
+    for (const article of filtered) {
+      articles.push(await this.getBySlug(article));
+    }
+
+    if(orderByDate)
+      return articles.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+
+    return articles
+  }
+
+  getAll = async () => {
     const articles = []
     for (const article of RegisteredArticles) {
       articles.push(await this.getBySlug(article));

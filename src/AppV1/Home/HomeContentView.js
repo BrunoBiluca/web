@@ -20,7 +20,7 @@ async function getContents() {
   const articlesProvider = GlobalConfig.articles.provider()
 
   const games = await gamesProvider.getAll()
-  const articles = await articlesProvider.get()
+  const articles = await articlesProvider.getAll()
 
   const allContents = [
     ...games.map(g => mapContent(g, GlobalConfig.games.color())),

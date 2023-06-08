@@ -7,7 +7,7 @@ import ArticleCard from "../Articles/ArticleCard";
 import style from './Home.module.css';
 import GlobalConfig from "config/GlobalConfig";
 import Profile from "./Profile";
-import ActionButton from "AppV2/Components/Buttons/ActionButton";
+import ActionButtonBlock from "AppV2/Components/Buttons/ActionButtonBlock";
 
 async function loadGamesAsync(page) {
   const pageSize = 3;
@@ -15,19 +15,23 @@ async function loadGamesAsync(page) {
   return await GlobalConfig.games.provider().get(start, start + pageSize, true)
 }
 
-async function loadArticles() {
-  return await GlobalConfig.articles.provider().get();
+async function loadArticlesAsync(page) {
+  const pageSize = 3;
+  const start = page * pageSize;
+  return await GlobalConfig.articles.provider().get(start, start + pageSize, true);
 }
 
 export default function Home() {
-  const [isGamesFilled, setIsGamesFilled] = useState(false);
+  const [isGamesFilled, setIsGamesFilled] = useState(false)
   const [gamesPage, setGamesPage] = useState(0)
   const [games, setGames] = useState([])
 
+  const [isArticlesFilled, setIsArticlesFilled] = useState(false)
+  const [articlesPage, setArticlesPage] = useState(0)
   const [articles, setArticles] = useState([])
 
-  function loadGames() {
-    loadGamesAsync(gamesPage)
+  function loadGames(page) {
+    loadGamesAsync(page)
       .then(res => {
         if (res.length === 0) {
           setIsGamesFilled(true);
@@ -39,13 +43,23 @@ export default function Home() {
       });
   }
 
-  useEffect(() => {
-    loadGames();
-
-    loadArticles()
+  function loadArticles(page) {
+    loadArticlesAsync(page)
       .then(res => {
-        setArticles(res)
+
+        if (res.length === 0) {
+          setIsArticlesFilled(true);
+          return;
+        }
+
+        setArticles(a => [...a, ...res]);
+        setArticlesPage(p => p + 1)
       });
+  }
+
+  useEffect(() => {
+    loadGames(0);
+    loadArticles(0);
   }, [])
 
   return (
@@ -60,19 +74,22 @@ export default function Home() {
           <div className={style.grid}>
             {games.map(g => <GameCard key={g.key} game={g} />)}
           </div>
-          <div style={{ textAlign: "center", padding: "2em 0" }}>
-            <ActionButton
-              hide={isGamesFilled}
-              label="Carregar mais"
-              onClick={loadGames}
-            />
-          </div>
+          <ActionButtonBlock
+            hide={isGamesFilled}
+            label="Carregar mais"
+            onClick={() => loadGames(gamesPage)}
+          />
         </Section>
 
         <Section title="Artigos">
           <div className={style.grid}>
             {articles.map(a => <ArticleCard key={a.key} article={a} />)}
           </div>
+          <ActionButtonBlock
+            hide={isArticlesFilled}
+            label="Carregar mais"
+            onClick={() => loadArticles(articlesPage)}
+          />
         </Section>
       </div>
     </>
