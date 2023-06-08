@@ -1,7 +1,6 @@
 .card {
   height: 400px;
   display: block;
-  background-color: white;
 }
 
 .header {
@@ -35,8 +34,9 @@
 }
 
 .info {
-  font-family: cursive;
+  font-family: var(--font-main-family);
   padding: .8em 1em;
+  color: var(--card-main-txt-color);
 }
 
 .info h1 {
@@ -47,7 +47,7 @@
 
 .info span {
   font-size: .6em;
-  color: rgb(171, 171, 171);
+  color: var(--card-second-txt-color);
   font-weight: bold;
 }
 

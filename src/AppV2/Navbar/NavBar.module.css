@@ -1,7 +1,9 @@
+@import '/src/AppV2/Theme.module.css';
+
 .navBar {
-  background-color: #323150;
+  background-color: var(--bg-second-color);
+  color: var(--font-second-color);
   padding: .3em 0;
-  border-bottom: 2px solid #000;
 }
 
 .navBar .home {
@@ -16,9 +18,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
+  z-index: 2;
   
   font-size: 1.5em;
-  color: #fff;
+
   text-decoration: none;
 }
 
@@ -27,6 +32,6 @@
 }
 
 .navBarButton a {
-  color: #fff;
+  color: var(--font-second-color);
   text-decoration: none;
 }

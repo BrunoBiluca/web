@@ -1,0 +1,20 @@
+:root {
+  --bg-main-color: #EEEDF4;
+  --bg-second-color: #323150;
+  
+  --font-main-family: cursive;
+  --font-main-color: #5d5d5d;
+  --font-second-color: white;
+
+  --card-main-bg-color: white;
+  --card-main-txt-color: #434343;
+  --card-second-txt-color: rgb(171, 171, 171);
+
+  --btn-main-bg-color: #F54760;
+  --btn-main-txt-color: #fff;
+
+  --shadow-sm: 0px 0px 8px 2px;
+  --shadow-lg: 0px 0px 12px 2px;
+  --shadow-color: rgba(0, 0, 0, .4);
+  --shadow-hover: rgba(0, 0, 0, .7);
+}

@@ -1,0 +1,5 @@
+@import '/src/AppV2/Theme.module.css';
+
+.app {
+  background-color: var(--bg-main-color);
+}

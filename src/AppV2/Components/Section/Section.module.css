@@ -10,7 +10,8 @@
 }
 
 .sectionTitle h1 {
-  font-family: cursive;
+  font-family: var(--font-main-family);
+  color: var(--font-main-color);
   position: relative;
 }
 
