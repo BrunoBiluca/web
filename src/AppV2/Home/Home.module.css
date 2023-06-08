@@ -6,3 +6,9 @@
   justify-items: end;
   align-items: start;
 }
+
+@media screen and (max-width: 600px){
+  .grid {
+    grid-template-columns: none;
+  }
+}

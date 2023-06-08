@@ -35,3 +35,15 @@
   color: var(--font-second-color);
   text-decoration: none;
 }
+
+
+@media screen and (max-width: 600px) {
+
+  .navBar {
+    padding: 1em;
+  }
+
+  .navBarButton span {
+    font-size: .5em;
+  }
+}

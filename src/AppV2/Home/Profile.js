@@ -6,8 +6,9 @@ import ProfileImage from './ProfileImage';
 export default function Profile() {
 
   function animateBubbles() {
+    const bubblesNumber = window.innerWidth < 600 ? 10 : 20;
     let bubbles = []
-    for (let index = 0; index < 20; index++) {
+    for (let index = 0; index < bubblesNumber; index++) {
       let speed = Math.floor(Math.random() * 10) + 1
       bubbles.push(<span key={index} style={{ "--speed": speed }}></span>)
     }

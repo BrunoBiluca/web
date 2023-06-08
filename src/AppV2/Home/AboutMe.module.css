@@ -36,3 +36,18 @@
   margin-right: 5em;
   text-align: center;
 }
+
+@media screen and (max-width: 600px) {
+
+  .about {
+    flex-direction: column;
+  }
+
+  .description::before {
+    display: none;
+  }
+
+  .pictureHolder {
+    margin: 0;
+  }
+}
