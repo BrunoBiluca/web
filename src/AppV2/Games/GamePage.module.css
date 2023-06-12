@@ -1,0 +1,74 @@
+@import "/src/AppV2/Theme.module.css";
+
+.block {
+  background-color: var(--card-main-bg-color);
+  box-shadow: var(--shadow-lg) var(--shadow-color);
+  font-family: var(--font-main-family);
+  margin: 1em;
+  border-radius: 10px;
+}
+
+.section {
+  padding: 1em;
+}
+
+
+.twoColumnSection {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1em;
+}
+
+.gallery {}
+
+.section h1 {
+  margin: 0;
+}
+
+.section h2 {
+  margin: 0;
+  border-bottom: 2px solid;
+}
+
+.section h3 {
+  margin: 0;
+  margin-bottom: .5em;
+}
+
+.section p {
+  margin: .3em 0;
+}
+
+.gameHeader span {
+  color: var(--card-second-txt-color);
+}
+
+.gameDownload {
+  background-color: var(--bg-second-color);
+  color: var(--font-second-color);
+  height: 100px;
+  position: relative;
+}
+
+.downloadActions {
+  position: absolute;
+  bottom: -1em;
+  right: 1em;
+}
+
+.downloadAction {
+  font-weight: bold;
+  margin: 0 .5em;
+  border-radius: 10px;
+}
+
+.gameInfoSecondary {}
+
+.categories {}
+
+.category {
+  padding: 0.3em 0.6em;
+  border: 1px solid;
+  margin: 0.1em;
+  display: inline-block;
+}

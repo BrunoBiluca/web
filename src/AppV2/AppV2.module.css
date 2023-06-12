@@ -3,3 +3,9 @@
 .app {
   background-color: var(--bg-main-color);
 }
+
+.content {
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}

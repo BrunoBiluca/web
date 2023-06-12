@@ -6,7 +6,6 @@ import GameCard from "../Games/GameCard";
 import ArticleCard from "../Articles/ArticleCard";
 import style from './Home.module.css';
 import GlobalConfig from "config/GlobalConfig";
-import Profile from "./Profile";
 import ActionButtonBlock from "AppV2/Components/Buttons/ActionButtonBlock";
 
 async function loadGamesAsync(page) {
@@ -64,7 +63,6 @@ export default function Home() {
 
   return (
     <>
-      <Profile />
       <div>
         <Section title="Sobre mim">
           <AboutMe />
