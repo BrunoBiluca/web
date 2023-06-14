@@ -15,6 +15,7 @@ export default class Game {
   gameStatus // TODO: definir os tipos
   gamePlayLink
   itchioLink
+  packageSize
   featuredImage = {
     path: "",
     thumbnail: "",
@@ -42,6 +43,7 @@ export default class Game {
     this.gameStatus = game.gameStatus
     this.gamePlayLink = game.gamePlayLink
     this.itchioLink = game.itchioLink
+    this.packageSize = game.packageSize
 
     try {
       this.repository = new GitHubRepositoryModel(

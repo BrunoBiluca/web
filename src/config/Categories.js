@@ -10,5 +10,9 @@ const categories = [
 ]
 
 export function getCategory(key) {
-  return categories.find(c => c.key === key)
+  let cat = categories.find(c => c.key === key)
+  if(cat)
+    return cat
+
+  return new Category(key, "", "")
 }

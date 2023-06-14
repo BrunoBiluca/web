@@ -24,6 +24,7 @@ export default class LocalGameMapper {
     mappedGame.gameplayDuration = game.gameplay_duration
     mappedGame.itchioLink = game.itchio_link
     mappedGame.publishedAt = game.published_at
+    mappedGame.packageSize = game.package_size
 
     mappedGame.featuredImage = this.mapImage(game, game.featured_image)
 

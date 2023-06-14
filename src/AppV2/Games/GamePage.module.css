@@ -8,10 +8,13 @@
   border-radius: 10px;
 }
 
+.gameMain {
+  height: 50vh;
+}
+
 .section {
   padding: 1em;
 }
-
 
 .twoColumnSection {
   display: grid;
@@ -20,6 +23,25 @@
 }
 
 .gallery {}
+
+.gallery img {
+  height: 100%;
+  width: auto;
+}
+
+.gallery .main {
+  margin-bottom: 1em;
+  height: 35vh;
+}
+
+.gallery .secondary {
+  display: flex;
+  gap: 1em;
+}
+
+.gallery .item {
+  height: 100px;
+}
 
 .section h1 {
   margin: 0;
@@ -60,6 +82,8 @@
   font-weight: bold;
   margin: 0 .5em;
   border-radius: 10px;
+  font-size: 1em;
+  width: 140px;
 }
 
 .gameInfoSecondary {}
@@ -68,7 +92,23 @@
 
 .category {
   padding: 0.3em 0.6em;
-  border: 1px solid;
-  margin: 0.1em;
+  border: 2px solid black;
+  margin: 0.2em;
   display: inline-block;
+}
+
+.platforms {
+  display: flex;
+  gap: 1em;
+  filter: brightness(0) invert(1);
+  flex-direction: row-reverse;
+}
+
+.platformIcon {
+  height: 40px;
+}
+
+.platformIcon img {
+  height: 100%;
+  width: auto;
 }
