@@ -26,22 +26,25 @@
   ],
   "gallery": [
     {
-      "key": "",
+      "key": "gameplay_2",
       "name": "",
       "path": "",
-      "thumbnail": "images/gameplay_2.png"
+      "thumbnail": "images/gameplay_2.png",
+      "alt": ""
     },
     {
-      "key": "",
+      "key": "gameplay_1",
       "name": "",
       "path": "",
-      "thumbnail": "images/gameplay_1.png"
+      "thumbnail": "images/gameplay_1.png",
+      "alt": ""
     },
     {
-      "key": "",
+      "key": "title_screen",
       "name": "",
       "path": "",
-      "thumbnail": "images/title_screen.png"
+      "thumbnail": "images/title_screen.png",
+      "alt": ""
     }
   ],
   "repository": {

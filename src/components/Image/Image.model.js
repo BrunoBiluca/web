@@ -6,6 +6,7 @@ export default class Image {
   alt
 
   constructor(config, folderPath = "") {
+    this.key = config.key
     this.name = config.name
 
     if (folderPath) {

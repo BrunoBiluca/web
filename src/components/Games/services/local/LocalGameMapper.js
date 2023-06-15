@@ -39,6 +39,8 @@ export default class LocalGameMapper {
       ? this.formatImagePath(game, imageObj.path)
       : this.formatImagePath(game, imageObj.thumbnail)
     return new Image({
+      key: imageObj.key,
+      alt: imageObj.alt,
       path: path,
       thumbnail: this.formatImagePath(game, imageObj.thumbnail),
       name: imageObj.name

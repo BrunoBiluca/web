@@ -32,6 +32,10 @@
 .gallery .main {
   margin-bottom: 1em;
   height: 35vh;
+  width: 40vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .gallery .secondary {
@@ -40,7 +44,10 @@
 }
 
 .gallery .item {
-  height: 100px;
+  height: 90px;
+  width: 160px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .section h1 {

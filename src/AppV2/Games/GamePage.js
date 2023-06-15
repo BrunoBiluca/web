@@ -17,6 +17,9 @@ export default function GamePage() {
   const { gameSlug } = useParams();
   let [game, setGame] = useState(new Game({ slug: gameSlug }));
 
+  let [gallery, setGallery] = useState([]);
+  let [mainGallery, setMainGallery] = useState(<></>);
+
   useEffect(() => {
     const gameProvider = GlobalConfig.games.provider()
     gameProvider
@@ -24,28 +27,34 @@ export default function GamePage() {
       .then(res => {
         setGame(res)
         console.log(res)
-      });
+        let g = res.gallery.map(g =>
+          <img key={g.key} src={g.thumbnail} alt={g.alt} />
+        )
+        setGallery(g)
+        setMainGallery(g[0])
+      })
   }, [gameSlug]);
+
+  function changeMainGallery(index) {
+    setMainGallery(gallery[index])
+  }
 
   return <>
     <div className={classNames(style.block, style.twoColumnSection, style.gameMain)}>
       <div className={classNames(style.gallery, style.section)}>
         <div className={style.main}>
-          <img src={placeholder} />
+          {mainGallery}
         </div>
         <div className={style.secondary}>
-          <div className={style.item}>
-            <img src={placeholder} />
-          </div>
-          <div className={style.item}>
-            <img src={placeholder} />
-          </div>
-          <div className={style.item}>
-            <img src={placeholder} />
-          </div>
-          <div className={style.item}>
-            <img src={placeholder} />
-          </div>
+          {gallery.map((galleryImage, i) =>
+            <div
+              key={galleryImage.key}
+              className={style.item}
+              onClick={() => changeMainGallery(i)}
+            >
+              {galleryImage}
+            </div>
+          )}
         </div>
       </div>
       <div className={classNames(style.section)}>
