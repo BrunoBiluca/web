@@ -1,8 +1,6 @@
 import classNames from 'helpers/ClassNames'
 import style from './GamePage.module.css'
-import ActionButton from 'AppV2/Components/Buttons/ActionButton'
 
-import placeholder from './gameplay.png';
 import androidIcon from './android-icon.png'
 import windowsIcon from './windows-icon.png'
 import webIcon from './web-icon.png'
@@ -26,7 +24,6 @@ export default function GamePage() {
       .getBySlug(gameSlug)
       .then(res => {
         setGame(res)
-        console.log(res)
         let g = res.gallery.map(g =>
           <img key={g.key} src={g.thumbnail} alt={g.alt} />
         )
@@ -58,7 +55,6 @@ export default function GamePage() {
         </div>
       </div>
       <div className={classNames(style.section)}>
-        {/* Info */}
         <div className={classNames(style.gameHeader)}>
           <h1>{game.title}</h1>
           <span>Lançamento: {game.publishedAt}</span>
@@ -74,15 +70,35 @@ export default function GamePage() {
         <div className={classNames(style.twoColumnSection)} style={{ alignItems: "center" }}>
           <h1>Jogar {game.title}</h1>
           <div className={style.platforms}>
-            <span className={style.platformIcon}><img src={androidIcon} alt="Ícone do Android, jogo disponível para Android" /></span>
-            <span className={style.platformIcon}><img src={windowsIcon} alt="Ícone do Windows, jogo disponível para Windows" /></span>
-            <span className={style.platformIcon}><img src={webIcon} alt="Ícone de Web, jogo disponível para navegadores" /></span>
+            <span
+              hidden={!game.platforms.includes("android")}
+              className={style.platformIcon}
+            >
+              <img src={androidIcon} alt="Ícone do Android, jogo disponível para Android" />
+            </span>
+            <span
+              hidden={!game.platforms.includes("windows")}
+              className={style.platformIcon}
+            >
+              <img src={windowsIcon} alt="Ícone do Windows, jogo disponível para Windows" />
+            </span>
+            <span
+              hidden={!game.platforms.includes("web")}
+              className={style.platformIcon}
+            >
+              <img src={webIcon} alt="Ícone de Web, jogo disponível para navegadores" />
+            </span>
           </div>
         </div>
         <div className={classNames(style.downloadActions)}>
-          <ActionButton label="Play now" className={[style.downloadAction]} />
-          <ActionButton label="itch.io" className={[style.downloadAction]} />
-          <ActionButton label="Play Store" className={[style.downloadAction]} />
+          {game.playActions.map(action =>
+            <UrlButton
+              key={action.name}
+              label={action.name}
+              className={[style.downloadAction]}
+              url={action.url}
+            />
+          )}
         </div>
       </div>
       <div className={classNames(style.block, style.gameInfoSecondary)}>

@@ -24,6 +24,7 @@ export default class Game {
   categories = []
   gallery = []
   howToPlay = []
+  platforms = []
 
   repository = undefined
 
@@ -44,6 +45,8 @@ export default class Game {
     this.gamePlayLink = game.gamePlayLink
     this.itchioLink = game.itchioLink
     this.packageSize = game.packageSize
+    this.platforms = game.platforms != null ? game.platforms : []
+    this.playActions = []
 
     try {
       this.repository = new GitHubRepositoryModel(

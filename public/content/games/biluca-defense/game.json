@@ -21,8 +21,18 @@
     "tower defense"
   ],
   "platforms": [
-    "android",
-    "windows"
+    "windows",
+    "web"
+  ],
+  "play_actions":[
+    {
+      "name": "Play now",
+      "url": "https://play.unity.com/mg/other/biluca-defense"
+    },
+    {
+      "name": "itch.io",
+      "url": "https://brunobiluca.itch.io/biluca-defense"
+    }
   ],
   "gallery": [
     {
