@@ -2,14 +2,14 @@
 
 .block {
   background-color: var(--card-main-bg-color);
-  box-shadow: var(--shadow-lg) var(--shadow-color);
+  box-shadow: var(--shadow-sm) var(--shadow-color);
   font-family: var(--font-main-family);
   margin: 1em;
   border-radius: 10px;
 }
 
 .gameMain {
-  height: 50vh;
+  height: 60vh;
 }
 
 .section {
@@ -32,8 +32,8 @@
 .gallery .main {
   margin: 0 auto;
   margin-bottom: 1em;
-  height: 35vh;
-  max-width: 35vw;
+  height: 45vh;
+  max-width: 45vw;
   overflow: hidden;
   display: flex;
   justify-content: center;

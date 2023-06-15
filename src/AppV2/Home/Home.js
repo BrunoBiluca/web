@@ -7,6 +7,7 @@ import ArticleCard from "../Articles/ArticleCard";
 import style from './Home.module.css';
 import GlobalConfig from "config/GlobalConfig";
 import ActionButtonBlock from "AppV2/Components/Buttons/ActionButtonBlock";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 async function loadGamesAsync(page) {
   const pageSize = 3;
@@ -70,7 +71,15 @@ export default function Home() {
 
         <Section title="Jogos">
           <div className={style.grid}>
-            {games.map(g => <GameCard key={g.key} game={g} />)}
+            {games.map(g =>
+              <Link
+                key={g.slug}
+                to={g.link}
+                style={{ textDecoration: "none" }}
+              >
+                <GameCard key={g.key} game={g} />
+              </Link>
+            )}
           </div>
           <ActionButtonBlock
             hide={isGamesFilled}
