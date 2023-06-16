@@ -9,7 +9,7 @@ const SmoothScroll = ({ children }) => {
     const container = containerRef.current;
     const track = trackRef.current;
 
-    const interpolateAmount = 0.08;
+    const interpolateAmount = 0.05;
     let startY = 0;
     let endY = 0;
     let raf;
@@ -24,7 +24,10 @@ const SmoothScroll = ({ children }) => {
       startY = lerp(startY, endY, interpolateAmount);
       track.style.transform = `translateY(-${startY}px)`;
       raf = requestAnimationFrame(update);
-      if (stopCondition(startY, container.scrollTop)) cancelAnimationFrame(raf);
+      if (stopCondition(startY, container.scrollTop)) {
+        startY = container.scrollTop
+        cancelAnimationFrame(raf);
+      }
     }
 
     function move() {
