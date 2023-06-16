@@ -43,15 +43,17 @@ export default function GamePage() {
           {mainGallery}
         </div>
         <div className={style.secondary}>
-          {gallery.map((galleryImage, i) =>
-            <div
-              key={galleryImage.key}
-              className={style.item}
-              onClick={() => changeMainGallery(i)}
-            >
-              {galleryImage}
-            </div>
-          )}
+          <div className={style.galleryImageHolder}>
+            {gallery.map((galleryImage, i) =>
+              <div
+                key={galleryImage.key}
+                className={style.item}
+                onClick={() => changeMainGallery(i)}
+              >
+                {galleryImage}
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <div className={classNames(style.section)}>

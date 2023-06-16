@@ -122,3 +122,53 @@
   height: 100%;
   width: auto;
 }
+
+@media screen and (max-width: 600px) {
+
+  .block {
+    display: block;
+  }
+
+  .gameMain {
+    height: auto;
+  }
+
+  .gameHeader {
+    padding-top: 0;
+  }
+
+  .gameDownload {
+    padding: 2em 1em;
+  }
+
+  .gallery .main {
+    max-width: inherit;
+    height: 30vh;
+  }
+
+  .gallery .item {
+    height: 90px;
+    width: 120px;
+  }
+
+  .twoColumnSection {
+    display: block;
+  }
+
+  .gameDownload {
+    margin-bottom: 2em;
+  }
+
+  .gallery .secondary {
+    height: 90px;
+    position: relative;
+    overflow: scroll;
+  }
+
+  .galleryImageHolder {
+    position: absolute;
+    overflow: scroll;
+    display: inline-flex;
+    gap: 1em;
+  }
+}

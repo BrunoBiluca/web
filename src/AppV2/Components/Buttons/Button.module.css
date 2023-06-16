@@ -17,3 +17,11 @@
 .flatButton:hover {
   box-shadow: var(--shadow-lg) var(--shadow-hover);
 }
+
+@media screen and (max-width: 600px) {
+  .flatButton {
+    padding: 0.5em 1.2em;
+    font-size: 1.5em;
+    border-radius: 10px;
+  }
+}
