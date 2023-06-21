@@ -1,0 +1,22 @@
+.article {
+  margin: 4em auto;
+  max-width: 1000px;
+  font-family: cursive;
+  text-align: justify;
+}
+
+.articleHeader {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.subHeader {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article p {
+  font-size: 1.4em;
+}

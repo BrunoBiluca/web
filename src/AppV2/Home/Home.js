@@ -90,7 +90,15 @@ export default function Home() {
 
         <Section title="Artigos">
           <div className={style.grid}>
-            {articles.map(a => <ArticleCard key={a.key} article={a} />)}
+            {articles.map(a =>
+              <Link
+                key={a.slug}
+                to={a.link}
+                style={{ textDecoration: "none" }}
+              >
+                <ArticleCard key={a.key} article={a} />
+              </Link>
+            )}
           </div>
           <ActionButtonBlock
             hide={isArticlesFilled}

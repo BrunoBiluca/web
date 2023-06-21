@@ -1,8 +1,8 @@
 import classNames from "helpers/ClassNames";
-import style from "./ContentBlock.module.css"
+import styles from "./ContentBlock.module.css"
 
-export default function ContentBlock({ className, children }) {
-  return <div className={classNames(style.block, className)}>
+export default function ContentBlock({ style, className, children }) {
+  return <div style={style} className={classNames(styles.block, className)}>
     {children}
   </div>
 }
