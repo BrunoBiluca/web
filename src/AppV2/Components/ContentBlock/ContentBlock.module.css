@@ -1,0 +1,15 @@
+.block {
+  background-color: var(--card-main-bg-color);
+  box-shadow: var(--shadow-sm) var(--shadow-color);
+  font-family: var(--font-main-family);
+  margin: 1em;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .block {
+    display: block;
+  }
+
+}

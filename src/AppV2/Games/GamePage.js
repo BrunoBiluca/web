@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom';
 import Game from 'components/Games/model/Game.model';
 import GlobalConfig from 'config/GlobalConfig';
 import UrlButton from 'AppV2/Components/Buttons/UrlButton';
+import ContentBlock from 'AppV2/Components/ContentBlock/ContentBlock'
 
 export default function GamePage() {
   const { gameSlug } = useParams();
@@ -37,7 +38,7 @@ export default function GamePage() {
   }
 
   return <>
-    <div className={classNames(style.block, style.twoColumnSection, style.gameMain)}>
+    <ContentBlock className={classNames(style.twoColumnSection, style.gameMain)}>
       <div className={classNames(style.gallery, style.section)}>
         <div className={style.main}>
           {mainGallery}
@@ -65,10 +66,10 @@ export default function GamePage() {
           <p>{game.description}</p>
         </div>
       </div>
-    </div>
+    </ContentBlock>
 
     <div className={classNames(style.twoColumnSection)}>
-      <div className={classNames(style.block, style.section, style.gameDownload)}>
+      <ContentBlock className={classNames(style.section, style.gameDownload)}>
         <div className={classNames(style.twoColumnSection)} style={{ alignItems: "center" }}>
           <h1>Jogar {game.title}</h1>
           <div className={style.platforms}>
@@ -102,8 +103,8 @@ export default function GamePage() {
             />
           )}
         </div>
-      </div>
-      <div className={classNames(style.block, style.gameInfoSecondary)}>
+      </ContentBlock>
+      <ContentBlock className={classNames(style.gameInfoSecondary)}>
         <div className={classNames(style.section)}>
           <p><strong>Desenvolvedor:</strong> {game.author}</p>
           <p><strong>Lançamento:</strong> {game.publishedAt}</p>
@@ -124,22 +125,22 @@ export default function GamePage() {
             }
           </div>
         </div>
-      </div>
-    </div >
+      </ContentBlock>
+    </div>
 
-    <div className={classNames(style.block, style.section)}>
+    <ContentBlock className={style.section}>
       <h2>Sobre esse jogo</h2>
       <div>
         {game.contentSummary}
       </div>
-    </div>
+    </ContentBlock>
 
     {
       game.repository &&
-      <div className={classNames(style.block, style.section)}>
+      <ContentBlock className={style.section}>
         <h2>Repositório de código</h2>
         <UrlButton label={game.repository.repositoryName} url={game.repository.url} />
-      </div>
+      </ContentBlock>
     }
   </>
 }

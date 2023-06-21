@@ -1,13 +1,5 @@
 @import "/src/AppV2/Theme.module.css";
 
-.block {
-  background-color: var(--card-main-bg-color);
-  box-shadow: var(--shadow-sm) var(--shadow-color);
-  font-family: var(--font-main-family);
-  margin: 1em;
-  border-radius: 10px;
-}
-
 .gameMain {
   height: 60vh;
 }
@@ -76,7 +68,7 @@
 }
 
 .gameDownload {
-  background-color: var(--bg-second-color);
+  background-color: var(--bg-second-color)!important;
   color: var(--font-second-color);
   height: 100px;
   position: relative;
@@ -124,10 +116,6 @@
 }
 
 @media screen and (max-width: 600px) {
-
-  .block {
-    display: block;
-  }
 
   .gameMain {
     height: auto;
