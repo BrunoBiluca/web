@@ -13,6 +13,7 @@ export default function AppV2() {
 
   return (
     <div className={style.app}>
+      <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"></link>
       <NavBar />
       <Switch>
         <Route path={path} exact children={<Profile />} />

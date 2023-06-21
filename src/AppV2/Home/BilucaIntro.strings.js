@@ -6,8 +6,8 @@ class BilucaIntro {
       .addLocale("en", "👋 Hi, I'm Bruno (aka. BrunoBiluca).")
       .addLocale("pt-BR", "👋 Oi, me chamo Bruno, também conhecido por BrunoBiluca."),
     intro_2: new LocaleStr("intro_2")
-      .addLocale("en", "I'm a game developer, but I can handle everything. I also love to teach people and I want to share what I'be been learning.")
-      .addLocale("pt-BR", "Sou principalmente um desenvolvedor de games, mas sou pau pra toda obra. Eu também amo ensinar pessoas e quero compartilhar o que estou aprendendo."),
+      .addLocale("en", "I'm a game developer and I love to develop interesting games with surprising gameplay mechanics. I also love to teach people and I want to share what I'be been learning.")
+      .addLocale("pt-BR", "Sou um desenvolvedor de games e adoro a desenvolver jogos interessantes com mecânicas surpreendentes. Eu também amo ensinar pessoas e quero compartilhar o que estou aprendendo."),
     intro_3: new LocaleStr("intro_4")
       .addLocale("en", "So I started this website to document the stuff that I'm currently working. Hope to help! 🙋")
       .addLocale("pt-BR", "Então eu comecei esse website para documentar os meus jogos e me conhecimento. Espero te ajudar! 🙋"),
