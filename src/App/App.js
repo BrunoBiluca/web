@@ -10,18 +10,14 @@ import ResumePage from 'ResumePage/ResumePage';
 import AppV2 from '../AppV2/AppV2';
 
 class App extends React.Component {
-
   render() {
     return (
       <Switch>
         <Route path='/resume' >
           <ResumePage />
         </Route>
-        <Route path='/' exact>
-          <ScrollToTop />
-          <NavBar />
-          <ContentRouter />
-          <Footer />
+        <Route path='/'>
+          <AppV2 />
         </Route>
         <Route path='/v2'>
           <AppV2 />
