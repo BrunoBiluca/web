@@ -4,12 +4,13 @@
   "title": "Biluca Defense",
   "published_at": "2021-12-03",
   "author": "Bruno Bernardes da Costa",
-  "description": "",
+  "description": "Jogue contra ondas de inimigos, colete recursos para construir um forte estabelecimento.",
   "description_summary": "",
   "gameplay_duration": "5 - 10 minutes",
   "game_status": "Released",
   "online_play_link": "https://play.unity.com/mg/other/biluca-defense",
   "itchio_link": "https://brunobiluca.itch.io/biluca-defense",
+  "package_size": "600 MB",
   "featured_image": {
     "formats": {},
     "path": "",
@@ -17,26 +18,43 @@
     "description": ""
   },
   "categories": [
-    "games"
+    "tower defense"
+  ],
+  "platforms": [
+    "windows",
+    "web"
+  ],
+  "play_actions":[
+    {
+      "name": "Play now",
+      "url": "https://play.unity.com/mg/other/biluca-defense"
+    },
+    {
+      "name": "itch.io",
+      "url": "https://brunobiluca.itch.io/biluca-defense"
+    }
   ],
   "gallery": [
     {
-      "key": "",
+      "key": "gameplay_2",
       "name": "",
       "path": "",
-      "thumbnail": "images/gameplay_2.png"
+      "thumbnail": "images/gameplay_2.png",
+      "alt": ""
     },
     {
-      "key": "",
+      "key": "gameplay_1",
       "name": "",
       "path": "",
-      "thumbnail": "images/gameplay_1.png"
+      "thumbnail": "images/gameplay_1.png",
+      "alt": ""
     },
     {
-      "key": "",
+      "key": "title_screen",
       "name": "",
       "path": "",
-      "thumbnail": "images/title_screen.png"
+      "thumbnail": "images/title_screen.png",
+      "alt": ""
     }
   ],
   "repository": {

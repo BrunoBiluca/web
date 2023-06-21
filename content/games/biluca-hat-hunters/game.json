@@ -22,10 +22,10 @@
   ],
   "gallery": [
     {
-      "key": "",
-      "name": "",
-      "path": "",
-      "thumbnail": ""
+      "key": "game_2",
+      "name": "game_2",
+      "path": "images/game_2.png",
+      "thumbnail": "images/game_2.png"
     }
   ],
   "repository": {

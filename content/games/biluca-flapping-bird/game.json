@@ -21,10 +21,10 @@
   ],
   "gallery": [
     {
-      "key": "",
-      "name": "",
-      "path": "",
-      "thumbnail": ""
+      "key": "thumbnail",
+      "name": "thumbnail",
+      "path": "images/thumbnail.png",
+      "thumbnail": "images/thumbnail.png"
     }
   ],
   "repository": {
