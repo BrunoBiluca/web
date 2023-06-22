@@ -16,17 +16,17 @@ class App extends React.Component {
         <Route path='/resume' >
           <ResumePage />
         </Route>
-        <Route path='/'>
-          <AppV2 />
-        </Route>
-        <Route path='/v2'>
-          <AppV2 />
-        </Route>
         <Route path='/v1'>
           <ScrollToTop />
           <NavBar />
           <ContentRouter />
           <Footer />
+        </Route>
+        <Route path='/v2'>
+          <AppV2 />
+        </Route>
+        <Route path='/'>
+          <AppV2 />
         </Route>
       </Switch>
     );

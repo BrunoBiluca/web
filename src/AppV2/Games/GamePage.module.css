@@ -32,7 +32,7 @@
   border-radius: 10px;
 }
 
-.gallery .secondary {
+.gallery .galleryImageHolder {
   display: flex;
   gap: 1em;
 }
