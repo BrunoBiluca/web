@@ -21,13 +21,13 @@
   ],
   "gallery": [
     {
-      "key": "",
+      "key": "gameplay",
       "name": "",
       "path": "images/gameplay.jpg",
       "thumbnail": "images/gameplay.jpg"
     },
     {
-      "key": "",
+      "key": "gameplay_2",
       "name": "",
       "path": "images/gameplay_2.jpg",
       "thumbnail": "images/gameplay_2.jpg"

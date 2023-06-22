@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.5bdf11e8.chunk.css",
-    "main.js": "/web/static/js/main.971b1621.chunk.js",
-    "main.js.map": "/web/static/js/main.971b1621.chunk.js.map",
+    "main.css": "/web/static/css/main.61c7fc96.chunk.css",
+    "main.js": "/web/static/js/main.006ddda2.chunk.js",
+    "main.js.map": "/web/static/js/main.006ddda2.chunk.js.map",
     "runtime-main.js": "/web/static/js/runtime-main.544f45d8.js",
     "runtime-main.js.map": "/web/static/js/runtime-main.544f45d8.js.map",
     "static/js/2.95c1f131.chunk.js": "/web/static/js/2.95c1f131.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.b999b34e.chunk.js": "/web/static/js/3.b999b34e.chunk.js",
     "static/js/3.b999b34e.chunk.js.map": "/web/static/js/3.b999b34e.chunk.js.map",
     "index.html": "/web/index.html",
-    "static/css/main.5bdf11e8.chunk.css.map": "/web/static/css/main.5bdf11e8.chunk.css.map",
+    "static/css/main.61c7fc96.chunk.css.map": "/web/static/css/main.61c7fc96.chunk.css.map",
     "static/js/2.95c1f131.chunk.js.LICENSE.txt": "/web/static/js/2.95c1f131.chunk.js.LICENSE.txt",
     "static/media/android-icon.e1450326.png": "/web/static/media/android-icon.e1450326.png",
     "static/media/biluca_defense_gameplay.png": "/web/static/media/biluca_defense_gameplay.7fdcbe77.png",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.544f45d8.js",
     "static/js/2.95c1f131.chunk.js",
-    "static/css/main.5bdf11e8.chunk.css",
-    "static/js/main.971b1621.chunk.js"
+    "static/css/main.61c7fc96.chunk.css",
+    "static/js/main.006ddda2.chunk.js"
   ]
 }
