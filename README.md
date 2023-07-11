@@ -12,30 +12,23 @@ Para adicionar novos conteúdos é necessário seguir os seguintes passos:
   - Artigos são registrados no arquivo `src\config\RegisteredArticles.js`
   - Games são registrados no arquivo `src\config\RegisteredGames.js`
 
-# Project Setup
+# Commit messages
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+As mensagem de commits deve seguir o seguinte formato
 
-## Available Scripts
+```
+[tipo] [descrição do conteúdo alterado] [(opcional) justificativa]
+```
 
-In the project directory, you can run:
+- tipo: parte destinada a definir o tipo de alteração que está sendo registrada
+- descrição do conteúdo alterado: parte destinada a descrever em poucas palavras o que foi alterado nesse commit
+- justificativa: parte destinada a definir uma justificativa para para a alteração commitada
+	- A justificativa é opcional já que muitas vezes a própria descrição do conteúdo já explana a justificativa da alteração.
 
-### `npm start`
+## Tipos 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Cada commit deve ter um tipo associado, esses tipos são definidos como emojis para facilitar o seu entendimento.
 
-### `npm start:watch`
-
-Runs the app in the development mode watching for changes in the code.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder. The build is minified and the filenames include the hashes. Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Emoji | Descrição                                          |
+| ----- | -------------------------------------------------- |
+| 📈     | Alteração relacionada a análise de dados do portal |
