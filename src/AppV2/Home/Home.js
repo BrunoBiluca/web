@@ -22,6 +22,7 @@ async function loadArticlesAsync(page) {
 }
 
 export default function Home() {
+  document.title = "Bruno Biluca Portal"
   const [isGamesFilled, setIsGamesFilled] = useState(false)
   const [gamesPage, setGamesPage] = useState(0)
   const [games, setGames] = useState([])

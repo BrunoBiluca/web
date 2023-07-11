@@ -5,9 +5,9 @@ import { HashRouter } from 'react-router-dom';
 import './index.css';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
-import ReactGA from "react-ga4";
+import analyticsInit from 'analytics';
 
-ReactGA.initialize("G-8ENM6FGY2F");
+analyticsInit();
 
 const container = document.getElementById('root');
 const root = createRoot(container);

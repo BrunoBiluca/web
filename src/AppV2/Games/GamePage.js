@@ -24,6 +24,7 @@ export default function GamePage() {
     gameProvider
       .getBySlug(gameSlug)
       .then(res => {
+        document.title = res.title
         setGame(res)
         let g = res.gallery.map(g =>
           <img key={g.key} src={g.thumbnail} alt={g.alt} />

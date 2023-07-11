@@ -17,6 +17,7 @@ export default function ArticlePage() {
     articlesProvider
       .getBySlug(articleSlug)
       .then(res => {
+        document.title = res.title
         setArticle(res)
       });
   }, [articleSlug]);
