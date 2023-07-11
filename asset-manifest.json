@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.61c7fc96.chunk.css",
-    "main.js": "/web/static/js/main.006ddda2.chunk.js",
-    "main.js.map": "/web/static/js/main.006ddda2.chunk.js.map",
-    "runtime-main.js": "/web/static/js/runtime-main.544f45d8.js",
-    "runtime-main.js.map": "/web/static/js/runtime-main.544f45d8.js.map",
-    "static/js/2.95c1f131.chunk.js": "/web/static/js/2.95c1f131.chunk.js",
-    "static/js/2.95c1f131.chunk.js.map": "/web/static/js/2.95c1f131.chunk.js.map",
-    "static/js/3.b999b34e.chunk.js": "/web/static/js/3.b999b34e.chunk.js",
-    "static/js/3.b999b34e.chunk.js.map": "/web/static/js/3.b999b34e.chunk.js.map",
+    "main.css": "/web/static/css/main.8eb045c4.chunk.css",
+    "main.js": "/web/static/js/main.5af683d5.chunk.js",
+    "main.js.map": "/web/static/js/main.5af683d5.chunk.js.map",
+    "runtime-main.js": "/web/static/js/runtime-main.0d67a9f2.js",
+    "runtime-main.js.map": "/web/static/js/runtime-main.0d67a9f2.js.map",
+    "static/js/2.1f42d7f9.chunk.js": "/web/static/js/2.1f42d7f9.chunk.js",
+    "static/js/2.1f42d7f9.chunk.js.map": "/web/static/js/2.1f42d7f9.chunk.js.map",
+    "static/js/3.fcdad0c9.chunk.js": "/web/static/js/3.fcdad0c9.chunk.js",
+    "static/js/3.fcdad0c9.chunk.js.map": "/web/static/js/3.fcdad0c9.chunk.js.map",
     "index.html": "/web/index.html",
-    "static/css/main.61c7fc96.chunk.css.map": "/web/static/css/main.61c7fc96.chunk.css.map",
-    "static/js/2.95c1f131.chunk.js.LICENSE.txt": "/web/static/js/2.95c1f131.chunk.js.LICENSE.txt",
+    "static/css/main.8eb045c4.chunk.css.map": "/web/static/css/main.8eb045c4.chunk.css.map",
+    "static/js/2.1f42d7f9.chunk.js.LICENSE.txt": "/web/static/js/2.1f42d7f9.chunk.js.LICENSE.txt",
     "static/media/android-icon.e1450326.png": "/web/static/media/android-icon.e1450326.png",
     "static/media/biluca_defense_gameplay.png": "/web/static/media/biluca_defense_gameplay.7fdcbe77.png",
     "static/media/biluca_xgrid.jpg": "/web/static/media/biluca_xgrid.6df6d95b.jpg",
@@ -24,9 +24,9 @@
     "static/media/web-icon.06123a8a.png": "/web/static/media/web-icon.06123a8a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.544f45d8.js",
-    "static/js/2.95c1f131.chunk.js",
-    "static/css/main.61c7fc96.chunk.css",
-    "static/js/main.006ddda2.chunk.js"
+    "static/js/runtime-main.0d67a9f2.js",
+    "static/js/2.1f42d7f9.chunk.js",
+    "static/css/main.8eb045c4.chunk.css",
+    "static/js/main.5af683d5.chunk.js"
   ]
 }
