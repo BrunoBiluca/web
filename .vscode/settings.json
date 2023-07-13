@@ -1,4 +1,7 @@
 {
     "cSpell.language": "en,pt,pt_BR",
-    "cSpell.enabled": true
+    "cSpell.enabled": true,
+    "cSpell.words": [
+        "rehype"
+    ]
 }

@@ -7,7 +7,9 @@ Funções matemáticas são comumente utilizadas no desenvolvimento de games. Se
 
 Por mais que fórmulas matemáticas são utilizadas em todos os lugares, deixar essas operações soltas no código pode dificultar bastante sua legibilidade. Simples funções matemáticas podem tirar a atenção do desenvolvedor do que realmente o código está executando. Por esse motivos devemos implementar funções matemáticas levando em consideração sua legibilidade também.
 
-> 🐶 **Pense comigo:** Tome como exemplo o código abaixo e me diga se você consegue explicar o que esse código faz?
+<pense-comigo>
+<pergunta>Tome como exemplo o código abaixo e me diga se você consegue explicar o que esse código faz?</pergunta>
+<discussao>
 
 ```csharp
 if(value >= 0f) {
@@ -29,8 +31,10 @@ Agora podemos escrever a mesma coisa como
 if(IsSignPositive(value))
   Console.Write(Clamp(value, min, max))
 ```
-
 Esse exemplo nos mostra que encapsular essas operações em funções podem melhorar muito a legibilidade do código e facilitar sua compreensão. Também temos o bônus de já utilizar conceitos definidos pela própria matemática, ou seja, outros desenvolvedores que já estão acostumados com a nomenclatura matemática consegue entender o que está sendo feito pelo código.
+
+</discussao>
+</pense-comigo>
 
 Assim as próximas seções irão demonstrar a implementação de 4 funções muito utilizadas durante o desenvolvimento de games, focando também na legibilidade dessas funções.
 

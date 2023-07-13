@@ -1,50 +1,30 @@
-<style>
-td, th {
-   border: none!important;
-}
-img {
-    display:block;
-    float:none;
-    margin-left:auto;
-    margin-right:auto;
-    width: auto;
-    height: 400px; 
-}
-blockquote {
-  padding: 12px 20px;
-  border-radius: 20px;
-}
-</style>
-
-# Interpolação linear na Unity  <!-- omit in toc -->
-
-- [Matemática da Interpolação Linear](#matemática-da-interpolação-linear)
-    - [Exemplo de cálculo da interpolação linear para uma função quadrática](#exemplo-de-cálculo-da-interpolação-linear-para-uma-função-quadrática)
-- [Função Lerp na Unity](#função-lerp-na-unity)
-- [Criando uma função de interpolação quadrática](#criando-uma-função-de-interpolação-quadrática)
-- [Criando uma função de interpolação cúbica](#criando-uma-função-de-interpolação-cúbica)
-- [Biluca, o que tiramos disso tudo?](#biluca-o-que-tiramos-disso-tudo)
-- [Código fonte](#código-fonte)
-- [Referências](#referências)
-
 > 💡Nesse artigo você encontrará:
 > - Explicação da matemática da interpolação linear
 > - Principais casos de uso e seus códigos
 
 Interpolação linear é um método muito utilizado para calcular pontos intermediários dentro de uma função linear. Isso nos permite definir um comportamento que siga uma função estabelecida, eliminando a necessidade de definir pontos individuais.
 
-> 🙋 *Mas Biluca beleza essa matemática, e o que isso significa em desenvolvimento de games?*
-
 Podemos utilizar esse método para múltiplas funcionalidades como por exemplo: 
 
 - criar comportamentos de animações baseados em funções, isso nos permite alterar de forma programática um movimento e então conseguir uma animação mais fluída. 
 - definir a movimentação de um objeto dentro do jogo de forma a definir apenas os ponto iniciais e finais enquanto os intermediários são calculados pelo interpolação. Por exemplo na criação de um sistema de patrulha.
 
-> 🐶 **Pense comigo:** pegue como exemplo a implementação da movimentação de um personagem de um ponto A para um ponto B do mapa. *Como você implementaria essa movimentação?*
+<pense-comigo>
+<pergunta>
+Dada a implementação da movimentação de um personagem de um ponto A para um ponto B do mapa. Como você implementaria essa movimentação?
+</pergunta>
+<discussao>
 
-Uma forma seria definir todos os pontos que o personagem irá andar do ponto A até o ponto B. Outra seria ir somando um valor a cada passo do personagem e verificar se a posição final foi alcançada. Perceba que ambas abordagems precisamos conhecer todos os pontos que regem o movimento. Na primeira seria necessário definir vários passos para o personagem, caso o caminho mude precisaríamos definir novamente todos os passos. A seguindo abordagem poderia funcionar para um movimento simples, porém movimentos complexos poderiam dificultar muito a validação da posição final.
+Uma forma seria definir todos os pontos que o personagem irá andar do ponto A até o ponto B. 
+
+Outra forma seria mater o valor referente a posição do personagem e somar esse valor a uma quantidade relacionada a quantidade de movimentação.
+
+Perceba que ambas abordagens precisamos conhecer todos os pontos que regem o movimento. Na primeira seria necessário definir vários passos para o personagem, caso o caminho mude precisaríamos definir novamente todos os passos. A seguindo abordagem poderia funcionar para um movimento simples, porém movimentos complexos poderiam dificultar muito a validação da posição final.
 
 Para resolver esses tipos de problemas tempos a **interpolação polinomial** e é isso que vamos discutir hoje.
+
+</discussao>
+</pense-comigo>
 
 Ao final desse artigo teremos passado pela **matemática do método de interpolação linear** e os **principais casos de usos**. Usos como a interpolação de movimento de objetos na cena dada uma função decomposta (quebrada) em outras funções lineares, no caso as funções quadráticas e cúbicas.
 
