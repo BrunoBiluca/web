@@ -14,6 +14,10 @@
   gap: 1em;
 }
 
+.twoColumnSection>* {
+  min-width: 0px;
+}
+
 .gallery {}
 
 .gallery img {
@@ -68,7 +72,7 @@
 }
 
 .gameDownload {
-  background-color: var(--bg-second-color)!important;
+  background-color: var(--bg-second-color) !important;
   color: var(--font-second-color);
   height: 100px;
   position: relative;
