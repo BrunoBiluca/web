@@ -1,8 +1,24 @@
+import { isDebugMode } from "config/server";
 import ReactGA from "react-ga4";
 
 export default function analyticsInit() {
-  ReactGA.initialize("G-8ENM6FGY2F");
+  ReactGA.initialize("G-8ENM6FGY2F", getOptions());
   setupPageViewEvent();
+}
+
+function getOptions() {
+  return isDebugMode ? getBaseDebugOptions() : {}
+}
+
+function getBaseDebugOptions() {
+  return {
+    gaOptions: {
+      debug_mode: true,
+    },
+    gtagOptions: {
+      debug_mode: true,
+    }
+  }
 }
 
 function setupPageViewEvent() {
@@ -24,7 +40,7 @@ function pageViewCallback(mutations) {
 
   ReactGA.send(pageViewEvent);
 
-  if (process.env.NODE_ENV === "development") {
+  if (isDebugMode) {
     console.log(`[PageView event sended]`)
     console.log(pageViewEvent)
   }
