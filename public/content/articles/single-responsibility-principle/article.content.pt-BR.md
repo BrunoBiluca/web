@@ -342,5 +342,3 @@ O princípio de Responsabilidade Única é uma forma de distribuirmos a responsa
 Como podemos ver com todos esses exemplos de refatorações, implementar apenas o conceito de <mark>Responsabilidade Única não altera muito a estrutura do código.</mark> Podemos combinar esse conceito com vários outros princípios como Modularização, Coesão, Separação de responsabilidades a fim de criarmos estruturas mais dinâmicas e eficientes assim então revolucionarmos a forma que escrevemos código.
 
 Com todos esses conceitos combinados conseguimos criar um código mais limpo e claro para nós desenvolvedores, além de como vimos no caso do cálculo de mudança de direção até mais performático.
-
-# Referências

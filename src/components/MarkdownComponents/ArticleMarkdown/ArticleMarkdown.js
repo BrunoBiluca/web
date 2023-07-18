@@ -16,7 +16,7 @@ const ArticleMarkdown = ({ content, imageBasePath }) => {
       rehypePlugins={[rehypeRaw]}
       components={{
         "code": CodeBlock,
-        "img": function ({ node, className }) { return ImageMD({ node, className, imageBasePath }) },
+        "img": ({ node, className }) => ImageMD({ node, className, imageBasePath }),
         "p": Paragraph,
         "pense-comigo": PenseComigo,
         "blockquote": Blockquote

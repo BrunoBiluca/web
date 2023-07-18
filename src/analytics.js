@@ -11,6 +11,7 @@ function getOptions() {
 }
 
 function getBaseDebugOptions() {
+  console.log("[Analytics setup] Setting base debug options")
   return {
     gaOptions: {
       debug_mode: true,
