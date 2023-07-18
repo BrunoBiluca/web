@@ -1,0 +1,13 @@
+{
+  "Bloco pense comigo": {
+    "scope": "markdown",
+    "prefix": "pense",
+    "body": [
+      "<pense-comigo>",
+      "<pergunta></pergunta>",
+      "<discussao></discussao>",
+      "</pense-comigo>"
+    ],
+    "description": "Template de um bloco pense comigo dos artigos"
+  }
+}

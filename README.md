@@ -32,3 +32,5 @@ Cada commit deve ter um tipo associado, esses tipos são definidos como emojis p
 | Emoji | Descrição                                          |
 | ----- | -------------------------------------------------- |
 | 📈     | Alteração relacionada a análise de dados do portal |
+| 📝     | Adição e edição dos artigos                        |
+| 🔧     | Adição ou edição de ferramentas para criação de conteúdos                        |

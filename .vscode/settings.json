@@ -1,7 +1,10 @@
 {
-    "cSpell.language": "en,pt,pt_BR",
-    "cSpell.enabled": true,
-    "cSpell.words": [
-        "rehype"
-    ]
+  "cSpell.language": "en,pt,pt_BR",
+  "cSpell.enabled": true,
+  "cSpell.words": [
+    "rehype"
+  ],
+  "[markdown]": {
+    "editor.quickSuggestions": true
+  }
 }
