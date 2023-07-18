@@ -1,38 +1,12 @@
-import Image from "components/Image/Image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import CodeMarkdown from "../CodeMarkdown/CodeMarkdown";
-import ImageMarkdown from "../ImageMarkdown/ImageMarkdown";
 import PropTypes from 'prop-types';
 import rehypeRaw from 'rehype-raw'
 import { PenseComigo } from "./PenseComigo";
-
-function CodeBlock(codeProps) {
-  return <CodeMarkdown codeProps={codeProps} />
-}
-
-function ImageMD({ node, className, imageBasePath }) {
-  function imagePath(image) {
-    return `${imageBasePath}/${image}`
-  }
-
-  return (
-    <Image className={className}
-      src={imagePath(node.properties.src)}
-      alt={node.properties.alt}
-    />
-  );
-}
-
-function Paragraph(pProps) {
-  let { children, ...props } = pProps;
-  if (children.length <= 2) {
-    return <ImageMarkdown imageProps={pProps} />
-  }
-  return <p {...props}>
-    {children}
-  </p>
-}
+import { Paragraph } from "./Paragraph";
+import { ImageMD } from "./ImageMD";
+import { CodeBlock } from "./CodeBlock";
+import Blockquote from "./Blockquote";
 
 const ArticleMarkdown = ({ content, imageBasePath }) => {
   return (
@@ -44,7 +18,8 @@ const ArticleMarkdown = ({ content, imageBasePath }) => {
         "code": CodeBlock,
         "img": function ({ node, className }) { return ImageMD({ node, className, imageBasePath }) },
         "p": Paragraph,
-        "pense-comigo": PenseComigo
+        "pense-comigo": PenseComigo,
+        "blockquote": Blockquote
       }}
     />
   )

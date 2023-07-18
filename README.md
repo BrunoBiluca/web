@@ -29,8 +29,10 @@ As mensagem de commits deve seguir o seguinte formato
 
 Cada commit deve ter um tipo associado, esses tipos são definidos como emojis para facilitar o seu entendimento.
 
-| Emoji | Descrição                                          |
-| ----- | -------------------------------------------------- |
-| 📈     | Alteração relacionada a análise de dados do portal |
-| 📝     | Adição e edição dos artigos                        |
-| 🔧     | Adição ou edição de ferramentas para criação de conteúdos                        |
+| Emoji | Descrição                                                       |
+| ----- | --------------------------------------------------------------- |
+| 📈     | Alteração relacionada a análise de dados do portal              |
+| ✨     | Criação ou alteração de funcionalidades                         |
+| 💄     | Criação ou alteração de formatos da interface visual do usuário |
+| 📝     | Adição e edição dos artigos                                     |
+| 🔧     | Adição ou edição de ferramentas para criação de conteúdos       |
