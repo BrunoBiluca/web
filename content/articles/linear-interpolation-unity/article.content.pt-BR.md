@@ -1,7 +1,3 @@
-> 💡Nesse artigo você encontrará:
-> - Explicação da matemática da interpolação linear
-> - Principais casos de uso e seus códigos
-
 Interpolação linear é um método muito utilizado para calcular pontos intermediários dentro de uma função linear. Isso nos permite definir um comportamento que siga uma função estabelecida, eliminando a necessidade de definir pontos individuais.
 
 Podemos utilizar esse método para múltiplas funcionalidades como por exemplo: 
@@ -159,9 +155,12 @@ Agora que já criamos uma função quadrática podemos dar um próximo passo e c
 
 ![Função cúbica](images/cubic-function.png)
 
-> 🐶 Pense comigo: olhando bem para esse gráfico, em que tipo de funções podemos "quebrar" a função cúbica para implementarmos seu respectivo comportamento? 
-
+<pense-comigo>
+<pergunta>olhando bem para esse gráfico, em que tipo de funções podemos "quebrar" a função cúbica para implementarmos seu respectivo comportamento? </pergunta>
+<discussao>
 Se você falou duas funções quadráticas acertou em cheio. (🐶 Agora me diga, as cores do gráfico ajudaram?)
+</discussao>
+</pense-comigo>
 
 Conforme fizemos no exemplo da função quadrática, onde quebramos a função quadrática em duas funções polinomiais lineares agora vamos decompor a função cúbica em duas funções polinomiais quadráticas.
 
