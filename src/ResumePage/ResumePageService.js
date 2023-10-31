@@ -5,7 +5,7 @@ import {Resume as ResumeEN} from './data/ResumeData.en';
 class ResumePageService {
 
     static getContent(){
-        if(LocaleService.isLocale(LocaleService.locales.ptBR))
+        if(LocaleService.isLocaleActive(LocaleService.locales.ptBR))
             return ResumePTBR;
         else
             return ResumeEN;

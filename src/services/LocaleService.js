@@ -11,7 +11,6 @@ export class LocaleService {
       key: "en"
     }
   }
-
   static getLocale = () => {
     let currLocale = localStorage.getItem(this.localeKey);
 
@@ -29,7 +28,7 @@ export class LocaleService {
     return this.getLocale();
   }
 
-  static isLocale = (locale) => {
+  static isLocaleActive = (locale) => {
     return this.getLocale() === locale.name;
   }
 }
