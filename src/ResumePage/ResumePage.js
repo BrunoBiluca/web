@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import LocalizationHandler, { LocalizationDirection } from "components/LocalizationHandler/LocalizationHandler";
 import ResumePageService from "./ResumePageService";
-import bgImg from "./images/resume_packman_bg.png";
+import bgImg from "./images/pattern.jpg";
 import GamesInfo from "./components/GamesInfo";
 
 const ResumePage = () => {
@@ -21,7 +21,7 @@ const ResumePage = () => {
     = ResumePageService.getContent();
 
   return (
-    <div className={styles.resume}>
+    <div className={styles.resume} data-testid="resume-page">
       <div className={styles.resumeHelper}>
         <div className={styles.homeButton}>
           <Link to="/">{<FaHome />}</Link>
@@ -30,7 +30,7 @@ const ResumePage = () => {
       </div>
       <div className={styles.page}>
         <img src={bgImg} className={styles.bgImg} alt="background" />
-        <div data-testid="resume-page" style={{ position: "relative", zIndex: 1 }}>
+        <div style={{ position: "relative", zIndex: 1, padding: "0.8cm" }}>
           <HeaderInfo main={main} />
           <div className={styles.contentBody}>
             <div className={styles.sideContent}>
