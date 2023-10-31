@@ -1,13 +1,13 @@
 import ProfileImage from "./ProfileImage";
 import styles from "./AboutMe.module.css";
 import BilucaIntro from "./BilucaIntro.strings";
-import LinkButton from "AppV2/Components/Buttons/UrlButton";
+import LinkButton from "AppV2/Components/Buttons/LinkButton";
 
 export default function AboutMe() {
   return <div className={styles.about}>
     <div className={styles.pictureHolder}>
       <ProfileImage />
-      <LinkButton label="Resume" link="/resume" />
+      <LinkButton label="Resume" link={"/resume"} />
     </div>
     <div className={styles.description}>
       <p>{BilucaIntro.strings.intro_1.toString()}</p>

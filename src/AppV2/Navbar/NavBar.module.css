@@ -3,7 +3,7 @@
 .navBar {
   background-color: var(--bg-second-color);
   color: var(--font-second-color);
-  padding: .3em 0;
+  padding: 1em 0;
 }
 
 .navBar .home {
