@@ -4,10 +4,17 @@ import Section from './Section';
 import stylesResumePage from "../ResumePage.module.css";
 import styles from './GamesInfo.module.css';
 import { FaGithub } from 'react-icons/fa';
+import LocaleStringBuilder from 'services/LocaleStringBuilder';
 
 const GamesInfo = (props) => {
+
+  let title = new LocaleStringBuilder("My Games")
+    .ptbr("Meus jogos")
+    .en("My Games")
+    .build()
+
   return (
-    <Section title="My Games">
+    <Section title={title}>
       {
         props.games.map((g, i) =>
           <div className={i > 1 ? stylesResumePage.noPrint : ""} key={g.description}>

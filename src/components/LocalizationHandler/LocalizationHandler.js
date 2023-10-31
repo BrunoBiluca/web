@@ -6,45 +6,50 @@ import usFlag from '../../images/us_flag.png';
 
 
 export const LocalizationDirection = {
-    horizontal: 0,
-    vertical: 1
+  horizontal: 0,
+  vertical: 1
 }
 
 const LocalizationHandler = (props) => {
-    let { direction } = props;
+  let { direction, height } = props;
 
-    let directionClass = styles.row;
-    if(direction === LocalizationDirection.vertical)
-        directionClass = styles.column;
+  if(!height)
+    height = "32px"
 
-    let containerClass = `${styles.localeContainer} ${directionClass}`;
+  let directionClass = styles.row;
+  if (direction === LocalizationDirection.vertical)
+    directionClass = styles.column;
 
-    let changeLocale = (locale) => {
-        let oldLocale = LocaleService.getLocale();
+  let containerClass = `${styles.localeContainer} ${directionClass}`;
 
-        LocaleService.setLocale(locale);
+  let changeLocale = (locale) => {
+    let oldLocale = LocaleService.getLocale();
 
-        if (oldLocale !== locale.name) {
-            window.location.reload();
-        }
+    LocaleService.setLocale(locale);
+
+    if (oldLocale !== locale.name) {
+      window.location.reload();
     }
+  }
 
-    return (
-        <div className={containerClass}>
-            <span
-                className={styles.localeButton}
-                onClick={() => changeLocale(LocaleService.locales.ptBR)}
-            >
-                <img src={brazilFlag} alt="Brazil Flag" />
-            </span>
-            <span
-                className={styles.localeButton}
-                onClick={() => changeLocale(LocaleService.locales.en)}
-            >
-                <img src={usFlag} alt="United States Flag" />
-            </span>
-        </div>
-    );
+  return (
+    <div className={containerClass}>
+      <span
+        style={{ height: height }}
+        className={styles.localeButton}
+        onClick={() => changeLocale(LocaleService.locales.ptBR)}
+      >
+        <img src={brazilFlag} alt="Brazil Flag" />
+      </span>
+      <span
+        style={{ height: height }}
+        className={styles.localeButton}
+        onClick={() => changeLocale(LocaleService.locales.en)}
+      >
+        <img src={usFlag} alt="United States Flag" />
+      </span>
+    </div>
+  );
 }
 
 export default LocalizationHandler;

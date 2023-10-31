@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import ResumePage from './ResumePage';
+import ResumePage from "./ResumePage";
 import { BrowserRouter } from 'react-router-dom';
 
 describe('<Resume />', () => {

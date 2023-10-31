@@ -17,7 +17,6 @@
 
 .localeButton {
     display: flex;
-    height: 28px;
     padding: 0 0.6em;
     cursor: pointer;
     justify-content: center;

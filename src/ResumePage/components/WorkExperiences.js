@@ -2,11 +2,18 @@ import React from "react";
 import Section from "./Section";
 import stylesResumePage from "../ResumePage.module.css";
 import styles from "./WorkExperiences.module.css";
+import LocaleStringBuilder from "services/LocaleStringBuilder";
 
 const WorkExperiences = (props) => {
   let { workExperiences } = props;
+
+  let title = new LocaleStringBuilder("Work Experience")
+    .ptbr("Experiência de trabalho")
+    .en("Work Experience")
+    .build()
+
   return (
-    <Section title="Work Experience">
+    <Section title={title}>
       {workExperiences.map((we, i) =>
         <div className={i > 2 ? stylesResumePage.noPrint : ""} key={i}>
           <WorkExperience

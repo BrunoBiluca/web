@@ -1,4 +1,4 @@
-class LocaleService {
+export class LocaleService {
   static localeKey = "brunobilucaportal_locale";
 
   static locales = {
