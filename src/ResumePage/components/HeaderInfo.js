@@ -16,10 +16,10 @@ const HeaderInfo = (props) => {
       <div className={styles.headerInfo}>
         <div className={styles.main}>
           <h1>{main.name}</h1>
-          <p className={styles.goal} data-testid="goal">{main.job}</p>
+          <p className={styles.goal} data-testid="goal">{main.job.toString()}</p>
         </div>
         <p className={styles.mainDescription} data-testid="description">
-          {main.summary}
+          {main.summary.toString()}
         </p>
       </div>
     </div>

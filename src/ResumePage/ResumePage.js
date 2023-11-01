@@ -4,7 +4,7 @@ import styles from './ResumePage.module.css';
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import LocalizationHandler, { LocalizationDirection } from "components/LocalizationHandler/LocalizationHandler";
-import Resume from "./Resume";
+import ResumeView from "./ResumeView";
 
 export default function ResumePage() {
   return (
@@ -15,7 +15,7 @@ export default function ResumePage() {
         </div>
         <LocalizationHandler direction={LocalizationDirection.vertical} height={"auto"} />
       </div>
-      <Resume />
+      <ResumeView />
     </div>
   );
 };

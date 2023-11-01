@@ -1,6 +1,5 @@
 import React from "react";
 import Section from "./Section";
-import stylesResumePage from "../ResumePage.module.css";
 import styles from "./WorkExperiences.module.css";
 import LocaleStringBuilder from "services/LocaleStringBuilder";
 
@@ -15,7 +14,7 @@ const WorkExperiences = (props) => {
   return (
     <Section title={title}>
       {workExperiences.map((we, i) =>
-        <div className={i > 2 ? stylesResumePage.noPrint : ""} key={i}>
+        <div key={i}>
           <WorkExperience
             workExperience={we}
           />
@@ -27,27 +26,41 @@ const WorkExperiences = (props) => {
 
 const WorkExperience = (props) => {
   const workExperience = props.workExperience;
+
   return (
     <div className={styles.workExperience}>
       <div className={styles.workExperienceTitle}>
-        <h3>
-          {workExperience.title}
-          {" "}
-          <CompanyInfo
-            company={workExperience.company}
-            companyUrl={workExperience.companyUrl}
-          />
-        </h3>
+        <WorkExperienceTitle workExperience={workExperience} />
         <div>
           <p>{workExperience.period}</p>
           <p>{workExperience.location}</p>
         </div>
       </div>
       <div className={styles.workExperienceContent}>
-        {workExperience.description}
+        {workExperience.description.toString()}
       </div>
     </div>
   );
+}
+
+const WorkExperienceTitle = (props) => {
+  let { workExperience } = props
+  let titlePreposition = LocaleStringBuilder
+    .create()
+    .ptbr("em")
+    .en("at")
+    .build()
+
+  return (
+    <h3>
+      {workExperience.title.toString()}
+      {` ${titlePreposition} `}
+      <CompanyInfo
+        company={workExperience.company}
+        companyUrl={workExperience.companyUrl}
+      />
+    </h3>
+  )
 }
 
 const CompanyInfo = (props) => {

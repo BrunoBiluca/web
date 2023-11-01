@@ -1,15 +1,13 @@
 import React from "react";
 import styles from "./Certificates.module.css";
 import Section from "./Section";
-import LocaleStringBuilder from "services/LocaleStringBuilder";
+import { loc } from "services/LocaleStringBuilder";
+import Locale from "services/Locale";
 
 const Certificates = (props) => {
   let { certificates } = props;
 
-  let title = new LocaleStringBuilder("Certificates")
-    .ptbr("Certificados")
-    .en("Certificates")
-    .build()
+  let title = loc("Certificados", "Certificates")
 
   return (
     <Section title={title}>
@@ -20,8 +18,12 @@ const Certificates = (props) => {
 
 const Certificate = (props) => (
   <div className={styles.certificate}>
-    <h4>{props.certificate.title}</h4>
-    <p>{props.certificate.description}</p>
+    <h4>
+      <Locale str={props.certificate.title} />
+    </h4>
+    <p>
+      <Locale str={props.certificate.description} />
+    </p>
   </div>
 )
 

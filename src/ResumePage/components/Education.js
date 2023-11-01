@@ -1,21 +1,18 @@
 import React from "react";
 import Section from "./Section";
 import styles from "./Education.module.css";
-import LocaleStringBuilder from "services/LocaleStringBuilder";
+import { loc } from "services/LocaleStringBuilder";
+import Locale from "services/Locale";
 
 const Education = (props) => {
   let { educations } = props;
-
-  let title = new LocaleStringBuilder("Education")
-    .ptbr("Educação")
-    .en("Education")
-    .build()
+  let title = loc("Educação", "Education")
 
   return (
     <Section title={title}>
       <div className={styles.workExperience}>
         <div className={styles.workExperienceTitle}>
-          <h3>{educations[0].title}</h3>
+          <h3><Locale str={educations[0].title} /></h3>
           <div>
             <p>{educations[0].period}</p>
             <p>{educations[0].location}</p>
@@ -26,7 +23,13 @@ const Education = (props) => {
           &&
           <div className={styles.workExperienceContent}>
             <ul>
-              {educations[0].activities.map(v => <li key={v}>{v}</li>)}
+              {
+                educations[0]
+                  .activities
+                  .map(v =>
+                    <li key={v}><Locale str={v} /></li>
+                  )
+              }
             </ul>
           </div>
         }

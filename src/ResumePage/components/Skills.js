@@ -4,18 +4,21 @@ import SkillLabel from "./SkillLabel";
 import LocaleStringBuilder from "services/LocaleStringBuilder";
 
 const Skills = (props) => {
-    let { skills } = props;
+  let { skills } = props;
 
-    let title = new LocaleStringBuilder("Skills")
+  let title = new LocaleStringBuilder("Skills")
     .ptbr("Habilidades")
     .en("Skills")
     .build()
 
-    return (
-        <Section title={title}>
-            {skills.map((s, i) => <SkillLabel key={i} skill={s.label} />)}
-        </Section>
-    );
+  return (
+    <Section title={title}>
+      {
+        skills.map((s, i) =>
+          <SkillLabel key={i} skill={s.label} />
+        )}
+    </Section>
+  );
 }
 
 export default Skills;

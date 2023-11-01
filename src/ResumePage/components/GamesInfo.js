@@ -4,14 +4,11 @@ import Section from './Section';
 import stylesResumePage from "../ResumePage.module.css";
 import styles from './GamesInfo.module.css';
 import { FaGithub } from 'react-icons/fa';
-import LocaleStringBuilder from 'services/LocaleStringBuilder';
+import { loc } from 'services/LocaleStringBuilder';
 
 const GamesInfo = (props) => {
 
-  let title = new LocaleStringBuilder("My Games")
-    .ptbr("Meus jogos")
-    .en("My Games")
-    .build()
+  let title = loc("Meus jogos", "My Games")
 
   return (
     <Section title={title}>

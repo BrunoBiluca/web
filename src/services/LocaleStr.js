@@ -1,6 +1,6 @@
 import LocaleService from "./LocaleService";
 
-export default class LocaleStr {
+class LocaleStr {
   obj = {}
 
   constructor(key) {
@@ -27,3 +27,5 @@ export default class LocaleStr {
     return this.obj[locale];
   }
 }
+
+export default LocaleStr;

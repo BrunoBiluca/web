@@ -11,8 +11,16 @@ import bgImg from "./images/square_pattern.jpg";
 import GamesInfo from "./components/GamesInfo";
 import ResumePageService from "./ResumePageService";
 
-export default function Resume() {
-  let { main, workExperiences, certificates, languages, skills, educations, games } = ResumePageService.getContent();
+export default function ResumeView() {
+  let {
+    main,
+    workExperiences,
+    certificates,
+    languages,
+    skills,
+    educations,
+    games
+  } = ResumePageService.getContent();
 
   return (
     <div className={styles.page}>

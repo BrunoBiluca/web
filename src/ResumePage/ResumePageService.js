@@ -1,16 +1,9 @@
-import LocaleService from 'services/LocaleService';
-import {Resume as ResumePTBR} from './data/ResumeData.brBR';
-import {Resume as ResumeEN} from './data/ResumeData.en';
+import get_content from './data/Resume.Unity';
 
 class ResumePageService {
-
-    static getContent(){
-        if(LocaleService.isLocaleActive(LocaleService.locales.ptBR))
-            return ResumePTBR;
-        else
-            return ResumeEN;
-    }
-
+  static getContent() {
+    return get_content()
+  }
 }
 
 export default ResumePageService;
