@@ -1,6 +1,7 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../Section/Section";
 import LocaleStringBuilder from "services/LocaleStringBuilder";
+import Locale from "services/Locale";
 
 const Languages = (props) => {
   let { languages } = props;
@@ -15,7 +16,7 @@ const Languages = (props) => {
       {
         languages.map(l =>
           <p style={{ fontWeight: "bold" }} key={l.toString()}>
-            {l.toString()}
+            <Locale str={l} />
           </p>
         )
       }

@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "./Section";
+import Section from "../Section/Section";
 import styles from "./Education.module.css";
 import { loc } from "services/LocaleStringBuilder";
 import Locale from "services/Locale";

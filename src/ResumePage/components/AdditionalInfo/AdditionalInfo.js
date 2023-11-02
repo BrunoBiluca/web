@@ -5,7 +5,7 @@ import { GrMail } from 'react-icons/gr';
 import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 import { BsTelephoneFill } from 'react-icons/bs';
 import { ImLocation2 } from 'react-icons/im';
-import Section from "./Section";
+import Section from "../Section/Section";
 
 const AdditionalInfo = (props) => {
   let { main } = props;

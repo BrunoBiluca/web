@@ -25,6 +25,7 @@ Cada commit deve ter um tipo associado, esses tipos são definidos como emojis p
 | 💄     | Criação ou alteração de formatos da interface visual do usuário                       |
 | 🔥     | Remoção de artigos, códigos, documentação ou qualquer outro elemento do versionamento |
 | 🐛     | Correção de alguma funcionalidades                                                    |
+| ♻️     | Refatoração do projeto para melhorar legibilidade, organização                        |
 | 📖     | Adição ou alteração de documentação do projeto                                        |
 | 📈     | Alteração relacionada a análise de dados do portal (analytics)                        |
 | 📝     | Adição e edição de conteúdos                                                          |

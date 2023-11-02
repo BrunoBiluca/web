@@ -1,8 +1,7 @@
 import React from "react";
-import styles from "./Certificates.module.css";
-import Section from "./Section";
+import Section from "../Section/Section";
 import { loc } from "services/LocaleStringBuilder";
-import Locale from "services/Locale";
+import { Certificate } from "./Certificate";
 
 const Certificates = (props) => {
   let { certificates } = props;
@@ -15,16 +14,5 @@ const Certificates = (props) => {
     </Section>
   );
 }
-
-const Certificate = (props) => (
-  <div className={styles.certificate}>
-    <h4>
-      <Locale str={props.certificate.title} />
-    </h4>
-    <p>
-      <Locale str={props.certificate.description} />
-    </p>
-  </div>
-)
 
 export default Certificates;

@@ -1,14 +1,14 @@
 import React from "react";
 import styles from './ResumePage.module.css';
-import HeaderInfo from "./components/HeaderInfo";
-import AdditionalInfo from "./components/AdditionalInfo";
-import Languages from "./components/Languages";
-import WorkExperiences from "./components/WorkExperiences";
-import Certificates from "./components/Certificates";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
+import HeaderInfo from "./components/Header/HeaderInfo";
+import AdditionalInfo from "./components/AdditionalInfo/AdditionalInfo";
+import Languages from "./components/Languages/Languages";
+import WorkExperiences from "./components/WorkExperience/WorkExperiences";
+import Certificates from "./components/Certificates/Certificates";
+import Education from "./components/Education/Education";
+import Skills from "./components/Skills/Skills";
 import bgImg from "./images/square_pattern.jpg";
-import GamesInfo from "./components/GamesInfo";
+import GamesInfo from "./components/Games/GamesInfo";
 import ResumePageService from "./ResumePageService";
 
 export default function ResumeView() {

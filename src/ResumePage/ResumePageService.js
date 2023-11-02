@@ -1,4 +1,4 @@
-import get_content from './data/Resume.Unity';
+import get_content from './resumes/Resume.Unity';
 
 class ResumePageService {
   static getContent() {

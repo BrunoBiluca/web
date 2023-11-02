@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './Section';
+import Section from '../Section/Section';
 
-import stylesResumePage from "../ResumePage.module.css";
+import stylesResumePage from "../../ResumePage.module.css";
 import styles from './GamesInfo.module.css';
 import { FaGithub } from 'react-icons/fa';
 import { loc } from 'services/LocaleStringBuilder';
@@ -33,7 +33,7 @@ const GameInfo = (props) => {
       rel="noreferrer"
     >
       <div className={styles.imgHolder}>
-        <img src={require(`../images/${game.screenshoot}`).default} alt="game" />
+        <img src={require(`../../images/${game.screenshoot}`).default} alt="game" />
       </div>
       <div>
         <p className={styles.title}>

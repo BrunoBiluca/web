@@ -1,7 +1,7 @@
-import ResumeBuilder from "ResumePage/ResumeBuilder";
+import ResumeBuilder from "ResumePage/resumes/ResumeBuilder";
 import LocaleStringBuilder from "services/LocaleStringBuilder";
-import { workExperiences } from "./WorkExperiences";
-import { certificates } from "./Certificates";
+import { workExperiences } from "../data/WorkExperiences";
+import { certificates } from "../data/Certificates";
 
 export default function get_content() {
   return new ResumeBuilder()

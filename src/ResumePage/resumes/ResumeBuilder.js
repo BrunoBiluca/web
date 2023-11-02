@@ -1,7 +1,7 @@
-import { educations } from "./data/Educations"
-import { games } from "./data/Games"
-import { languages } from "./data/Languages"
-import { mainInformation } from "./data/MainInformation"
+import { educations } from "../data/Educations"
+import { games } from "../data/Games"
+import { languages } from "../data/Languages"
+import { mainInformation } from "../data/MainInformation"
 
 export default class ResumeBuilder {
   main = mainInformation

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './HeaderInfo.module.css';
 import brunoPicture from 'images/bruno_picture.webp';
+import Locale from "services/Locale";
 
 const HeaderInfo = (props) => {
   let { main } = props;
@@ -16,10 +17,12 @@ const HeaderInfo = (props) => {
       <div className={styles.headerInfo}>
         <div className={styles.main}>
           <h1>{main.name}</h1>
-          <p className={styles.goal} data-testid="goal">{main.job.toString()}</p>
+          <p className={styles.goal} data-testid="goal">
+            <Locale str={main.job} />
+          </p>
         </div>
         <p className={styles.mainDescription} data-testid="description">
-          {main.summary.toString()}
+          <Locale str={main.summary} />
         </p>
       </div>
     </div>
