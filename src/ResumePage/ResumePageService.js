@@ -1,8 +1,14 @@
-import get_content from './resumes/Resume.Unity';
+import { isDebugMode, isProduction } from 'config/server';
+import main from './resumes/Resume.Full';
+import unity from './resumes/Resume.Unity';
 
 class ResumePageService {
   static getContent() {
-    return get_content()
+
+    if (isProduction)
+      return main()
+    else if (isDebugMode)
+      return unity()
   }
 }
 

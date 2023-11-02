@@ -1,4 +1,4 @@
-import { baseUrl } from 'config/server';
+import { baseUrl, isDebugMode, isProduction } from 'config/server';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
@@ -17,7 +17,11 @@ root.render(
   </HashRouter>
 );
 
-if (process.env.NODE_ENV === "development") {
+if (isProduction) {
+  console.log("Production build.")
+}
+
+if (isDebugMode) {
   console.log("Env variables")
   console.log(process.env)
 }

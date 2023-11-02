@@ -1,34 +1,59 @@
-import { educations } from "../data/Educations"
-import { games } from "../data/Games"
-import { languages } from "../data/Languages"
-import { mainInformation } from "../data/MainInformation"
-
 export default class ResumeBuilder {
-  main = mainInformation
+  main = {}
   workExperiences = []
   certificates = []
-  languages = languages
+  languages = []
   skills = []
-  educations = Object.keys(educations).map(k => educations[k])
-  games = games
+  educations = []
+  games = []
 
-  withMain(job){
+  withJobGoal(job) {
     this.main["job"] = job
     return this
   }
 
-  addExperience(experience){
+  withMain(mainInfo) {
+    this.main = mainInfo
+    return this
+  }
+
+  withWorkExperiences(entries) {
+    this.workExperiences = entries
+    return this
+  }
+
+  withLanguages(entries) {
+    this.languages = entries
+    return this
+  }
+
+  withGames(entries) {
+    this.games = entries
+    return this
+  }
+
+  withSkills(skills) {
+    this.skills = skills
+    return this
+  }
+
+  withCertificates(entries) {
+    this.certificates = entries
+    return this
+  }
+
+  withEducations(entries){
+    this.educations = entries
+    return this
+  }
+
+  addExperience(experience) {
     this.workExperiences.push(experience)
     return this
   }
 
   addCertificate(certificate) {
     this.certificates.push(certificate)
-    return this
-  }
-
-  withSkills(skills){
-    this.skills = skills
     return this
   }
 
