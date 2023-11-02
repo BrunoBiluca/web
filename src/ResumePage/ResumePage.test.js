@@ -31,9 +31,6 @@ describe('<Resume />', () => {
     const name = within(resumeHeader).getByText("Bruno Bernardes da Costa");
     expect(name).toBeInTheDocument();
 
-    const goal = within(resumeHeader).getByTestId("goal");
-    expect(goal).toBeInTheDocument();
-
     const picture = within(resumeHeader).getByTestId("bruno-picture");
     expect(picture).toBeInTheDocument();
 

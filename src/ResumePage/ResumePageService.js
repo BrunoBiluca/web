@@ -1,14 +1,13 @@
-import { isDebugMode, isProduction } from 'config/server';
+import { isDebugMode } from 'config/server';
 import main from './resumes/Resume.Full';
 import unity from './resumes/Resume.Unity';
 
 class ResumePageService {
   static getContent() {
-
-    if (isProduction)
-      return main()
-    else if (isDebugMode)
+    if (isDebugMode)
       return unity()
+
+    return main()
   }
 }
 
