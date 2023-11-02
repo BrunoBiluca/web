@@ -2,7 +2,7 @@ import { LocaleService } from "./LocaleService";
 import LocaleStr from "./LocaleStr";
 
 export default class LocaleStringBuilder {
-  static create(name=""){
+  static create(name = "") {
     return new LocaleStringBuilder(name)
   }
 
@@ -10,25 +10,27 @@ export default class LocaleStringBuilder {
     this.name = name;
     this.localeStr = new LocaleStr(name);
 
-    for (const key of Object.keys(LocaleService.locales)) {
-      this.localeStr.addLocale(key, "")
+    for (const langKey of Object.keys(LocaleService.locales)) {
+      var langName = LocaleService.locales[langKey].name
+      this.localeStr.add(langName, "")
     }
   }
 
   ptbr(value) {
-    this.localeStr.ptbr(value);
+    this.localeStr.add(LocaleService.locales.ptBR.name, value)
     return this;
   }
 
   en(value) {
-    this.localeStr.en(value);
+    this.localeStr.add(LocaleService.locales.en.name, value)
     return this;
   }
 
   build() {
-    for (const key of Object.keys(this.localeStr.obj)) {
-      if (["", undefined].includes(this.localeStr[key]))
-        console.warn(`Localização não foi configurada para a língua <${key}>`);
+    for (const langKey of Object.keys(LocaleService.locales)) {
+      var langName = LocaleService.locales[langKey].name
+      if (this.localeStr.get(langName) === "")
+        console.warn(`Localização não foi configurada para a língua <${langName}>`);
     }
     return this.localeStr;
   }
@@ -38,7 +40,7 @@ export default class LocaleStringBuilder {
  * @param {string[]} values 
  * [0] ptbr [1] en  
  */
-export function loc(...values){
+export function loc(...values) {
   return LocaleStringBuilder
     .create()
     .ptbr(values[0])

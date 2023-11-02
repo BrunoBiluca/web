@@ -1,8 +1,8 @@
-import LocaleStr from "services/LocaleStr";
+import { loc } from "services/LocaleStringBuilder";
 
-const today = new LocaleStr("today").en("Today").ptbr("Hoje")
-const yesterday = new LocaleStr("today").en("Yesterday").ptbr("Ontem")
-const daysAgo = new LocaleStr("today").en("days ago").ptbr("dias atrás")
+const today = loc("Hoje", "Today")
+const yesterday = loc("Ontem", "Yesterday")
+const daysAgo = loc("dias atrás", "days ago")
 
 class DateFormatterAsDaysAgo {
   constructor(referenceDate) {

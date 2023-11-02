@@ -7,24 +7,15 @@ class LocaleStr {
     this.obj["key"] = key;
   }
 
-  addLocale(locale, value) {
+  add(locale, value) {
     this.obj[locale] = value;
     return this;
   }
 
-  ptbr(value) {
-    this.obj[LocaleService.locales.ptBR.name] = value;
-    return this;
-  }
-
-  en(value) {
-    this.obj[LocaleService.locales.en.name] = value;
-    return this;
-  }
+  get = (locale) => this.obj[locale]
 
   toString() {
-    const locale = LocaleService.getLocale();
-    return this.obj[locale];
+    return this.obj[LocaleService.getLocale()];
   }
 }
 
