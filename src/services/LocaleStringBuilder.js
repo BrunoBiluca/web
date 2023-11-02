@@ -27,8 +27,8 @@ export default class LocaleStringBuilder {
 
   build() {
     for (const key of Object.keys(this.localeStr.obj)) {
-      if (this.localeStr[key] === "")
-        console.warn(`Localização para <${this.name}> não foi configurada para a língua <${key}>`);
+      if (["", undefined].includes(this.localeStr[key]))
+        console.warn(`Localização não foi configurada para a língua <${key}>`);
     }
     return this.localeStr;
   }

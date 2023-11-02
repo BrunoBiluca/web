@@ -27,7 +27,7 @@ const Education = (props) => {
                 educations[0]
                   .activities
                   .map(v =>
-                    <li key={v}><Locale str={v} /></li>
+                    <li key={v.toString()}><Locale str={v} /></li>
                   )
               }
             </ul>
