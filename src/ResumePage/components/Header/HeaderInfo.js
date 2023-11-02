@@ -17,9 +17,12 @@ const HeaderInfo = (props) => {
       <div className={styles.headerInfo}>
         <div className={styles.main}>
           <h1>{main.name}</h1>
-          <p className={styles.goal} data-testid="goal">
-            <Locale str={main.job} />
-          </p>
+          {
+            main.job &&
+            <p className={styles.goal} data-testid="goal">
+              <Locale str={main.job} />
+            </p>
+          }
         </div>
         <p className={styles.mainDescription} data-testid="description">
           <Locale str={main.summary} />

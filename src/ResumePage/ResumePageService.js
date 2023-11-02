@@ -8,7 +8,7 @@ class ResumePageService {
     if (isProduction)
       return main()
     else if (isDebugMode)
-      return unity()
+      return main()
   }
 }
 
