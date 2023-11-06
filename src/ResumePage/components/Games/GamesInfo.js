@@ -1,7 +1,6 @@
 import React from 'react';
 import Section from '../Section/Section';
 
-import stylesResumePage from "../../ResumePage.module.css";
 import styles from './GamesInfo.module.css';
 import { FaGithub } from 'react-icons/fa';
 import { loc } from 'services/LocaleStringBuilder';
@@ -14,7 +13,7 @@ const GamesInfo = (props) => {
     <Section title={title}>
       {
         props.games.map((g, i) =>
-          <div className={i > 1 ? stylesResumePage.noPrint : ""} key={g.description}>
+          <div key={g.description}>
             <GameInfo game={g} key={g.description} />
           </div>
         )

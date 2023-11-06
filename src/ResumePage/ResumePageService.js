@@ -5,7 +5,7 @@ import unity from './resumes/Resume.Unity';
 class ResumePageService {
   static getContent() {
     if (isDebugMode)
-      return unity()
+      return main()
 
     return main()
   }
