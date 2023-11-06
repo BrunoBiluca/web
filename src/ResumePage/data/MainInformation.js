@@ -3,7 +3,7 @@ import { loc } from "services/LocaleStringBuilder";
 export const mainInformation = {
   name: "Bruno Bernardes da Costa",
   summary: loc(
-    "Com mais de 10 anos de experiência em desenvolvimento de software. Tenho trabalhado nos mais diversificados tipos de sistemas, como, sistemas bancários, plataforma de análise de Big Data, websites, mobile apps e games. Sou uma pessoa determinada, gosto de trabalhar em equipe e compartilhar conhecimento. Acredito que podemos criar um produto incrível enquanto nos divertimos e aprendemos no processo.",
+    "Com mais de 10 anos de experiência em desenvolvimento de software, venho trabalhando nos mais diversificados tipos de sistemas, como, sistemas bancários, plataformas de análise para Big Data, websites, aplicativos móveis e games. Sou uma pessoa determinada, gosto de trabalhar em equipe e compartilhar conhecimento. Acredito que podemos criar um produto incrível enquanto nos divertimos e aprendemos no processo.",
     "With more than 10 years of experience in development, I've been working on many systems, such as, Banking systems, Big Data analysis platforms from multiple sources, websites, mobile apps and games. My main focus is on the quality of the delivery, and I use always market-proof best practices."
   ),
   email: "b.b.da.costa@gmail.com",

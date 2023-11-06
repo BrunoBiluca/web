@@ -16,14 +16,14 @@ export const games = [
   {
     name: "Biluca Crazy Memory",
     description: "2D Puzzle Game, Multi-level",
-    role: "Level Designer, UI Programmer",
+    role: "UI Programmer",
     repo: "https://github.com/BrunoBiluca/crazy-memory",
     screenshoot: 'crazy_memory_gameplay.png'
   },
   {
     name: "Flapping Bird",
     description: "2D Platformer, Multiple modes",
-    role: "Level Designer, Gameplayer & UI Programmer",
+    role: "Gameplay & UI Programmer",
     repo: "https://github.com/BrunoBiluca/flap-bird-clone",
     screenshoot: 'flapping_bird_menu.png'
   }

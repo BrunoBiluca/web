@@ -11,15 +11,15 @@ export const educations = {
     activities: [
       loc(
         "Tomei parte como desenvolvedor web na empresa júnior LinkedEJ",
-        ""
+        "Take place as web developer on LinkedEJ junior company"
       ),
       loc(
         "Fui responsável pelo Centro de Recursos computacionais do departamento da computação",
-        ""
+        "Was responsible for Science Computer's computing resources center"
       ),
       loc(
-        "Participação em matérias opcionais de relacionadas a desenvolvimento de games",
-        ""
+        "Trabalhei como monitor de aula por 6 semestres",
+        "Worked as class monitor for 6 terms"
       )
     ]
   }

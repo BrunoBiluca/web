@@ -41,7 +41,12 @@ export default function ResumeView() {
       <Page
         side={games && <GamesInfo games={games} />}
         content={
-          <Certificates certificates={certificates} />
+          <Certificates certificates={certificates.filter((c, i) => i < 16)} />
+        }
+      />
+      <Page
+        content={
+          <Certificates certificates={certificates.filter((c, i) => i >= 16)} />
         }
       />
     </div>
