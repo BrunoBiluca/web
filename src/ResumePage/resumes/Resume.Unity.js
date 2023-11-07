@@ -16,12 +16,20 @@ export default function get_content() {
     .withGames(games)
     .withLanguages(languages)
     .withEducations(toList(educations))
-    .withSkills(skills)
+    .withSkills([
+      { label: "Unity" },
+      { label: "C#" },
+      { label: "Python" },
+      { label: "TDD" },
+      { label: "Clean Code" },
+      { label: "Godot" },
+      { label: "Design Patterns" },
+    ])
     .addExperience(workExperiences.gh)
     .addExperience(workExperiences.sensedia)
     .addExperience(workExperiences.cinnecta)
-    .addExperience(workExperiences.accenture)
+    .addCertificate(certificates["Unity Turn Based Strategy - Intermediate C# Coding"])
+    .addCertificate(certificates["Learn to make an Awesome Builder-Defender game in Unity!"])
     .addCertificate(certificates["Design Patterns in C# and .NET"])
-    .addCertificate(certificates["Twin Stick Shooter with Blueprint"])
     .build()
 }

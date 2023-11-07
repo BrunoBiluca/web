@@ -62,8 +62,8 @@ export const certificates = {
     platform: "Udemy",
     emission_date: "2021/02",
     description: loc(
-      "",
-      ""
+      "Jogo no formato builder-defender onde o jogador deve construir a sua base de para enfrentar várias hordas de inimigos com os recursos disponíveis.",
+      "Game in the builder-defender format where the player must build his base to face several hordes of enemies with the resources available."
     ),
     url: "https://www.udemy.com/certificate/UC-de11a3ef-159c-4da4-be96-6fa285cd00c0/"
   },
@@ -161,8 +161,8 @@ export const certificates = {
     platform: "Gamedev.tv",
     emission_date: "2022/12",
     description: loc(
-      "",
-      ""
+      "Jogo completo de estratégia por turnos utilizando Unity. O jogador controla vários personagens que desempenham ações diversas contra hordas de inimigos",
+      "Complete turn-based strategy game using Unity. The player controls several characters who perform different actions against hordes of enemies"
     ),
     url: "https://www.gamedev.tv/courses/1722359/certificate"
   },
