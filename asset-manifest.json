@@ -1,33 +1,33 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.d0efe103.chunk.css",
-    "main.js": "/web/static/js/main.eec28031.chunk.js",
-    "main.js.map": "/web/static/js/main.eec28031.chunk.js.map",
+    "main.css": "/web/static/css/main.f87ea754.chunk.css",
+    "main.js": "/web/static/js/main.c6c331be.chunk.js",
+    "main.js.map": "/web/static/js/main.c6c331be.chunk.js.map",
     "runtime-main.js": "/web/static/js/runtime-main.ac3a6a7c.js",
     "runtime-main.js.map": "/web/static/js/runtime-main.ac3a6a7c.js.map",
-    "static/js/2.1afc22d3.chunk.js": "/web/static/js/2.1afc22d3.chunk.js",
-    "static/js/2.1afc22d3.chunk.js.map": "/web/static/js/2.1afc22d3.chunk.js.map",
+    "static/js/2.2725b829.chunk.js": "/web/static/js/2.2725b829.chunk.js",
+    "static/js/2.2725b829.chunk.js.map": "/web/static/js/2.2725b829.chunk.js.map",
     "static/js/3.604438b8.chunk.js": "/web/static/js/3.604438b8.chunk.js",
     "static/js/3.604438b8.chunk.js.map": "/web/static/js/3.604438b8.chunk.js.map",
     "index.html": "/web/index.html",
-    "static/css/main.d0efe103.chunk.css.map": "/web/static/css/main.d0efe103.chunk.css.map",
-    "static/js/2.1afc22d3.chunk.js.LICENSE.txt": "/web/static/js/2.1afc22d3.chunk.js.LICENSE.txt",
+    "static/css/main.f87ea754.chunk.css.map": "/web/static/css/main.f87ea754.chunk.css.map",
+    "static/js/2.2725b829.chunk.js.LICENSE.txt": "/web/static/js/2.2725b829.chunk.js.LICENSE.txt",
     "static/media/android-icon.e1450326.png": "/web/static/media/android-icon.e1450326.png",
-    "static/media/biluca_defense_gameplay.png": "/web/static/media/biluca_defense_gameplay.7fdcbe77.png",
+    "static/media/biluca_defense_gameplay.png": "/web/static/media/biluca_defense_gameplay.44defa33.png",
     "static/media/biluca_xgrid.jpg": "/web/static/media/biluca_xgrid.6df6d95b.jpg",
+    "static/media/bruno_picture.webp": "/web/static/media/bruno_picture.1e0b0fa9.webp",
     "static/media/bruno_picture.68805bf7.webp": "/web/static/media/bruno_picture.68805bf7.webp",
     "static/media/crazy_memory_gameplay.png": "/web/static/media/crazy_memory_gameplay.26496b87.png",
     "static/media/flapping_bird_menu.png": "/web/static/media/flapping_bird_menu.3173bd3a.png",
-    "static/media/resume_packman_bg.png": "/web/static/media/resume_packman_bg.50e3d9af.png",
-    "static/media/square_pattern.jpg": "/web/static/media/square_pattern.4b134c9c.jpg",
+    "static/media/square_pattern.f6628f9e.jpg": "/web/static/media/square_pattern.f6628f9e.jpg",
     "static/media/title_pattern.90c4c318.svg": "/web/static/media/title_pattern.90c4c318.svg",
     "static/media/unity_logo_white.15fd696d.png": "/web/static/media/unity_logo_white.15fd696d.png",
     "static/media/web-icon.06123a8a.png": "/web/static/media/web-icon.06123a8a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ac3a6a7c.js",
-    "static/js/2.1afc22d3.chunk.js",
-    "static/css/main.d0efe103.chunk.css",
-    "static/js/main.eec28031.chunk.js"
+    "static/js/2.2725b829.chunk.js",
+    "static/css/main.f87ea754.chunk.css",
+    "static/js/main.c6c331be.chunk.js"
   ]
 }
