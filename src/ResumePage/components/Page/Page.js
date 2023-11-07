@@ -1,5 +1,5 @@
-import styles from './ResumePage.module.css';
-import bgImg from "./images/square_pattern.jpg";
+import styles from './Page.module.css';
+import bgImg from "./background/square_pattern.jpg";
 
 export default function Page({ header, side, content }) {
   return (

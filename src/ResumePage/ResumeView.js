@@ -8,7 +8,7 @@ import Education from "./components/Education/Education";
 import Skills from "./components/Skills/Skills";
 import GamesInfo from "./components/Games/GamesInfo";
 import ResumePageService from "./ResumePageService";
-import Page from "./Page";
+import Page from "./components/Page/Page";
 
 export default function ResumeView() {
   let {
