@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './HeaderInfo.module.css';
-import brunoPicture from 'images/bruno_picture.webp';
+import brunoPicture from '../../images/bruno_picture.webp';
 import Locale from "services/Locale";
 
 const HeaderInfo = (props) => {

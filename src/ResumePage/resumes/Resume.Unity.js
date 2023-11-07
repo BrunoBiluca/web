@@ -18,11 +18,11 @@ export default function get_content() {
     .withEducations(toList(educations))
     .withSkills([
       { label: "Unity" },
+      { label: "Godot" },
       { label: "C#" },
       { label: "Python" },
       { label: "TDD" },
       { label: "Clean Code" },
-      { label: "Godot" },
       { label: "Design Patterns" },
     ])
     .addExperience(workExperiences.gh)
