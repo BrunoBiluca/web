@@ -12,8 +12,8 @@ import { educations } from "ResumePage/data/Educations";
 export default function get_content() {
   return new ResumeBuilder()
     .withMain(mainInformation)
-    .withJobGoal(loc("Desenvolvedor Unity", "Unity Developer"))
-    .withGames(games)
+    .withJobGoal(loc("Desenvolvedor de games e ferramentas", "Gameplay and tools developer"))
+    .withGames(games.filter((c, i) => i < 3))
     .withLanguages(languages)
     .withEducations(toList(educations))
     .withSkills([
@@ -25,6 +25,7 @@ export default function get_content() {
       { label: "Clean Code" },
       { label: "Design Patterns" },
     ])
+    .addExperience(workExperiences.freela_2023)
     .addExperience(workExperiences.gh)
     .addExperience(workExperiences.sensedia)
     .addExperience(workExperiences.cinnecta)

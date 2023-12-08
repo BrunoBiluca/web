@@ -29,24 +29,15 @@ export default function ResumeView() {
           <AdditionalInfo main={main} />
           <Languages languages={languages} />
           <Skills skills={skills} />
+          <GamesInfo games={games} />
         </>
         }
         content={
           <>
             <WorkExperiences workExperiences={workExperiences} />
             <Education educations={educations} />
+            <Certificates certificates={certificates.filter((c, i) => i < 16)} />
           </>
-        }
-      />
-      <Page
-        side={games && <GamesInfo games={games} />}
-        content={
-          <Certificates certificates={certificates.filter((c, i) => i < 16)} />
-        }
-      />
-      <Page
-        content={
-          <Certificates certificates={certificates.filter((c, i) => i >= 16)} />
         }
       />
     </div>

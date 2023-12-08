@@ -7,8 +7,8 @@ const WorkExperiences = (props) => {
   let { workExperiences } = props;
 
   let title = new LocaleStringBuilder("Work Experience")
-    .ptbr("Experiência de trabalho")
-    .en("Work Experience")
+    .ptbr("Experiências mais relevantes")
+    .en("Most relevant experiences")
     .build()
 
   return (

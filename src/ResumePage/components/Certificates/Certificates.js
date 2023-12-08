@@ -6,7 +6,7 @@ import { Certificate } from "./Certificate";
 const Certificates = (props) => {
   let { certificates } = props;
 
-  let title = loc("Certificados", "Certificates")
+  let title = loc("Principais certificações", "Main certificates")
 
   return (
     <Section title={title}>

@@ -30,11 +30,11 @@ const AdditionalInfo = (props) => {
       </div>
       <div className={styles.additionalInfo}>
         <FaLinkedin />
-        <a href={main.linkedin} target="_blank" rel="noreferrer">{main.linkedin}</a>
+        <a href={"https://" + main.linkedin} target="_blank" rel="noreferrer">{main.linkedin}</a>
       </div>
       <div className={styles.additionalInfo}>
         <FaGithub />
-        <a href={main.github} target="_blank" rel="noreferrer">{main.github}</a>
+        <a href={"https://" + main.github} target="_blank" rel="noreferrer">{main.github}</a>
       </div>
       <div className={styles.additionalInfo}>
         <FaGlobe />

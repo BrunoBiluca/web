@@ -1,10 +1,24 @@
 import { loc } from "services/LocaleStringBuilder";
 
 export const workExperiences = {
+  freela_2023: {
+    title: loc(
+      "Desenvolvedor de software sênior",
+      "Senior software developer"
+    ),
+    period: "01/2023 -",
+    location: "Lagoa Dourada - MG",
+    description: loc(
+      "Trabalho com o desenvolvimento de jogos e software em projetos variados. Também sou responsável pela criação de ferramentas de desenvolvimento voltadas principalmente para duas engines Unity e Godot.",
+      "I work with the development of games and software on various projects. I am also responsible for creating development tools aimed mainly at two engines Unity and Godot."
+    ),
+    company: "",
+    companyUrl: ""
+  },
   gh: {
     title: loc(
-      "Desenvolvedor Fullstack",
-      "Fullstack developer"
+      "Desenvolvedor Fullstack sênior",
+      "Senior Fullstack developer"
     ),
     period: "01/2022 - 12/2022",
     location: "Santa Rosa - RS",
@@ -17,8 +31,8 @@ export const workExperiences = {
   },
   sensedia: {
     title: loc(
-      "Desenvolvedor de software",
-      "Software Development Engineer"
+      "Desenvolvedor backend sênior",
+      "Senior Backend Developer"
     ),
     period: "01/2021 - 10/2021",
     location: "Campinas - SP",
@@ -31,8 +45,8 @@ export const workExperiences = {
   },
   cinnecta: {
     title: loc(
-      "Analista de sistemas",
-      "Software Engineer"
+      "Analista de sistemas pleno",
+      "Full-fledged Software analyst"
     ),
     period: "03/2019 - 09/2020",
     location: "Belo Horizonte - MG",
@@ -45,8 +59,8 @@ export const workExperiences = {
   },
   accenture: {
     title: loc(
-      "Engenheiro de software",
-      "Software Engineer"
+      "Engenheiro de software pleno",
+      "Full-fledged Software Engineer"
     ),
     period: "06/2018 - 03/2019",
     location: "Nova Lima - MG",
@@ -59,8 +73,8 @@ export const workExperiences = {
   },
   handcom: {
     title: loc(
-      "Analista de sistemas",
-      "Software Engineer"
+      "Analista de sistemas júnior",
+      "Junior Software Engineer"
     ),
     period: "08/2016 - 03/2018",
     location: "Juiz de Fora - MG",
