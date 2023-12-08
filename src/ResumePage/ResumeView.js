@@ -36,7 +36,7 @@ export default function ResumeView() {
           <>
             <WorkExperiences workExperiences={workExperiences} />
             <Education educations={educations} />
-            <Certificates certificates={certificates.filter((c, i) => i < 16)} />
+            <Certificates certificates={certificates} />
           </>
         }
       />
