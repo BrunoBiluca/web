@@ -256,6 +256,36 @@
           "company": "Cinnecta",
           "company_url": "https://cinnecta.com/",
           "company_location": "Belo Horizonte - MG"
+        },
+        {
+          "title": [
+            "Engenheiro de software pleno",
+            "Full-fledged Software Engineer"
+          ],
+          "period_begin": "06/2018",
+          "period_end": "03/2019",
+          "description": [
+            "Trabalhei no desenvolvimento de aplicações web direcionada na solução de problemas de Cadeia de suprimentos e Logística para a indústria do petróleo.",
+            "Worked on development of web applications for creating solutions for Supply Chain and Logistics problems for petrol industry."
+          ],
+          "company": "Accenture",
+          "company_url": "https://www.accenture.com/us-en",
+          "company_location": "Nova Lima - MG"
+        },
+        {
+          "title": [
+            "Analista de sistemas júnior",
+            "Junior Software Engineer"
+          ],
+          "period_begin": "08/2016",
+          "period_end": "03/2018",
+          "description": [
+            "Trabalhei como desenvolvedor web na criação de websites e sistemas administrativos. Minhas principais responsabilidades eram manter e implementar novas funcionalidades aos produtos, levantamento de requisitos junto ao cliente e suporte com conhecimento ao time.",
+            "Worked as Web Developer creating websites and admin systems. Main roles include also helping the others developers of the team and analyzing new features to system requirements."
+          ],
+          "company": "Handcom",
+          "company_url": "http://www.handcom.com.br",
+          "company_location": "Juiz de Fora - MG"
         }
       ]
     },
@@ -295,7 +325,7 @@
           "platform": "Udemy",
           "emission_date": "2018/02",
           "description": "",
-          "url": ""
+          "url": "https://udemy-certificate.s3.amazonaws.com/pdf/UC-AKJY17FN.pdf"
         },
         {
           "title": "C#: Art of writting clean code",
@@ -317,6 +347,106 @@
           "url": "https://www.udemy.com/certificate/UC-CUPI13TP/"
         },
         {
+          "title": "Docker: Ferramenta Essencial para desenvolvedores",
+          "platform": "Udemy",
+          "emission_date": "2018/10",
+          "description": [
+            "",
+            ""
+          ],
+          "url": "https://www.udemy.com/certificate/UC-3T0CQMWH/"
+        },
+        {
+          "title": "Essential Cloud Infrastructure: Foundation",
+          "platform": "Coursera",
+          "emission_date": "2019/01",
+          "description": [
+            "",
+            ""
+          ],
+          "url": "https://www.coursera.org/account/accomplishments/certificate/ZXSGHU99TJ9R"
+        },
+        {
+          "title": "Testes unitários em JAVA: Domine JUnit, Mockito e TDD",
+          "platform": "Udemy",
+          "emission_date": "2020/08",
+          "description": [
+            "",
+            ""
+          ],
+          "url": "https://www.udemy.com/certificate/UC-7625ac63-ea16-49c6-9da8-597fa905bdf1/"
+        },
+        {
+          "title": "Learn to make an Awesome Builder-Defender game in Unity!",
+          "platform": "Udemy",
+          "emission_date": "2021/02",
+          "description": [
+            "Jogo no formato builder-defender onde o jogador deve construir a sua base de para enfrentar várias hordas de inimigos com os recursos disponíveis.",
+            "Game in the builder-defender format where the player must build his base to face several hordes of enemies with the resources available."
+          ],
+          "url": "https://www.udemy.com/certificate/UC-de11a3ef-159c-4da4-be96-6fa285cd00c0/"
+        },
+        {
+          "title": "Intro to Multiplayer Game Development with Unity",
+          "platform": "Zenva",
+          "emission_date": "2021/09",
+          "description": [
+            "",
+            ""
+          ],
+          "url": "https://academy.zenva.com/certificate/4535516c"
+        },
+        {
+          "title": "Unity Shader Graph for Beginners",
+          "platform": "Zenva",
+          "emission_date": "2021/10",
+          "description": [
+            "",
+            ""
+          ],
+          "url": "https://academy.zenva.com/certificate/85892d76"
+        },
+        {
+          "title": "Unity Multiplayer: Intermediate C# Coding & Networking",
+          "platform": "Gamedev.tv",
+          "emission_date": "2021/10",
+          "description": [
+            "",
+            ""
+          ],
+          "url": "https://www.gamedev.tv/courses/1086379/certificate"
+        },
+        {
+          "title": "Finish It! Motivation & Processes For Game Developers Course",
+          "platform": "Gamedev.tv",
+          "emission_date": "2021/10",
+          "description": [
+            "",
+            ""
+          ],
+          "url": "https://drive.google.com/file/d/1-UE_Lp1KuusZf5oUfrxLF4O0MzeFb_79/view?usp=sharing"
+        },
+        {
+          "title": "Certification in Mobile Game Monetization with Ads in Unity",
+          "platform": "Zenva",
+          "emission_date": "2021/11",
+          "description": [
+            "",
+            ""
+          ],
+          "url": "https://academy.zenva.com/certificate/902d99bc29d0"
+        },
+        {
+          "title": "Unity HDRP | Iluminação, Volume e Shading",
+          "platform": "Udemy",
+          "emission_date": "2022/01",
+          "description": [
+            "",
+            ""
+          ],
+          "url": "https://www.udemy.com/certificate/UC-c5c29b0b-02d9-4790-bef0-066967674d37/"
+        },
+        {
           "title": "Unity Turn Based Strategy - Intermediate C# Coding",
           "platform": "Gamedev.tv",
           "emission_date": "2022/12",
@@ -325,6 +455,36 @@
             "Complete turn-based strategy game using Unity. The player controls several characters who perform different actions against hordes of enemies"
           ],
           "url": "https://www.gamedev.tv/courses/1722359/certificate"
+        },
+        {
+          "title": "Design Patterns in C# and .NET",
+          "platform": "Udemy",
+          "emission_date": "2018/07",
+          "description": [
+            "Definição e implementação dos principais padrões de projetos definidos pela Gang of Four em múltiplos cenários.",
+            "Definitions and implementations of the most common Design Pattern defined for the Gang of Four in C# and .NET"
+          ],
+          "url": "https://www.udemy.com/certificate/UC-CUPI13TP/"
+        },
+        {
+          "title": "Taming Big Data with Apache Spark and Python - Hands On!",
+          "platform": "Udemy",
+          "emission_date": "2020/10",
+          "description": [
+            "Implementação de vários problemas de análise de dados utilizando Apache Spark e Python",
+            "Implementation of the most common problems on data analysis using Apache Spark and Python"
+          ],
+          "url": "https://www.udemy.com/certificate/UC-398dd595-513c-492c-83dd-ea5502e5551e/"
+        },
+        {
+          "title": "Google Cloud Platform Fundamentals: Core Infrastructure",
+          "platform": "Coursera",
+          "emission_date": "2019/01",
+          "description": [
+            "Principais serviços e aplicações do GCP",
+            "Main GCP's services and application"
+          ],
+          "url": "https://www.coursera.org/account/accomplishments/certificate/P5AB8LP8Y7B6"
         }
       ]
     }
