@@ -1,0 +1,284 @@
+{
+  "theme": {
+    "type": "OnePager",
+    "background": "./resume_data/square_pattern.jpg",
+    "variables": {
+      "sections_gap": "1em",
+      "contents_gap": "1em"
+    }
+  },
+  "locale": [
+    {
+      "key": "ptbr",
+      "label": "Brasileiro"
+    },
+    {
+      "key": "en",
+      "label": "English"
+    }
+  ],
+  "main_information": {
+    "type": "MainInformation",
+    "picture": "./resume_data/bruno_picture.webp",
+    "name": "Bruno Bernardes da Costa",
+    "summary": [
+      "Com mais de 10 anos de experiência em desenvolvimento de software, venho trabalhando nos mais diversificados tipos de sistemas, como, sistemas bancários, plataformas de análise para Big Data, websites, aplicativos móveis e games. Sou uma pessoa determinada, gosto de trabalhar em equipe e compartilhar conhecimento. Acredito que podemos criar um produto incrível enquanto nos divertimos e aprendemos no processo.",
+      "With more than 10 years of experience in software development, I have been working on the most diverse types of systems, such as banking systems, analysis platforms for Big Data, websites, mobile applications and games. I am a determined person, I like to work in a team and share knowledge. I believe we can create an amazing product while having fun and learning in the process."
+    ],
+    "goal": [
+      "Desenvolvedor fullstack",
+      "Fullstack developer"
+    ]
+  },
+  "contact_information": {
+    "type": "ContactInformation",
+    "entries": [
+      {
+        "type": "Mail",
+        "email": "b.b.da.costa@gmail.com"
+      },
+      {
+        "type": "Phone",
+        "number": "+55 (31) 99325-3017"
+      },
+      {
+        "type": "Location",
+        "place": "Lagoa Dourada - MG - Brasil",
+        "google_maps": "https://www.google.com/maps/place/Lagoa+Dourada+-+MG/@-20.872942,-44.1893066,11.17z/data=!4m5!3m4!1s0xa19f3675b62e7b:0xaf82e17dd71573da!8m2!3d-20.9147587!4d-44.0754448"
+      },
+      {
+        "type": "Github",
+        "profile": "github.com/BrunoBiluca"
+      },
+      {
+        "type": "LinkedIn",
+        "profile": "linkedin.com/in/bbdacosta/"
+      },
+      {
+        "type": "Website",
+        "url": "brunobiluca.github.io/web"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": [
+        "Línguas",
+        "Languages"
+      ],
+      "type": "Language",
+      "theme": {
+        "place": "side"
+      },
+      "entries": [
+        {
+          "label": [
+            "Português",
+            "Portuguese"
+          ],
+          "level": [
+            "Nativo",
+            "Native"
+          ]
+        },
+        {
+          "label": [
+            "Inglês",
+            "English"
+          ],
+          "level": [
+            "Fluente",
+            "Fluent"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "Habilidades relacionadas",
+        "Related skills"
+      ],
+      "theme": {
+        "place": "side"
+      },
+      "type": "Skill",
+      "entries": [
+        {
+          "label": "Node.JS"
+        },
+        {
+          "label": "Java"
+        },
+        {
+          "label": "C# & .NET"
+        },
+        {
+          "label": "Python"
+        },
+        {
+          "label": "TDD"
+        },
+        {
+          "label": "Clean Code"
+        },
+        {
+          "label": "Design Patterns"
+        },
+        {
+          "label": "Docker"
+        },
+        {
+          "label": "Automation"
+        },
+        {
+          "label": "HTML5 & CSS"
+        },
+        {
+          "label": "Javascript"
+        },
+        {
+          "label": "Agile PM"
+        }
+      ]
+    },
+    {
+      "title": [
+        "Últimas experiências de trabalho",
+        "Latest work experiences"
+      ],
+      "type": "WorkExperience",
+      "entries": [
+        {
+          "title": [
+            "Desenvolvedor de software sênior",
+            "Senior software developer"
+          ],
+          "period_begin": "01/2023",
+          "period_end": "",
+          "is_current_job": true,
+          "description": [
+            "Trabalho com o desenvolvimento de jogos e software em projetos variados. Também sou responsável pela criação de ferramentas de desenvolvimento voltadas principalmente para duas engines Unity e Godot.",
+            "I work with the development of games and software on various projects. I am also responsible for creating development tools aimed mainly at two engines Unity and Godot."
+          ],
+          "company": "",
+          "company_url": "",
+          "company_location": "Lagoa Dourada - MG"
+        },
+        {
+          "title": [
+            "Desenvolvedor Fullstack sênior",
+            "Senior Fullstack developer"
+          ],
+          "period_begin": "01/2022",
+          "period_end": "12/2022",
+          "description": [
+            "Trabalhei principalmente no desenvolvimento de aplicações web direcionadas para o sistema educacional brasileiro. Também fui responsável por treinar a equipe de forma a elevar o nível da qualidade dos processos e capacidade técnica.",
+            "Worked primarily in the development of web applications targeting the Brazilian educational system. Also, I was responsible to train members in order to raise the level of quality of processes and technical capacity."
+          ],
+          "company": "GH Branding",
+          "company_url": "https://ghbranding.com.br",
+          "company_location": "Santa Rosa - RS"
+        },
+        {
+          "title": [
+            "Desenvolvedor backend sênior",
+            "Senior Backend Developer"
+          ],
+          "period_begin": "01/2021",
+          "period_end": "10/2021",
+          "description": [
+            "Trabalhei em consultoria o desenvolvimento de sistemas de grande escala voltados para bancos e outros sistemas financeiros.",
+            "Worked on consulting for the development of large-scale systems aimed at banks and other financial systems."
+          ],
+          "company": "Sensedia",
+          "company_url": "https://br.sensedia.com",
+          "company_location": "Campinas - SP"
+        },
+        {
+          "title": [
+            "Analista de sistemas pleno",
+            "Full-fledged system analyst"
+          ],
+          "period_begin": "03/2019",
+          "period_end": "09/2020",
+          "description": [
+            "Trabalhei no desenvolvimento de plataforma para análise de grandes quantidades de dados baseados em múltiplas fontes de dados. Minha principal responsabilidade era ajudar a equipe na criação e manutenção de ferramentas e suporte ao core business do produto.",
+            "Worked on the development of a data analysis platform, based on multi-data sources. I was responsible to create and maintain systems and tools to support the core business of the product."
+          ],
+          "company": "Cinnecta",
+          "company_url": "https://cinnecta.com/",
+          "company_location": "Belo Horizonte - MG"
+        }
+      ]
+    },
+    {
+      "title": [
+        "Educação",
+        "Education"
+      ],
+      "type": "Education",
+      "entries": [
+        {
+          "title": [
+            "Bacharelado em Ciências da Computação",
+            "Bachelor of Science Computer"
+          ],
+          "institution": "Universidade Federal de São João del Rei",
+          "period_begin": "01/2012",
+          "period_end": "12/2015",
+          "location": "São João del Rei - MG - Brasil",
+          "description": [
+            "- Tomei parte como desenvolvedor web na empresa júnior LinkedEJ.<br> - Fui responsável pelo Centro de Recursos computacionais do departamento da computação.<br> - Trabalhei durante 6 meses como monitor em diversas cadeiras.",
+            "- Take place as web developer on LinkedEJ junior company<br>- Was responsible for Science Computer's computing resources center<br>- Worked as class monitor for 6 terms"
+          ]
+        }
+      ]
+    },
+    {
+      "title": [
+        "Certificados relevantes",
+        "Relevant certificates"
+      ],
+      "type": "Certificate",
+      "entries": [
+        {
+          "is_active": false,
+          "title": "Curso Ionic 3 para iniciantes",
+          "platform": "Udemy",
+          "emission_date": "2018/02",
+          "description": "",
+          "url": ""
+        },
+        {
+          "title": "C#: Art of writting clean code",
+          "platform": "Udemy",
+          "emission_date": "2018/04",
+          "description": [
+            "Criação de um jogo no estilo builder-defender que o jogador deve construir a sua base e gerar recursos enquanto enfrenta várias hordas de inimigos"
+          ],
+          "url": "https://www.udemy.com/certificate/UC-VPEZZZLM/"
+        },
+        {
+          "title": "Twin Stick Shooter with Blueprint",
+          "platform": "Unreal Engine User Group",
+          "emission_date": "2020/11",
+          "description": [
+            "Implementação de um protótipo de Twin Stick Shooter, passando pelas principais funcionalidades da Unreal Engine 4",
+            "Implementation of a prototype of a Twin Stick Shooter using the fundamentals of Unreal Engine 4"
+          ],
+          "url": "https://www.udemy.com/certificate/UC-CUPI13TP/"
+        },
+        {
+          "title": "Unity Turn Based Strategy - Intermediate C# Coding",
+          "platform": "Gamedev.tv",
+          "emission_date": "2022/12",
+          "description": [
+            "Jogo completo de estratégia por turnos utilizando Unity. O jogador controla vários personagens que desempenham ações diversas contra hordas de inimigos",
+            "Complete turn-based strategy game using Unity. The player controls several characters who perform different actions against hordes of enemies"
+          ],
+          "url": "https://www.gamedev.tv/courses/1722359/certificate"
+        }
+      ]
+    }
+  ]
+}
