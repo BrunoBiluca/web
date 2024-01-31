@@ -1,0 +1,8 @@
+.base {
+  background: gray;
+  padding: 2em;
+}
+
+.base p {
+  margin: 0;
+}

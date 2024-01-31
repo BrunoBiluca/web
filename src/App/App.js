@@ -6,8 +6,8 @@ import ContentRouter from '../AppV1/ContentRouter/ContentRouter';
 
 import './App.css';
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
-import ResumePage from "ResumePage/ResumePage";
 import AppV2 from '../AppV2/AppV2';
+import ResumePage from 'Resume/ResumePage';
 
 class App extends React.Component {
   render() {

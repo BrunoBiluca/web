@@ -9,6 +9,8 @@ import analyticsInit from 'analytics';
 
 analyticsInit();
 
+window.React = React
+
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
