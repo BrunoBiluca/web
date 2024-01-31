@@ -11,7 +11,19 @@ export default function ResumePage() {
     async function fetchResumeData() {
       const request = await fetch(baseUrl + "/resume/resume.json")
       const resumeJson = await request.json()
-      console.log(resumeJson)
+
+      console.log(baseUrl)
+      resumeJson["main_information"]["picture"]
+        = baseUrl + "/" + resumeJson["main_information"]["picture"]
+
+      let gameSection = resumeJson["sections"].filter(s => s["type"] === "Game")
+
+      if (gameSection.length > 0) {
+        for (let g of gameSection[0]["entries"]) {
+          g["screenshoot"] = baseUrl + "/" + g["screenshoot"]
+        }
+      }
+
       setResume(resumeJson)
     }
     fetchResumeData()
