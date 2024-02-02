@@ -1,20 +1,26 @@
 [
   {
-    "slug": "biluca-defense"
+    "slug": "biluca-defense",
+    "state": "public"
   },
   {
-    "slug": "biluca-sumo-ball"
+    "slug": "biluca-sumo-ball",
+    "state": "public"
   },
   {
-    "slug": "biluca-crazy-memory"
+    "slug": "biluca-crazy-memory",
+    "state": "public"
   },
   {
-    "slug": "biluca-flapping-bird"
+    "slug": "biluca-flapping-bird",
+    "state": "public"
   },
   {
-    "slug": "biluca-hat-hunters"
+    "slug": "biluca-hat-hunters",
+    "state": "public"
   },
   {
-    "slug": "biluca-xgrid"
+    "slug": "biluca-xgrid",
+    "state": "public"
   }
 ]

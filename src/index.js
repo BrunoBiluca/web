@@ -24,6 +24,7 @@ if (isProduction) {
 }
 
 if (isDebugMode) {
+  console.log("Running in debug mode")
   console.log("Env variables")
   console.log(process.env)
 }
