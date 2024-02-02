@@ -1,4 +1,4 @@
-import Game from "components/Games/model/Game.model"
+import Game from "components/Games/Game.model"
 import Image from "components/Image/Image.model"
 
 export default class LocalGameMapper {

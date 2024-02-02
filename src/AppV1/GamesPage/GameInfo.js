@@ -1,4 +1,4 @@
-import Game from "components/Games/model/Game.model";
+import Game from "components/Games/Game.model";
 import { formatBytes } from "helpers/FormatBytes";
 import styles from "./GamesPage.module.css"
 import unityLogo from "images/unity_logo_white.png";

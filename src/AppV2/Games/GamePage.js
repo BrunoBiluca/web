@@ -7,10 +7,10 @@ import webIcon from './web-icon.png'
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom/cjs/react-router-dom';
-import Game from 'components/Games/model/Game.model';
+import Game from 'components/Games/Game.model';
 import UrlButton from 'AppV2/Components/Buttons/UrlButton';
 import ContentBlock from 'AppV2/Components/ContentBlock/ContentBlock'
-import GamesLocalProvider from 'components/Games/services/local/GamesLocalProvider'
+import GamesLocalProvider from 'components/Games/GamesLocalProvider'
 
 export default function GamePage() {
   const { gameSlug } = useParams();

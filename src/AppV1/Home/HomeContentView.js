@@ -2,7 +2,7 @@ import InfinityContentHolder from 'AppV1/InfinityContentHolder/InfinityContentHo
 import Content from 'components/Contents/Content.model';
 import { useEffect, useState } from 'react';
 import BilucaIntro from './BilucaIntro.strings';
-import GamesLocalProvider from 'components/Games/services/local/GamesLocalProvider';
+import GamesLocalProvider from 'components/Games/GamesLocalProvider';
 import ArticlesLocalProvider from 'components/Articles/services/local/ArticlesLocalProvider';
 import ContentColor from 'components/Contents/ContentColor.model';
 

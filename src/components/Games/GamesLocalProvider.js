@@ -1,8 +1,8 @@
-import RegisteredGames from "config/RegisteredGames";
 import LocalContentPath from "components/Contents/LocalContentPath";
 import LocalFileReader from "services/LocalFileReader";
-import IGamesProvider from "../IGamesProvider";
+import IGamesProvider from "./IGamesProvider";
 import LocalGameMapper from "./LocalGameMapper";
+import Contents from "components/Contents/Contents.service";
 
 export default class GamesLocalProvider extends IGamesProvider {
 
@@ -10,17 +10,21 @@ export default class GamesLocalProvider extends IGamesProvider {
     super()
     this.contentPath = new LocalContentPath("game")
     this.fileReader = new LocalFileReader()
+    this.contents = new Contents(this.contentPath)
     this.mapper = new LocalGameMapper(this.contentPath)
   }
 
   get = async (start = 0, limit = 3, orderByDate = false) => {
+    if (!this.contents.isLoaded)
+      await this.contents.load()
+
     const games = []
-    const filteredGames = RegisteredGames.slice(start, limit)
+    const filteredGames = this.contents.all(start, limit)
     for (const game of filteredGames) {
-      games.push(await this.getGameContent(game));
+      games.push(await this.getGameContent(game.slug));
     }
 
-    if(orderByDate)
+    if (orderByDate)
       return games.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
 
     return games
@@ -28,8 +32,8 @@ export default class GamesLocalProvider extends IGamesProvider {
 
   getAll = async () => {
     const games = []
-    for (const game of RegisteredGames) {
-      games.push(await this.getGameContent(game));
+    for (const game of this.contents.all()) {
+      games.push(await this.getGameContent(game.slug));
     }
     return games
   }

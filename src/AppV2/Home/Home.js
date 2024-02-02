@@ -7,7 +7,7 @@ import ArticleCard from "../Articles/ArticleCard";
 import style from './Home.module.css';
 import ActionButtonBlock from "AppV2/Components/Buttons/ActionButtonBlock";
 import { Link } from "react-router-dom/cjs/react-router-dom";
-import GamesLocalProvider from "components/Games/services/local/GamesLocalProvider";
+import GamesLocalProvider from "components/Games/GamesLocalProvider";
 import ArticlesLocalProvider from "components/Articles/services/local/ArticlesLocalProvider";
 
 async function loadGamesAsync(page) {

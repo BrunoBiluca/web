@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
 import styles from './GamesPage.module.css';
-import Game from 'components/Games/model/Game.model';
+import Game from 'components/Games/Game.model';
 import GamesMarkdown from 'components/MarkdownComponents/GamesMarkdown/GamesMarkdown';
 import GameInfo from './GameInfo';
 import GameGallery from './GameGallery';
 import GitHubRepository from 'components/GitHubRepository/GitHubRepository';
 import ContentColor from 'components/Contents/ContentColor.model';
-import GamesLocalProvider from 'components/Games/services/local/GamesLocalProvider';
+import GamesLocalProvider from 'components/Games/GamesLocalProvider';
 
 const GamesPage = () => {
   const { gameSlug } = useParams();
