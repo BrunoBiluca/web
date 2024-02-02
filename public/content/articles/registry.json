@@ -1,26 +1,26 @@
 [
   {
-    "folder": "unity-timer-tutorial"
+    "slug": "unity-timer-tutorial"
   },
   {
-    "folder": "dice-tutorial-part-1"
+    "slug": "dice-tutorial-part-1"
   },
   {
-    "folder": "linear-interpolation-unity"
+    "slug": "linear-interpolation-unity"
   },
   {
-    "folder": "math-extension-functions"
+    "slug": "math-extension-functions"
   },
   {
-    "folder": "single-responsibility-principle"
+    "slug": "single-responsibility-principle"
   },
   {
-    "folder": "open-close-principle"
+    "slug": "open-close-principle"
   },
   {
-    "folder": "linear-interpolation-modularization"
+    "slug": "linear-interpolation-modularization"
   },
   {
-    "folder": "async-programming-unity"
+    "slug": "async-programming-unity"
   }
 ]
