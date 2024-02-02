@@ -2,20 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
 import styles from './GamesPage.module.css';
-import GlobalConfig from 'config/GlobalConfig';
 import Game from 'components/Games/model/Game.model';
 import GamesMarkdown from 'components/MarkdownComponents/GamesMarkdown/GamesMarkdown';
 import GameInfo from './GameInfo';
 import GameGallery from './GameGallery';
 import GitHubRepository from 'components/GitHubRepository/GitHubRepository';
+import ContentColor from 'components/Contents/ContentColor.model';
+import GamesLocalProvider from 'components/Games/services/local/GamesLocalProvider';
 
 const GamesPage = () => {
   const { gameSlug } = useParams();
   let [game, setGame] = useState(new Game({ slug: gameSlug }));
-  const contentColor = GlobalConfig.games.color()
+  const contentColor = new ContentColor("azure", "#69dada", "#1cadad")
 
   useEffect(() => {
-    const gameProvider = GlobalConfig.games.provider()
+    const gameProvider = new GamesLocalProvider()
     gameProvider
       .getBySlug(gameSlug)
       .then(res => {

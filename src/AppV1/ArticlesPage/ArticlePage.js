@@ -4,18 +4,19 @@ import Category from "components/Category/Category";
 import styles from './ArticlePage.module.css';
 import { useParams } from "react-router";
 
-import GlobalConfig from "config/GlobalConfig";
 import Image from "components/Image/Image";
 import Article from "components/Articles/model/Article.model";
 import ArticleMarkdown from "components/MarkdownComponents/ArticleMarkdown/ArticleMarkdown";
+import ContentColor from "components/Contents/ContentColor.model";
+import ArticlesLocalProvider from "components/Articles/services/local/ArticlesLocalProvider";
 
 function ArticlePage() {
   let { articleSlug } = useParams();
   const [article, setArticle] = useState(new Article({ slug: articleSlug }));
-  const articleColor = GlobalConfig.articles.color()
+  const articleColor = new ContentColor("beige", "#dddd99", "#c6c61e")
 
   useEffect(() => {
-    const articlesProvider = GlobalConfig.articles.provider()
+    const articlesProvider = new ArticlesLocalProvider()
     articlesProvider
       .getBySlug(articleSlug)
       .then(res => {

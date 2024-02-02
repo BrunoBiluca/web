@@ -8,9 +8,9 @@ import webIcon from './web-icon.png'
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom/cjs/react-router-dom';
 import Game from 'components/Games/model/Game.model';
-import GlobalConfig from 'config/GlobalConfig';
 import UrlButton from 'AppV2/Components/Buttons/UrlButton';
 import ContentBlock from 'AppV2/Components/ContentBlock/ContentBlock'
+import GamesLocalProvider from 'components/Games/services/local/GamesLocalProvider'
 
 export default function GamePage() {
   const { gameSlug } = useParams();
@@ -20,7 +20,7 @@ export default function GamePage() {
   let [mainGallery, setMainGallery] = useState(<></>);
 
   useEffect(() => {
-    const gameProvider = GlobalConfig.games.provider()
+    const gameProvider = new GamesLocalProvider()
     gameProvider
       .getBySlug(gameSlug)
       .then(res => {

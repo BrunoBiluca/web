@@ -1,8 +1,10 @@
 import InfinityContentHolder from 'AppV1/InfinityContentHolder/InfinityContentHolder';
 import Content from 'components/Contents/Content.model';
-import GlobalConfig from 'config/GlobalConfig';
 import { useEffect, useState } from 'react';
 import BilucaIntro from './BilucaIntro.strings';
+import GamesLocalProvider from 'components/Games/services/local/GamesLocalProvider';
+import ArticlesLocalProvider from 'components/Articles/services/local/ArticlesLocalProvider';
+import ContentColor from 'components/Contents/ContentColor.model';
 
 
 function mapContent(newContent, contentColor) {
@@ -16,15 +18,15 @@ function mapContent(newContent, contentColor) {
 }
 
 async function getContents() {
-  const gamesProvider = GlobalConfig.games.provider()
-  const articlesProvider = GlobalConfig.articles.provider()
+  const gamesProvider = new GamesLocalProvider()
+  const articlesProvider = new ArticlesLocalProvider()
 
   const games = await gamesProvider.getAll()
   const articles = await articlesProvider.getAll()
 
   const allContents = [
-    ...games.map(g => mapContent(g, GlobalConfig.games.color())),
-    ...articles.map(a => mapContent(a, GlobalConfig.articles.color()))
+    ...games.map(g => mapContent(g, new ContentColor("azure", "#69dada", "#1cadad"))),
+    ...articles.map(a => mapContent(a, new ContentColor("beige", "#dddd99", "#c6c61e")))
   ];
 
   const sortedContents = allContents

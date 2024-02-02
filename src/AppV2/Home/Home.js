@@ -5,20 +5,21 @@ import AboutMe from "./AboutMe";
 import GameCard from "../Games/GameCard";
 import ArticleCard from "../Articles/ArticleCard";
 import style from './Home.module.css';
-import GlobalConfig from "config/GlobalConfig";
 import ActionButtonBlock from "AppV2/Components/Buttons/ActionButtonBlock";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import GamesLocalProvider from "components/Games/services/local/GamesLocalProvider";
+import ArticlesLocalProvider from "components/Articles/services/local/ArticlesLocalProvider";
 
 async function loadGamesAsync(page) {
   const pageSize = 3;
   const start = page * pageSize;
-  return await GlobalConfig.games.provider().get(start, start + pageSize, true)
+  return await new GamesLocalProvider().get(start, start + pageSize, true)
 }
 
 async function loadArticlesAsync(page) {
   const pageSize = 3;
   const start = page * pageSize;
-  return await GlobalConfig.articles.provider().get(start, start + pageSize, true);
+  return await new ArticlesLocalProvider().get(start, start + pageSize, true);
 }
 
 export default function Home() {

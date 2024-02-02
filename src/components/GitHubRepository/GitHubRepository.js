@@ -1,4 +1,3 @@
-import GlobalConfig from "config/GlobalConfig";
 import DateFormatterAsDaysAgo from "helpers/DateFormatterAsDaysAgo";
 import { useEffect, useState } from "react";
 import styles from "./GitHubRepository.module.css"
@@ -93,7 +92,7 @@ const GitHubRepository = ({ repositoryURL, repository, owner }) => {
   const [commits, setCommits] = useState([])
 
   useEffect(() => {
-    const githubToken = GlobalConfig.github.token();
+    const githubToken = process.env.REACT_APP_GITHUB_PERSONAL_TOKEN;
     getLastCommits(
       repository,
       owner,
