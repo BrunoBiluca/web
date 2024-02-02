@@ -11,9 +11,6 @@ const GlobalConfig = {
     provider() { return GamesProviderFactory.local() },
     color() { return new ContentColor("azure", "#69dada", "#1cadad") }
   },
-  newsletter: {
-    enable: false
-  },
   github: {
     token() { return process.env.REACT_APP_GITHUB_PERSONAL_TOKEN }
   }
