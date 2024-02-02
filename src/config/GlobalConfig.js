@@ -1,6 +1,6 @@
 import ArticlesProviderFactory from "components/Articles/services/ArticlesProviderFactory";
 import GamesProviderFactory from "components/Games/services/GamesProviderFactory";
-import ContentColor from "../components/Contents/model/ContentColor.model";
+import ContentColor from "../components/Contents/ContentColor.model";
 
 const GlobalConfig = {
   articles: {

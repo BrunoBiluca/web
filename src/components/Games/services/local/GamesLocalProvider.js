@@ -1,5 +1,5 @@
 import RegisteredGames from "config/RegisteredGames";
-import LocalContentPath from "services/LocalContentPath";
+import LocalContentPath from "components/Contents/LocalContentPath";
 import LocalFileReader from "services/LocalFileReader";
 import IGamesProvider from "../IGamesProvider";
 import LocalGameMapper from "./LocalGameMapper";

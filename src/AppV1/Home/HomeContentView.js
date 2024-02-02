@@ -1,5 +1,5 @@
 import InfinityContentHolder from 'AppV1/InfinityContentHolder/InfinityContentHolder';
-import Content from 'components/Contents/model/Content.model';
+import Content from 'components/Contents/Content.model';
 import GlobalConfig from 'config/GlobalConfig';
 import { useEffect, useState } from 'react';
 import BilucaIntro from './BilucaIntro.strings';

@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import Content from "../../components/Contents/model/Content.model"
+import Content from "../../components/Contents/Content.model"
 import InfinityContentHolder from "./InfinityContentHolder"
 
 describe('InfinityContentHolder', () => {

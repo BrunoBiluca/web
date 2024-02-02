@@ -1,4 +1,4 @@
-import ContentColor from "components/Contents/model/ContentColor.model"
+import ContentColor from "components/Contents/ContentColor.model"
 
 class Content {
   title

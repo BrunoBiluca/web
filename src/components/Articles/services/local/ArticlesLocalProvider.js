@@ -1,5 +1,5 @@
 import RegisteredArticles from "config/RegisteredArticles";
-import LocalContentPath from "services/LocalContentPath";
+import LocalContentPath from "components/Contents/LocalContentPath";
 import LocalFileReader from "services/LocalFileReader";
 import IArticlesProvider from "../IArticlesProvider";
 import LocalArticleMapper from "./LocalArticleMapper";

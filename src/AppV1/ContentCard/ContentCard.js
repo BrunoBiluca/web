@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import styles from './ContentCard.module.css';
 import Category from '../../components/Category/Category';
 import Image from 'components/Image/Image';
-import Content from '../../components/Contents/model/Content.model';
+import Content from '../../components/Contents/Content.model';
 
 
 const ContentCard = ({style, content, onClick, children}) => {
